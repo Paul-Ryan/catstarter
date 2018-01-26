@@ -1,0 +1,8 @@
+routes
+
+/
+/signup
+/signin
+/projects
+/projects/new
+/categories

@@ -1,0 +1,34 @@
+entities
+  projects
+    id
+    title
+    description
+    author_id
+    due_date
+    category
+    img_url
+
+  rewards
+    id
+    title
+    project_id
+    pledge_amnt
+    description
+
+  users
+    id
+    username
+    img_url
+    project_id (project backed)
+
+ui
+  loading
+
+errors
+  login
+  projectCreation
+
+session
+  id
+  username
+  img_url
