@@ -1,0 +1,76 @@
+{
+  entities: {
+    projects: {
+      1: {
+        id: 1,
+        title: "make an album",
+        blurb: "really cool jamz",
+        description: "good music, and I'll write way more about it",
+        author_id: 1,
+        due_date: 06/28/18,
+        funding_goal: 5000,
+        current_funding: 2000,
+        categories: [1],
+        img_url: "http:kickstarter.com",
+      },
+      2: {
+        id: 2,
+        title: "make a cool game",
+        blurb: "lots of pieces",
+        description: "rad game with many pieces and many other things",
+        author_id: 3,
+        due_date: 06/15/18,
+        funding_goal: 1000000,
+        current_funding: 2000,
+        categories: [1, 2],
+        img_url: "http:kickstarter.com",
+      },
+    }
+    rewards: {
+      1: {
+        id: 1,
+        project_id: 1,
+        title: "super backer",
+        description: "get 100 widgets",
+        pledge_amount: 45,
+      }
+    },
+    categories: {
+      1: {
+        id: 1,
+        name: "music",
+      },
+      2: {
+        id: 2,
+        name: "games",
+      }
+    },
+    users: {
+      11: {
+        id: 11,
+        username: "bart",
+        email: "user@gmail.com",
+        backed_id: [1, 2], --JOINS table?
+        img_url: "....jpg",
+      }
+    }
+  },
+
+  ui: {
+    loading: false;
+  },
+
+  errors: {
+    login: ["Incorrect username or password"],
+    projectForm: ["Must complete all fields"]
+  },
+
+  session: {
+    currentUser: {
+      id: 1,
+      username: "username",
+      email: "name@email.com",
+      img_url: "....jpg",
+    }
+  }
+}

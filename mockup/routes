@@ -1,8 +1,20 @@
-routes
+Frontend routes
 
-/
+/ - homepage
 /signup
 /signin
-/projects
-/projects/new
-/categories
+/projects - project list/explore
+/projects/new - create project
+/project/:projectId - show project
+/project/:projectId/edit
+
+
+
+
+/signin
+/signup
+/feed - stories feed, homepage
+/users/:userId - user profile, used to access new/edit story function
+/stories/new - create a new story
+/stories/:storyId - show a single story
+/stories/:storyId/edit - update a story
