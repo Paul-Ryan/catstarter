@@ -1,8 +1,9 @@
 import React from 'react';
+import NavBarContainer from './nav_bar/nav_bar_container';
 
 const App = () => (
   <div>
-    <h1>Catstarter app file</h1>
+    <NavBarContainer />
   </div>
 );
 
