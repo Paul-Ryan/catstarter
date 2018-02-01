@@ -16,16 +16,20 @@ export default ({ currentUser, logout }) => {
 
   return (
 
-    <header className="header">
-      <ul>
-        <li>Explore</li>
-        <li>Start a project</li>
-      </ul>
+    <header className="global-nav">
+      <section className="global-nav-left">
+        <Link to="/">Explore</Link>
+        <Link to="/">Start a project</Link>
+      </section>
+
+      <section className="global-nav-center">
         <h1><Link to="/">Kickstarter</Link></h1>
+      </section>
+
+      <section className="global-nav-right">
         <h3>search</h3>
-        <div>
-          {display}
-        </div>
+        {display}
+      </section>
     </header>
   );
 };
