@@ -8,6 +8,9 @@ import {
   HashRouter
 } from 'react-router-dom';
 
+import { AuthRoute } from '../util/route_util';
+import { ProtectedRoute } from '../util/route_util';
+
 import NavBarContainer from './nav_bar/nav_bar_container';
 import SessionFormContainer from './session_form/session_form_container';
 
@@ -15,8 +18,8 @@ const App = () => (
   <div>
     <NavBarContainer />
     <Switch>
-      <Route path="/login" component={SessionFormContainer} />
-      <Route path="/signup" component={SessionFormContainer} />
+      <AuthRoute exact path="/login" component={SessionFormContainer} />
+      <AuthRoute exact path="/signup" component={SessionFormContainer} />
     </Switch>
   </div>
 );
