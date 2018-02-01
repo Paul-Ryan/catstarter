@@ -1,4 +1,17 @@
 
 html {
-  font-family: 'Source Sans Pro', sans-serif;
+  font: 400 16px 'Source Sans Pro', sans-serif;
+  color: rgb(40, 40, 40);
+  background-color: rgb(240, 240, 240);
   }
+
+a.btn {
+  text-decoration: none;
+  color: rgb(40, 40, 40);
+}
+
+a.btn:hover,
+a.btn:active,
+a.btn:focus {
+  color: rgb(0, 158, 116);
+}

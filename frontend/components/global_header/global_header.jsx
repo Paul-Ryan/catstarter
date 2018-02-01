@@ -18,25 +18,18 @@ export default ({ currentUser, logout }) => {
 
     <header className="global-nav">
       <section className="global-nav-left">
-        <Link to="/">Explore</Link>
-        <Link to="/">Start a project</Link>
+        <Link className="btn" to="/">Explore</Link>
+        <Link className="btn" to="/">Start a project</Link>
       </section>
 
       <section className="global-nav-center">
-        <h1><Link to="/">Kickstarter</Link></h1>
+        <h1><Link to="/">CATSTARTER</Link></h1>
       </section>
 
       <section className="global-nav-right">
-        <h3>search</h3>
+        <Link className="btn" to="/">Search</Link>
         {display}
       </section>
     </header>
   );
 };
-
-
-
-
-// if logged in
-// A welcome message including the user's username
-// A button to logout
