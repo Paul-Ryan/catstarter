@@ -9,7 +9,6 @@ export default ({ currentUser, logout }) => {
     </div>
   ) : (
     <div>
-      <Link className="header-btn" to="/signup">Sign Up</Link>
       <Link className="header-btn" to="/login">Login</Link>
     </div>
   );
@@ -27,8 +26,8 @@ export default ({ currentUser, logout }) => {
       </section>
 
       <section className="global-nav-right">
-        <Link className="header-btn" to="/">Search</Link>
         {display}
+        <Link className="header-btn" to="/">Search</Link>
       </section>
     </header>
   );

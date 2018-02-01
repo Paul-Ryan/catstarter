@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+import SignUp from './signup';
 
 // const newUser = Boolean(this.props.formType === "signup");
 
@@ -48,6 +49,14 @@ class SessionForm extends React.Component {
     }
   }
 
+  submitLink() {
+    if (this.props.formType === 'login') {
+      return <input type="submit" className="btn btn-submit" value="Log me in!" />;
+    } else {
+      return <input type="submit" className="btn btn-submit" value="Sign up!" />;
+    }
+  }
+
   emailField() {
     if (this.props.formType === 'signup') {
       return (
@@ -85,9 +94,10 @@ class SessionForm extends React.Component {
             />
         </label>
 
-        <input type="submit" className="btn btn-submit" value="Submit" />
+        {this.submitLink()}
       </form>
       <button className="btn btn-demo" onClick={() => this.demoLogin()}>Demo Account Login</button>
+      <SignUp formType={this.props.formType} />
     </section>
   );
   }
