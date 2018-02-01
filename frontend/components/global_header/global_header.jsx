@@ -9,8 +9,8 @@ export default ({ currentUser, logout }) => {
     </div>
   ) : (
     <div>
-      <Link className="btn" to="/signup">Sign Up</Link>
-      <Link className="btn" to="/login">Login</Link>
+      <Link className="header-btn" to="/signup">Sign Up</Link>
+      <Link className="header-btn" to="/login">Login</Link>
     </div>
   );
 
@@ -18,8 +18,8 @@ export default ({ currentUser, logout }) => {
 
     <header className="global-nav">
       <section className="global-nav-left">
-        <Link className="btn" to="/">Explore</Link>
-        <Link className="btn" to="/">Start a project</Link>
+        <Link className="header-btn" to="/">Explore</Link>
+        <Link className="header-btn" to="/">Start a project</Link>
       </section>
 
       <section className="global-nav-center">
@@ -27,7 +27,7 @@ export default ({ currentUser, logout }) => {
       </section>
 
       <section className="global-nav-right">
-        <Link className="btn" to="/">Search</Link>
+        <Link className="header-btn" to="/">Search</Link>
         {display}
       </section>
     </header>

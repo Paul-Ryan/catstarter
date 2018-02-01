@@ -5,13 +5,36 @@ html {
   background-color: rgb(240, 240, 240);
   }
 
-a.btn {
+.btn {
+  height: 42px;
+  line-height: 42px;
+  font-size: 15px;
+  display: inline-block;
   text-decoration: none;
-  color: rgb(40, 40, 40);
+  transition: all 0.25s ease-in-out;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  color: white;
 }
 
-a.btn:hover,
-a.btn:active,
-a.btn:focus {
-  color: rgb(0, 158, 116);
+.btn-submit {
+  background-color: #009E74;
+  color: white;
+}
+
+.btn-submit:hover,
+.btn-submit:active {
+  background-color: #037362;
+}
+
+.btn-demo {
+  background-color: #39579A;
+  color: white;
+}
+
+.btn-demo:hover,
+.btn-demo:active {
+  background-color: #1D3F8C;
 }

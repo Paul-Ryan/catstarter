@@ -62,12 +62,11 @@ class SessionForm extends React.Component {
     }
   }
 
-
-
   render() {
     return (
-    <React.Fragment>
-      <form onSubmit={this.handleSubmit}>
+    <section className="session">
+      <h1 className="session-header">Log in</h1>
+      <form className="session-form"onSubmit={this.handleSubmit}>
         <label>Username:
           <input
             type="text"
@@ -86,10 +85,10 @@ class SessionForm extends React.Component {
             />
         </label>
 
-        <input type="submit" value="Submit" />
+        <input type="submit" className="btn btn-submit" value="Submit" />
       </form>
-      <button onClick={() => this.demoLogin()}>Demo Account Login</button>
-    </React.Fragment>
+      <button className="btn btn-demo" onClick={() => this.demoLogin()}>Demo Account Login</button>
+    </section>
   );
   }
 }

@@ -16,3 +16,13 @@
 .global-nav a {
   padding: 0 9px;
 }
+
+a.header-btn {
+  text-decoration: none;
+  color: rgb(40, 40, 40);
+}
+
+a.header-btn:hover,
+a.header-btn:active {
+  color: rgb(0, 158, 116);
+}
