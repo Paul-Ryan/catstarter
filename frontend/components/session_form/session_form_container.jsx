@@ -13,19 +13,12 @@ const mapStateToProps = (state, ownProps) => {
   });
 };
 
-
-
-// loggedIn (boolean) - representing whether a currentUser exists
-// errors (array) - list of errors from the state
-// formType (string): 'login' or 'signup' given the current ownProps.location.pathname
-
-
-
 const mapDispatchToProps = (dispatch, ownProps) => {
   console.log("session props", ownProps);
-  const formType = location.pathname.slice(1);
+  const formType = ownProps.location.pathname.slice(1);
+  console.log("formtype: ", formType);
   const processForm = (formType === 'login') ? login : signup;
-  
+
   return ({
     processForm: user => dispatch(processForm(user))
   });
