@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+// const newUser = Boolean(this.props.formType === "signup");
+
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -10,9 +12,11 @@ class SessionForm extends React.Component {
       password: "",
       email: ""
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
+    console.log(this.state);
     return e => this.setState({
       [field]: e.currentTarget.value
     });
@@ -22,25 +26,46 @@ class SessionForm extends React.Component {
     event.preventDefault();
     const user = this.state;
     this.props.processForm({user});
+    this.setState({username: "", email: "", password: ""});
   }
 
-  renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
+  demoLogin() {
+    this.props.login({
+      user: {
+        username: 'Paul',
+        email: 'paul.ryan.iii@gmail.com',
+        password: 'dinosaur1'
+      }
+    });
   }
+
+  navLink() {
+    if (this.props.formType === 'login') {
+      return <Link to="/signup">sign up instead</Link>;
+    } else {
+      return <Link to="/login">log in instead</Link>;
+    }
+  }
+
+  emailField() {
+    if (this.props.formType === 'signup') {
+      return (
+        <label>Email:
+          <input
+            type="text"
+            value={this.state.email}
+            onChange={this.update('email')}
+            />
+        </label>
+      );
+    }
+  }
+
+
 
   render() {
     return (
-    <form onSubmit={(e) => this.handleSubmit(e)}>
-
-      {this.renderErrors()}
+    <form onSubmit={this.handleSubmit}>
 
       <label>Username:
         <input
@@ -50,26 +75,21 @@ class SessionForm extends React.Component {
           />
       </label>
 
-      <label>Email:
-        <input
-          type="text"
-          value={this.state.email}
-          onChange={this.update('email')}
-          />
-      </label>
+      {this.emailField()}
 
       <label>Password:
         <input
-          type="text"
+          type="password"
           value={this.state.password}
           onChange={this.update('password')}
           />
       </label>
 
-      <button>Create Account</button>
+      <input type="submit" value="Submit" />
+      <button onClick={() => this.demoLogin()}>Demo Account Login</button>
     </form>
   );
   }
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);
