@@ -21,7 +21,7 @@ export default ({ currentUser, logout }) => {
         <li>Explore</li>
         <li>Start a project</li>
       </ul>
-        <h1>Kickstarter</h1>
+        <h1><Link to="/">Kickstarter</Link></h1>
         <h3>search</h3>
         <div>
           {display}

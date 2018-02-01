@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+
 // const newUser = Boolean(this.props.formType === "signup");
 
 class SessionForm extends React.Component {
@@ -32,9 +33,9 @@ class SessionForm extends React.Component {
   demoLogin() {
     this.props.login({
       user: {
-        username: 'Paul',
-        email: 'paul.ryan.iii@gmail.com',
-        password: 'dinosaur1'
+        username: 'demoLogin',
+        email: 'demo@email.com',
+        password: 'password'
       }
     });
   }
@@ -65,29 +66,30 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-    <form onSubmit={this.handleSubmit}>
+    <React.Fragment>
+      <form onSubmit={this.handleSubmit}>
+        <label>Username:
+          <input
+            type="text"
+            value={this.state.username}
+            onChange={this.update('username')}
+            />
+        </label>
 
-      <label>Username:
-        <input
-          type="text"
-          value={this.state.username}
-          onChange={this.update('username')}
-          />
-      </label>
+        {this.emailField()}
 
-      {this.emailField()}
+        <label>Password:
+          <input
+            type="password"
+            value={this.state.password}
+            onChange={this.update('password')}
+            />
+        </label>
 
-      <label>Password:
-        <input
-          type="password"
-          value={this.state.password}
-          onChange={this.update('password')}
-          />
-      </label>
-
-      <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" />
+      </form>
       <button onClick={() => this.demoLogin()}>Demo Account Login</button>
-    </form>
+    </React.Fragment>
   );
   }
 }
