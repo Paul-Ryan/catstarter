@@ -38,11 +38,10 @@
   border: 1px solid rgb(6, 160, 119);
 }
 
-
 .session-header {
   font-size: 32px;
   line-height: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 
 .session .btn {
@@ -59,4 +58,13 @@
 
 .sign-up {
   padding-left: 0.35em;
+}
+
+.error-list > li {
+  color: red;
+  padding: 2px;
+}
+
+.error-list > li:last-child {
+  padding-bottom: 10px;
 }

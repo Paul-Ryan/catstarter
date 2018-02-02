@@ -18,7 +18,6 @@ class SessionForm extends React.Component {
   }
 
   update(field) {
-    console.log(this.state);
     return e => this.setState({
       [field]: e.currentTarget.value
     });
@@ -27,8 +26,27 @@ class SessionForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const user = this.state;
+    console.log("process form ", this.props.processForm);
     this.props.processForm({user});
     this.setState({username: "", email: "", password: ""});
+  }
+
+  renderErrors() {
+    return(
+      <ul className="error-list">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.loggedIn) {
+      this.props.history.push('/');
+    }
   }
 
   demoLogin() {
@@ -60,9 +78,10 @@ class SessionForm extends React.Component {
   emailField() {
     if (this.props.formType === 'signup') {
       return (
-        <label>Email:
+        <label>
           <input
             type="text"
+            placeholder="Email"
             value={this.state.email}
             onChange={this.update('email')}
             />
@@ -75,10 +94,12 @@ class SessionForm extends React.Component {
     return (
     <section className="session">
       <h1 className="session-header">Log in</h1>
+      {this.renderErrors()}
       <form className="session-form"onSubmit={this.handleSubmit}>
-        <label>Username:
+        <label>
           <input
             type="text"
+            placeholder="Username"
             value={this.state.username}
             onChange={this.update('username')}
             />
@@ -86,9 +107,10 @@ class SessionForm extends React.Component {
 
         {this.emailField()}
 
-        <label>Password:
+        <label>
           <input
             type="password"
+            placeholder="Password"
             value={this.state.password}
             onChange={this.update('password')}
             />

@@ -1,4 +1,5 @@
 .global-nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,6 +14,10 @@
 }
 
 .global-nav-center {
+  // tried to stop logo from moving
+  // position: absolute;
+  // width: 180px;
+  // left: calc(50% - 90px);
   text-align: center;
 }
 
@@ -26,12 +31,22 @@
   padding: 0 9px;
 }
 
-a.header-btn {
+.header-btn {
   text-decoration: none;
   color: rgb(40, 40, 40);
+  border: none;
 }
 
-a.header-btn:hover,
-a.header-btn:active {
+.header-btn:hover,
+.header-btn:active {
   color: rgb(0, 158, 116);
+}
+
+/* adjusting for logout button */
+  // margin-top: 15px;
+.current-user {
+  padding: 0 9px;
+}
+.current-user > .header-btn {
+  padding-left: 0;
 }
