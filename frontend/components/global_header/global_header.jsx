@@ -27,7 +27,7 @@ export default ({ currentUser, logout }) => {
 
       <section className="global-nav-right">
         {display}
-        <Link className="header-btn" to="/">Search</Link>
+        <Link className="header-btn" to="/">Search <i className="fas fa-search"></i></Link>
       </section>
     </header>
   );
