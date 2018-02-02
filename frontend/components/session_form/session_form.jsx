@@ -47,6 +47,11 @@ class SessionForm extends React.Component {
     if (nextProps.loggedIn) {
       this.props.history.push('/');
     }
+    console.log(this.props);
+    if (nextProps.match.path !== this.props.match.path) {
+      this.props.clear();
+    }
+
   }
 
   demoLogin() {

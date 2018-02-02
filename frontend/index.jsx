@@ -4,7 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 // import { login, signup, logout } from './util/session_api_util';
-import { login, signup, logout } from './actions/session_actions';
+import { login, signup, logout, clear } from './actions/session_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.login = login;
   window.signup = signup;
   window.logout = logout;
+  window.clear = clear;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
    // TESTING END
