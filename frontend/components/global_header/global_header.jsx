@@ -22,7 +22,7 @@ export default ({ currentUser, logout }) => {
       </section>
 
       <section className="global-nav-center">
-        <h1><Link to="/">CATSTARTER</Link></h1>
+        <Link to="/"><h1 className="header-logo">CATSTARTER</h1></Link>
       </section>
 
       <section className="global-nav-right">

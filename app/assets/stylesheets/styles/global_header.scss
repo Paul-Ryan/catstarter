@@ -18,6 +18,18 @@
   text-align: center;
 }
 
+.global-nav-center a {
+  text-decoration: none;
+}
+
+.header-logo {
+  font-family: 'Modak', cursive;
+  color: #004853;
+  font-size: 26px;
+  letter-spacing: 0.8px;
+}
+
+
 .global-nav-right {
   display: flex;
   justify-content: right;
@@ -27,7 +39,7 @@
 .global-nav-right .fa-search {
   color: inherit;
   font-size: 12px;
-  padding-left: 3px; 
+  padding-left: 3px;
 }
 
 .global-nav a {
@@ -38,6 +50,7 @@
   text-decoration: none;
   color: rgb(40, 40, 40);
   border: none;
+  cursor: pointer;
 }
 
 .header-btn:hover,
