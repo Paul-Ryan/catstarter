@@ -4,5 +4,5 @@ import projectErrorsReducer from './project_errors_reducer';
 
 export default combineReducers({
   session: sessionErrorsReducer,
-  project: projectErrorsReducer
+  projects: projectErrorsReducer
 });

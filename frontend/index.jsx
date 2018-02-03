@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
    // TESTING START
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.fetchProject = fetchProject;
+  window.createProject = createProject;
+  window.deleteProject = deleteProject;
   window.fetchProjects = fetchProjects;
    // TESTING END
 
