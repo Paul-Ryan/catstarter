@@ -1,4 +1,4 @@
-import * as ProjectAPIUtil from './util/project_api_util';
+import * as ProjectAPIUtil from '../util/project_api_util';
 
 export const RECEIVE_PROJECT_ERRORS = "RECEIVE_PROJECT_ERRORS";
 export const RECEIVE_PROJECTS = "RECEIVE_PROJECTS";
@@ -6,7 +6,6 @@ export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 export const REMOVE_PROJECT = "DELETE_PROJECT";
 
 // We need two actions: one to go fetch all the benches from our Rails API, and one that tells our store to change our application state to represent the bench data in our action.
-
 
 const receiveProjects = projects => ({
   type: RECEIVE_PROJECTS,
