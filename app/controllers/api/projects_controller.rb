@@ -1,6 +1,8 @@
 class Api::ProjectsController < ApplicationController
   def index
-    @projects = Project.all
+    # trying to figure out how to get authors into state
+    # @projects = Project.all
+    @projects = Project.all.includes(:author)
     render '/api/projects/index'
   end
 
@@ -31,7 +33,7 @@ class Api::ProjectsController < ApplicationController
     if @project.update(project_params)
       render 'api/projects/show'
     else
-      render json @project.errors.full_messages, status: 422
+      render json: @project.errors.full_messages, status: 422
     end
   end
 
@@ -41,7 +43,7 @@ class Api::ProjectsController < ApplicationController
       @project.destroy
       render json: {}, status: 200
     else
-      render json ['couldn\'t find project'], status: 404
+      render json: ['couldn\'t find project'], status: 404
     end
   end
 

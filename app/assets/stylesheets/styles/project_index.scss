@@ -1,0 +1,72 @@
+.project-index {
+  background-color: #ffffff;
+}
+
+.categories {
+  font-size: 24px;
+  margin: 25px auto;
+  padding: 25px;
+}
+
+.project-index > ul {
+
+}
+
+.grayBorder {
+  border: 1px solid #DCDEDD;
+}
+
+.project-index-item {
+  margin: 20px 0;
+}
+
+.project-index-image {
+  width: 100%;
+}
+
+.project-index-title {
+  box-sizing: border-box;
+  padding: 24px 18px 0;
+  height: 120px;
+}
+
+.project-index-info {
+  box-sizing: border-box;
+  color: #ACAFAF;
+  padding: 18px;
+  height: 160px;
+}
+
+.project-index-header {
+  text-decoration: none;
+}
+
+.project-index-header h1 {
+  font-size: 24px;
+  color: #282828;
+  margin-bottom: 18px;
+}
+
+.project-pledge-bar {
+  position: relative;
+  background-color: #E8E8E8;
+  width: 100%;
+  height: 3px;
+  margin-bottom: 18px;
+}
+
+.project-pledge-bar-fill {
+  background-color: #037362;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+}
+
+.project-pledge-total {
+  color: #037362;
+}
+
+.project-categories {
+  margin: 18px 0 0;
+}

@@ -2,7 +2,9 @@
 @import "base/reset.scss";
 // @import "base/normalize.scss";
 @import "base/globals.scss";
+@import "base/grid.scss";
 
 /* componenet styles */
 @import "styles/global_header.scss";
 @import "styles/session_form.scss";
+@import "styles/project_index.scss";

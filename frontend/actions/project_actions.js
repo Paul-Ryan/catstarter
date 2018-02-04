@@ -17,14 +17,14 @@ const receiveProject = project => ({
   project
 });
 
-const receiveErrors = (errors) => ({
-  type: RECEIVE_PROJECT_ERRORS,
-  errors
-});
-
 const removeProject = (id) => ({
   type: REMOVE_PROJECT,
   id
+});
+
+const receiveErrors = (errors) => ({
+  type: RECEIVE_PROJECT_ERRORS,
+  errors
 });
 
 export const fetchProjects = () => dispatch => {

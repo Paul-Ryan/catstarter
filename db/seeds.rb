@@ -22,7 +22,7 @@ project1 = Project.create(
   author_id: user1.id,
   due_date: Date.today + 30,
   funding_goal: 2000,
-  image_url: "https://commons.wikimedia.org/wiki/Main_Page#/media/File:Marmot-edit1.jpg"
+  image_url: "http://via.placeholder.com/300x225"
 )
 
 project2 = Project.create(
@@ -32,7 +32,7 @@ project2 = Project.create(
   author_id: user2.id,
   due_date: Date.today + 30,
   funding_goal: 2000,
-  image_url: "https://commons.wikimedia.org/wiki/Main_Page#/media/File:Marmot-edit1.jpg"
+  image_url: "http://via.placeholder.com/300x225"
 )
 
 project3 = Project.create(
@@ -42,7 +42,7 @@ project3 = Project.create(
   author_id: user3.id,
   due_date: Date.today + 30,
   funding_goal: 2000,
-  image_url: "https://commons.wikimedia.org/wiki/Main_Page#/media/File:Marmot-edit1.jpg"
+  image_url: "http://via.placeholder.com/300x225"
 )
 
 project4 = Project.create(
@@ -52,7 +52,7 @@ project4 = Project.create(
   author_id: user1.id,
   due_date: Date.today + 30,
   funding_goal: 2000,
-  image_url: "https://commons.wikimedia.org/wiki/Main_Page#/media/File:Marmot-edit1.jpg"
+  image_url: "http://via.placeholder.com/300x225"
 )
 
 project5 = Project.create(
@@ -62,7 +62,7 @@ project5 = Project.create(
   author_id: user4.id,
   due_date: Date.today + 30,
   funding_goal: 2000,
-  image_url: "https://commons.wikimedia.org/wiki/Main_Page#/media/File:Marmot-edit1.jpg"
+  image_url: "http://via.placeholder.com/300x225"
 )
 
 project6 = Project.create(
@@ -72,5 +72,5 @@ project6 = Project.create(
   author_id: user3.id,
   due_date: Date.today + 30,
   funding_goal: 2000,
-  image_url: "https://commons.wikimedia.org/wiki/Main_Page#/media/File:Marmot-edit1.jpg"
+  image_url: "http://via.placeholder.com/300x225"
 )

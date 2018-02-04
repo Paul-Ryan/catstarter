@@ -1,0 +1,70 @@
+.row {
+  padding: 0 12px;
+}
+
+.col {
+  flex: 1;
+  box-sizing: border-box;
+}
+
+/* Attribute selector targeting all elements
+with a class attribute containing 'col-' */
+[class*='col-'] {
+  display: inline-block;
+  // padding-right: 20px;
+  padding: 0 10px; 
+}
+
+.col-1 {
+  width: 8.333333%;
+}
+
+.col-2 {
+  width: 16.666666%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.333333%;
+}
+
+.col-5 {
+  width: 41.666666%
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.333333%;
+}
+
+.col-8 {
+  width: 66.666666%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.333333%;
+}
+
+.col-11 {
+  width: 91.666666%;
+}
+
+.col-12 {
+  width: 100%;
+}
+/* CSS Day 6 media queries */
+// @media all and (max-width: 900px) {
+//   [class*='col-'] {
+//     width: 100%;
+//   }
+// }

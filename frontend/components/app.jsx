@@ -13,6 +13,7 @@ import { ProtectedRoute } from '../util/route_util';
 
 import GlobalHeaderContainer from './global_header/global_header_container';
 import SessionFormContainer from './session_form/session_form_container';
+import ProjectIndexContainer from './project_index/project_index_container';
 
 const App = () => (
   <div>
@@ -20,6 +21,7 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={SessionFormContainer} />
       <AuthRoute exact path="/signup" component={SessionFormContainer} />
+      <Route path="/projects" component={ProjectIndexContainer} />
     </Switch>
   </div>
 );
