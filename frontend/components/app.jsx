@@ -15,6 +15,7 @@ import GlobalHeaderContainer from './global_header/global_header_container';
 import SessionFormContainer from './session_form/session_form_container';
 import ProjectIndexContainer from './project_index/project_index_container';
 import ProjectShowContainer from './project_show/project_show_container';
+import ProjectFormContainer from './project_create/project_form_container';
 
 const App = () => (
   <div>
@@ -23,6 +24,7 @@ const App = () => (
       <AuthRoute exact path="/login" component={SessionFormContainer} />
       <AuthRoute exact path="/signup" component={SessionFormContainer} />
       <Route exact path="/projects" component={ProjectIndexContainer} />
+      <Route exact path="/create" component={ProjectFormContainer} />
       <Route path="/projects/:projectId" component={ProjectShowContainer} />
     </Switch>
   </div>

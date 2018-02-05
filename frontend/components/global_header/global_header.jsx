@@ -18,7 +18,7 @@ export default ({ currentUser, logout }) => {
     <header className="global-nav">
       <section className="global-nav-left">
         <Link className="header-btn" to="/projects">Explore</Link>
-        <Link className="header-btn" to="/">Start a project</Link>
+        <Link className="header-btn" to="/create">Start a project</Link>
       </section>
 
       <section className="global-nav-center">
