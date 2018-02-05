@@ -1,0 +1,70 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 900px;
+  margin: 60px auto 0;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #DCDEDD;
+}
+
+.form h1 {
+  font-size: 32px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.project-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-select {
+  display: flex;
+  margin: 10px auto;
+}
+
+.form-select button {
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 14px;
+}
+
+.project-form label > input {
+  display: block;
+  box-sizing: border-box;
+  height: 42px;
+  width: 100%;
+  margin: 4px 0 18px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 17px;
+  border: 1px solid #DCDEDD;
+}
+
+
+.form-description {
+  box-sizing: border-box;
+  font-size: 14px;
+  width: 100%;
+  height: 200px;
+  resize: vertical;
+  margin: 4px 0 18px;
+  border: 1px solid #DCDEDD;
+}
+
+.form-description:focus {
+  outline: none;
+  border: 1px solid rgb(6, 160, 119);
+}
+
+.project-form label > input:focus {
+  outline: none;
+  border: 1px solid rgb(6, 160, 119);
+}

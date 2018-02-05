@@ -40,51 +40,61 @@ class ProjectForm extends React.Component {
 
   render () {
     return (
-      <form className="project-form" onSubmit={this.handleSubmit}>
-        <label>Title
-          <input
-            type="text"
-            value={this.state.title}
-            onChange={this.update('title')} />
-        </label>
+      <div className="form">
+        <h1>Create your project</h1>
+        <ul className="form-select">
+          <li><button>Basics</button></li>
+          <li><button>Rewards</button></li>
+        </ul>
 
-        <label>Image url
-          <input
-            type="text"
-            value={this.state.image_url}
-            onChange={this.update('image_url')} />
-        </label>
+        <form className="project-form" onSubmit={this.handleSubmit}>
+          <label>Title
+            <input
+              type="text"
+              value={this.state.title}
+              onChange={this.update('title')} />
+          </label>
 
-        <label>Short blurb
-          <input
-            type="text"
-            value={this.state.blurb}
-            onChange={this.update('blurb')} />
-        </label>
+          <label>Image url
+            <input
+              type="text"
+              value={this.state.image_url}
+              onChange={this.update('image_url')} />
+          </label>
 
-        <label>Description
-          <textarea
-            type="textarea"
-            value={this.state.description}
-            onChange={this.update('description')} />
-        </label>
+          <label>Short blurb
+            <input
+              type="text"
+              value={this.state.blurb}
+              onChange={this.update('blurb')} />
+          </label>
 
-        <label>Funding duration
-          <input
-            type="date"
-            value={this.state.due_date}
-            onChange={this.update('due_date')} />
-        </label>
+          <label>Description
+            <textarea
+              type="textarea"
+              className="form-description"
+              value={this.state.description}
+              onChange={this.update('description')} />
+          </label>
 
-        <label>Funding goal
-          <input
-            type="text"
-            value={this.state.funding_goal}
-            onChange={this.update('funding_goal')} />
-        </label>
+          <label>Funding duration
+            <input
+              type="date"
+              className="form-due-date"
+              value={this.state.due_date}
+              onChange={this.update('due_date')} />
+          </label>
 
-        <input type="submit" className="btn btn-submit" value="Create project!" />
-      </form>
+          <label>Funding goal
+            <input
+              type="number"
+              value={this.state.funding_goal}
+              onChange={this.update('funding_goal')} />
+          </label>
+
+          <input type="submit" className="btn btn-submit" value="Create project!" />
+        </form>
+      </div>
     );
   }
 }
