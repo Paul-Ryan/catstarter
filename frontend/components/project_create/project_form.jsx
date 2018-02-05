@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 class ProjectForm extends React.Component {
   constructor(props) {
@@ -11,7 +12,8 @@ class ProjectForm extends React.Component {
       blurb: "",
       description: "",
       funding_duration: "",
-      funding_goal: 0
+      funding_goal: 0,
+      fireRedirect: false
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,7 +27,6 @@ class ProjectForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log("state: ", this.state);
     this.props.createProject(this.state);
     this.setState({
       author_id: this.props.user.id,
@@ -36,9 +37,13 @@ class ProjectForm extends React.Component {
       due_date: "",
       funding_goal: 0
     });
+    this.setState({ fireRedirect: true })
   }
 
   render () {
+    const { from } = this.props.location.state || '/';
+    const { fireRedirect } = this.state;
+
     return (
       <div className="form">
         <h1>Create your project</h1>
@@ -94,6 +99,9 @@ class ProjectForm extends React.Component {
 
           <input type="submit" className="btn btn-submit" value="Create project!" />
         </form>
+        {fireRedirect && (
+          <Redirect to={from || '/projects'}/>
+        )}
       </div>
     );
   }
