@@ -6,15 +6,68 @@
 }
 
 .show-project h1 {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 42px;
+  font-weight: 400;
 }
 
 .show-project h2 {
   font-size: 22px;
+  font-weight: 400;
   color: #656969;
 }
 
 .show-project h3 {
   font-size: 24px;
+}
+
+.show-project-stats {
+  display: flex;
+}
+
+.green-stat {
+  font-size: 32px;
+  color: rgb(0, 116, 96);
+}
+
+.gray-stat {
+  font-size: 32px;
+  color: rgb(40, 40, 40);
+}
+
+
+.project-stats {
+  flex-grow: 1;
+  height: 100%;
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+
+.project-stats li {
+  margin-bottom: 12px;
+}
+
+.show-image {
+  flex-grow: 2;
+  max-width: 620px;
+  height: auto;
+}
+
+.back-this-project {
+  font-size: 18px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 15px; 
+}
+
+.show-project-content {
+  margin-top: 40px;
+  margin-left: -20px;
+  margin: 50px -20px -40px;
+  padding: 20px 20px 50px;
+
+  height: 100%;
+  background: white;
+  border-top: 1px solid #DCDEDD;
 }

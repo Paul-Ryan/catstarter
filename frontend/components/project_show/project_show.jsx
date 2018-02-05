@@ -15,6 +15,7 @@ class ProjectShow extends React.Component {
     return (
       <div className="show-project-header row">
         <p className="col col-2">By {this.props.project.author_id}</p>
+        <div className="col col-1"></div>
         <header className="col col-8">
           <h1>{this.props.project.title}</h1>
           <h2>{this.props.project.blurb}</h2>
@@ -22,7 +23,32 @@ class ProjectShow extends React.Component {
       </div>
     );
   }
-  // <h1>{this.props.projects.title}</h1>
+
+  projectStats() {
+    return (
+      <div className="show-project-stats row">
+        <img className="show-image col col-8" src={this.props.project.image_url} />
+        <ul className="project-stats col col-4">
+          <li><span className="green-stat">$3,650</span><br />pledged of ${this.props.project.funding_goal}</li>
+          <li><span className="gray-stat">181</span><br />backers</li>
+          <li><span className="gray-stat">14</span><br />days to go</li>
+          <Link className="btn btn-submit back-this-project" to="/">Back this project</Link>
+          <li>This project will only be funded if it reaches its goal by {this.props.project.due_date}</li>
+        </ul>
+      </div>
+    );
+  }
+
+  projectAbout() {
+    return (
+      <div className="show-project-content row">
+        <div className="col col-8">
+          <h3>About</h3>
+          <p>{this.props.project.description}</p>
+        </div>
+      </div>
+    );
+  }
 
   render() {
     return (
@@ -31,10 +57,8 @@ class ProjectShow extends React.Component {
           <header className="col col-8">
             {this.projectHeader()}
           </header>
-          <div className="show-project-stats row">
-          </div>
-          <div className="show-project-content row">
-          </div>
+          {this.projectStats()}
+          {this.projectAbout()}
         </div>
       </section>
     );

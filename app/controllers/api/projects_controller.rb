@@ -12,8 +12,6 @@ class Api::ProjectsController < ApplicationController
 
     if @project.save
       render 'api/projects/show'
-      # render :show
-      # render `api/projects/project#{@project.id}`
     else
       render json: @project.errors.full_messages, status: 422
     end
