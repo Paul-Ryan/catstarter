@@ -8,8 +8,8 @@
   padding: 25px;
 }
 
-.project-index > ul {
-
+.project-index {
+  font-size: 14px;
 }
 
 .grayBorder {
@@ -35,6 +35,8 @@
   color: #ACAFAF;
   padding: 18px;
   height: 160px;
+  font-size: 14px;
+  line-height: 1.3;
 }
 
 .project-index-header {
@@ -51,7 +53,7 @@
   position: relative;
   background-color: #E8E8E8;
   width: 100%;
-  height: 3px;
+  height: 3.5px;
   margin-bottom: 18px;
 }
 
@@ -60,7 +62,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 3px;
+  height: 3.5px;
 }
 
 .project-pledge-total {

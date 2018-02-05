@@ -15,7 +15,7 @@ const ProjectIndexItem = ({ project }) => (
         <Link className="project-index-header" to={`projects/${project.id}`}>
           <h1>{project.title}</h1>
         </Link>
-        <p>by {project.author}</p>
+        <p className="project-author">by {project.author}</p>
       </div>
       <div className="project-index-info">
         <div className="project-pledge-bar">
