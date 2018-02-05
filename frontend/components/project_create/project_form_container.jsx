@@ -4,9 +4,9 @@ import { createProject } from '../../actions/project_actions';
 import ProjectForm from './project_form';
 
 const mapStateToProps = (state, ownProps) => {
-
   return ({
-    project: {}
+    project: {},
+    user: state.session.currentUser
   });
 };
 

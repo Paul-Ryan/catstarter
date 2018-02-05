@@ -26,7 +26,6 @@ class SessionForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const user = this.state;
-    console.log("process form ", this.props.processForm);
     this.props.processForm({user});
     this.setState({username: "", email: "", password: ""});
   }
@@ -100,7 +99,7 @@ class SessionForm extends React.Component {
     <section className="session">
       <h1 className="session-header">Log in</h1>
       {this.renderErrors()}
-      <form className="session-form"onSubmit={this.handleSubmit}>
+      <form className="session-form" onSubmit={this.handleSubmit}>
         <label>
           <input
             type="text"

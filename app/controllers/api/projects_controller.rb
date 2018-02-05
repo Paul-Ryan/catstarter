@@ -60,11 +60,3 @@ class Api::ProjectsController < ApplicationController
     )
   end
 end
-
-
-# api_projects GET    /api/projects(.:format)     api/projects#index {:format=>:json}
-#              POST   /api/projects(.:format)     api/projects#create {:format=>:json}
-#  api_project GET    /api/projects/:id(.:format) api/projects#show {:format=>:json}
-#              PATCH  /api/projects/:id(.:format) api/projects#update {:format=>:json}
-#              PUT    /api/projects/:id(.:format) api/projects#update {:format=>:json}
-#              DELETE /api/projects/:id(.:format) api/projects#destroy {:format=>:json}

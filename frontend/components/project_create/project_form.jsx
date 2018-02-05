@@ -5,6 +5,7 @@ class ProjectForm extends React.Component {
     super(props);
 
     this.state = {
+      author_id: props.user.id,
       title: "",
       image_url: "",
       blurb: "",
@@ -12,6 +13,8 @@ class ProjectForm extends React.Component {
       funding_duration: "",
       funding_goal: 0
     };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
@@ -20,9 +23,24 @@ class ProjectForm extends React.Component {
     });
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log("state: ", this.state);
+    this.props.createProject(this.state);
+    this.setState({
+      author_id: this.props.user.id,
+      title: "",
+      image_url: "",
+      blurb: "",
+      description: "",
+      due_date: "",
+      funding_goal: 0
+    });
+  }
+
   render () {
     return (
-      <form>
+      <form className="project-form" onSubmit={this.handleSubmit}>
         <label>Title
           <input
             type="text"
@@ -54,8 +72,8 @@ class ProjectForm extends React.Component {
         <label>Funding duration
           <input
             type="date"
-            value={this.state.funding_duration}
-            onChange={this.update('funding_duration')} />
+            value={this.state.due_date}
+            onChange={this.update('due_date')} />
         </label>
 
         <label>Funding goal
@@ -64,6 +82,8 @@ class ProjectForm extends React.Component {
             value={this.state.funding_goal}
             onChange={this.update('funding_goal')} />
         </label>
+
+        <input type="submit" className="btn btn-submit" value="Create project!" />
       </form>
     );
   }

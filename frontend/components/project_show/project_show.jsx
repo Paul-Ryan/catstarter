@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 class ProjectShow extends React.Component {
   constructor(props) {
     super(props);
-    // let currentProject = this.props.projects;
   }
 
   componentDidMount() {
