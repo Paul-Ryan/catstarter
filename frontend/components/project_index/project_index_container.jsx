@@ -4,9 +4,13 @@ import ProjectIndex from './project_index';
 
 import { fetchProjects, fetchProject } from '../../actions/project_actions';
 
-const mapStateToProps = (state, ownProps) => ({
-  projects: Object.values(state.entities.projects)
-});
+const mapStateToProps = (state, ownProps) => {
+
+  console.log("state ", state);
+  return ({
+    projects: Object.values(state.entities.projects)
+  });
+};
 
 const mapDispatchToProps = (dispatch, ownProps) => {
 

@@ -11,8 +11,8 @@ class UserInfo extends React.Component {
   }
 
   render() {
-    const { projects } = this.props;
-    console.log(projects);
+    // const { projects } = this.props;
+    // console.log(projects);
 
     return (
       <div>

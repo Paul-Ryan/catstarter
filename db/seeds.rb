@@ -17,7 +17,7 @@ user5 = User.create(username: 'Bart', email: 'bart@cat.com', password: 'dinosaur
 user6 = User.create(username: 'Bonny', email: 'bonny@cat.com', password: 'dinosaur4')
 
 project1 = Project.create(
-  title: "My great gradfather's cast iron pan",
+  title: "My great-great-grandfather's cast iron pan",
   blurb: "These pans are made using secret family iron smithing techniques passed down through generations",
   description: "Lorem ipsum dolor amet shoreditch viral vaporware beard williamsburg. Tumblr artisan sartorial, kale chips knausgaard irony selvage cloud bread tumeric ennui 3 wolf moon lumbersexual aesthetic godard. Organic pour-over bushwick everyday carry sustainable aesthetic. Food truck bitters master cleanse typewriter offal photo booth man bun selfies. Chicharrones pok pok biodiesel gluten-free cred succulents portland.
 
@@ -41,7 +41,7 @@ Direct trade meggings godard heirloom. Tousled distillery narwhal, lo-fi pok pok
 )
 
 project3 = Project.create(
-  title: "Notebooks made of recycled other notebooks",
+  title: "Notebooks made of recycled worse notebooks",
   blurb: "College-ruled notebooks for writing your thoughts, feelings, hopes, dreams or whatever",
   description: "Street art austin selfies neutra portland asymmetrical fashion axe kinfolk fingerstache. Flannel deep v trust fund enamel pin brunch meh woke try-hard biodiesel letterpress. Williamsburg skateboard gastropub butcher chicharrones activated charcoal. Umami post-ironic af, poutine microdosing small batch master cleanse.
 
@@ -68,7 +68,7 @@ Quinoa crucifix activated charcoal before they sold out. Viral hot chicken direc
 
 project5 = Project.create(
   title: "Boat Zone: a strategy game where you play the boat",
-  blurb: "Upgrade your cannons, sails, and parrots in this real-time fantasy epic",
+  blurb: "Upgrade your and parrots and shiver your timbers in this real-time fantasy epic",
   description: "Blue bottle paleo sartorial polaroid plaid austin. Mlkshk ramps cold-pressed live-edge, stumptown gentrify bespoke plaid actually green juice tofu. IPhone direct trade street art put a bird on it tumblr. Snackwave skateboard craft beer organic.
 
 Lo-fi edison bulb farm-to-table, keytar tumblr photo booth poke williamsburg seitan cloud bread plaid occupy. DIY irony lo-fi kombucha woke. Iceland artisan whatever, humblebrag pitchfork wayfarers tilde vinyl godard pork belly man braid kickstarter jean shorts succulents. Meditation unicorn small batch, jean shorts literally trust fund green juice hot chicken. Paleo iceland tattooed celiac whatever gluten-free drinking vinegar vape listicle. Sriracha 8-bit post-ironic normcore kinfolk mustache truffaut organic pop-up.

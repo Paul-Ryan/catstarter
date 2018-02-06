@@ -13,7 +13,7 @@ class ProjectShow extends React.Component {
   projectHeader() {
     return (
       <div className="show-project-header row">
-        <p className="col col-2">By {this.props.project.authorId}</p>
+        <p className="col col-2">By {this.props.project.author.username}</p>
         <div className="col col-1"></div>
         <header className="col col-8">
           <h1>{this.props.project.title}</h1>
@@ -50,17 +50,21 @@ class ProjectShow extends React.Component {
   }
 
   render() {
-    return (
-      <section className="show-project">
-        <div className="show-project-header row">
-          <header className="col col-8">
-            {this.projectHeader()}
-          </header>
-          {this.projectStats()}
-          {this.projectAbout()}
-        </div>
-      </section>
-    );
+    if (this.props.project.author) {
+      return (
+        <section className="show-project">
+          <div className="show-project-header row">
+            <header className="col col-8">
+              {this.projectHeader()}
+            </header>
+            {this.projectStats()}
+            {this.projectAbout()}
+          </div>
+        </section>
+      );
+    } else {
+      return null;
+    }
   }
 }
 
