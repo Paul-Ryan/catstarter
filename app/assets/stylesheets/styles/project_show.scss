@@ -49,6 +49,7 @@
 .show-image {
   flex-grow: 2;
   max-width: 620px;
+  max-height: 350px; 
   height: auto;
 }
 
@@ -58,7 +59,7 @@
   line-height: 48px;
   text-align: center;
   width: 100%;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
 .show-project-content {

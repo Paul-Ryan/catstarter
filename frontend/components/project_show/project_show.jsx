@@ -13,7 +13,7 @@ class ProjectShow extends React.Component {
   projectHeader() {
     return (
       <div className="show-project-header row">
-        <p className="col col-2">By {this.props.project.author_id}</p>
+        <p className="col col-2">By {this.props.project.authorId}</p>
         <div className="col col-1"></div>
         <header className="col col-8">
           <h1>{this.props.project.title}</h1>
@@ -26,13 +26,13 @@ class ProjectShow extends React.Component {
   projectStats() {
     return (
       <div className="show-project-stats row">
-        <img className="show-image col col-8" src={this.props.project.image_url} />
+        <img className="show-image col col-8" src={this.props.project.imageUrl} />
         <ul className="project-stats col col-4">
-          <li><span className="green-stat">$3,650</span><br />pledged of ${this.props.project.funding_goal}</li>
+          <li><span className="green-stat">$3,650</span><br />pledged of ${this.props.project.fundingGoal}</li>
           <li><span className="gray-stat">181</span><br />backers</li>
           <li><span className="gray-stat">14</span><br />days to go</li>
           <Link className="btn btn-submit back-this-project" to="/">Back this project</Link>
-          <li>This project will only be funded if it reaches its goal by {this.props.project.due_date}</li>
+          <li>This project will only be funded if it reaches its goal by {this.props.project.dueDate}</li>
         </ul>
       </div>
     );

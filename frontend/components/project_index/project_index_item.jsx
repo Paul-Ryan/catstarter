@@ -9,13 +9,15 @@ const ProjectIndexItem = ({ project }) => (
   <li className="project-index-item col col-4">
     <div className="grayBorder">
       <Link to={`projects/${project.id}`}>
-        <img className="project-index-image" src={project.image_url} />
+        <div className="project-index-image-box">
+          <img className="project-index-image" src={project.imageUrl} />
+        </div>
       </Link>
       <div className="project-index-title">
         <Link className="project-index-header" to={`projects/${project.id}`}>
           <h1>{project.title}</h1>
         </Link>
-        <p className="project-author">by {project.author}</p>
+        <p className="project-author">by {project.author.username}</p>
       </div>
       <div className="project-index-info">
         <div className="project-pledge-bar">

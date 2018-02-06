@@ -11,7 +11,7 @@ class ProjectForm extends React.Component {
       image_url: "",
       blurb: "",
       description: "",
-      funding_duration: "",
+      due_date: new Date(),
       funding_goal: 0,
       fireRedirect: false
     };
@@ -37,7 +37,7 @@ class ProjectForm extends React.Component {
       due_date: "",
       funding_goal: 0
     });
-    this.setState({ fireRedirect: true })
+    this.setState({ fireRedirect: true });
   }
 
   render () {
@@ -82,7 +82,7 @@ class ProjectForm extends React.Component {
               onChange={this.update('description')} />
           </label>
 
-          <label>Funding duration
+          <label>Due date
             <input
               type="date"
               className="form-due-date"

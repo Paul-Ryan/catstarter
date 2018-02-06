@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default ({ currentUser, logout }) => {
   const display = currentUser ? (
     <div className="current-user">
-      <h2>Welcome, {currentUser.username}!</h2>
+      <Link className="user-info-link" to={`/users/${currentUser.id}`}><h2>Welcome, {currentUser.username}!</h2></Link>
       <button className="header-btn" onClick={logout}>Logout</button>
     </div>
   ) : (
@@ -14,7 +14,6 @@ export default ({ currentUser, logout }) => {
   );
 
   return (
-
     <header className="global-nav">
       <section className="global-nav-left">
         <Link className="header-btn" to="/projects">Explore</Link>
