@@ -1,3 +1,55 @@
 // Place all the styles related to the api/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.user-info {
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto 0;
+  background: white;
+  border-radius: 3px;
+}
+
+.user-info > h1 {
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid lightgray;
+}
+
+.user-item-list {
+
+}
+
+.user-item-list li {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+  padding: 3px 3px 3px 0;
+  margin-bottom: 8px;
+}
+
+.user-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.user-info .btn {
+  line-height: 42px;
+  width: 90px;
+  padding: 0;
+  border-radius: 3px;
+}
+
+.user-info .btn-submit {
+  margin-right: 8px;
+}
+
+.user-info .logout {
+  margin: 18px 0 3px;
+  border-radius: 3px;
+  padding-top: 8px;
+  border-top: 1px solid lightgray;
+}

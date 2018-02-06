@@ -12,18 +12,22 @@ class UserInfo extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="user-info">
         <h1>Your projects</h1>
-          <ul className="row">
+          <ul className="user-item-list">
             {
               this.props.projects.map(project => (
                 <UserProjectItem
                   project={project}
                   key={project.id}
-                  deleteProject = {this.props.deleteProject} />
+                  deleteProject = {this.props.deleteProject}
+                  />
               ))
             }
           </ul>
+          <div className="logout">
+            <button className="btn btn-demo" onClick={this.props.logout}>Log out</button>
+          </div>
       </div>
     );
   }
