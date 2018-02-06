@@ -17,6 +17,7 @@ import ProjectIndexContainer from './project_index/project_index_container';
 import ProjectShowContainer from './project_show/project_show_container';
 import ProjectFormContainer from './project_create/project_form_container';
 import UserInfoContainer from './user_info/user_info_container';
+import ProjectEditContainer from './project_edit/project_edit_container';
 
 const App = () => (
   <div>
@@ -28,6 +29,7 @@ const App = () => (
       <ProtectedRoute exact path="/create" component={ProjectFormContainer} />
       <Route path="/projects/:projectId" component={ProjectShowContainer} />
       <ProtectedRoute path="/users/:userId" component={UserInfoContainer} />
+      <ProtectedRoute path="/projects/:projectId" component={ProjectEditContainer} />
     </Switch>
   </div>
 );

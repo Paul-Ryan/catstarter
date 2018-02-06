@@ -11,14 +11,18 @@ class UserInfo extends React.Component {
   }
 
   render() {
-    // const { projects } = this.props;
-    // console.log(projects);
-
     return (
       <div>
         <h1>Your projects</h1>
           <ul className="row">
-
+            {
+              this.props.projects.map(project => (
+                <UserProjectItem
+                  project={project}
+                  key={project.id}
+                  deleteProject = {this.props.deleteProject} />
+              ))
+            }
           </ul>
       </div>
     );
@@ -26,12 +30,3 @@ class UserInfo extends React.Component {
 }
 
 export default UserInfo;
-
-
-// {
-//   projects.map(project => (
-//     <UserProjectItem
-//       project={project}
-//       key={project.id} />
-//   ))
-// }

@@ -1,20 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import UserInfo from './user_info.jsx';
-import { fetchProjects, fetchProject } from '../../actions/project_actions';
-
+import { fetchProjects, fetchProject, deleteProject } from '../../actions/project_actions';
+import { selectUserProjects } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log("state", state);
-
   return ({
-    projects: Object.values(state.entities.projects)
+    projects: selectUserProjects(state.entities.projects, state.session.currentUser.id)
   });
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return ({
-    fetchProjects: () => dispatch(fetchProjects())
+    fetchProjects: () => dispatch(fetchProjects()),
+    deleteProject: id => dispatch(deleteProject(id))
   });
 };
 
