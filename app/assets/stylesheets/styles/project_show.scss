@@ -8,6 +8,7 @@
 .show-project h1 {
   font-size: 42px;
   font-weight: 400;
+  margin-bottom: 4px;
 }
 
 .show-project h2 {
@@ -49,7 +50,7 @@
 .show-image {
   flex-grow: 2;
   max-width: 620px;
-  max-height: 350px; 
+  max-height: 350px;
   height: auto;
 }
 
@@ -67,8 +68,13 @@
   margin-left: -20px;
   margin: 50px -20px -40px;
   padding: 20px 20px 50px;
-
   height: 100%;
   background: white;
   border-top: 1px solid #DCDEDD;
+  line-height: 1.6;
+}
+
+.show-project-content h3 {
+  font-size: 30px;
+  margin: 8px 0 3px;
 }

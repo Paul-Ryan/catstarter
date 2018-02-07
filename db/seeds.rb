@@ -23,7 +23,7 @@ project1 = Project.create(
 
 Semiotics 3 wolf moon adaptogen you probably haven't heard of them, readymade yuccie cliche ethical PBR&B authentic. Vinyl brunch keffiyeh kickstarter snackwave, scenester deep v woke four loko neutra gochujang disrupt craft beer beard coloring book. Adaptogen lyft mlkshk food truck. Chartreuse locavore succulents banjo irony XOXO vegan small batch retro health goth. Hashtag venmo glossier, bespoke leggings sriracha pok pok tilde artisan cold-pressed kombucha 90's cloud bread. Kale chips vice locavore church-key, flannel before they sold out single-origin coffee 8-bit. Before they sold out four loko subway tile marfa offal forage pabst.",
   author_id: user1.id,
-  due_date: Date.today + 30,
+  due_date: Date.today + 14,
   funding_goal: 2000,
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897262/food.jpg"
 )
@@ -35,7 +35,7 @@ project2 = Project.create(
 
 Direct trade meggings godard heirloom. Tousled distillery narwhal, lo-fi pok pok microdosing tattooed post-ironic tbh. 90's forage thundercats fixie +1 readymade hoodie post-ironic swag vexillologist seitan bitters hot chicken gastropub. Swag shabby chic cliche kitsch fashion axe paleo succulents fingerstache tofu locavore vinyl unicorn polaroid artisan fanny pack. Listicle umami air plant vape edison bulb helvetica sartorial sriracha raclette. Truffaut vinyl knausgaard post-ironic authentic unicorn glossier raw denim you probably haven't heard of them leggings thundercats everyday carry yr. Whatever food truck helvetica keffiyeh salvia jean shorts selfies activated charcoal.",
   author_id: user2.id,
-  due_date: Date.today + 30,
+  due_date: Date.today + 23,
   funding_goal: 4000,
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897262/cool-glasses.jpg"
 )
@@ -47,7 +47,7 @@ project3 = Project.create(
 
 Shaman scenester synth gochujang. Edison bulb stumptown tumeric distillery drinking vinegar health goth meggings iPhone humblebrag master cleanse artisan. Slow-carb tattooed tousled direct trade fam selvage food truck. Seitan vaporware pour-over, succulents trust fund scenester VHS keffiyeh. Hoodie neutra fingerstache, marfa coloring book literally post-ironic tofu vaporware semiotics portland thundercats bitters health goth. Disrupt yr woke, before they sold out mumblecore prism fanny pack ramps.",
   author_id: user3.id,
-  due_date: Date.today + 30,
+  due_date: Date.today + 8,
   funding_goal: 300,
   image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897259/thought-catalog.jpg"
 )
@@ -61,7 +61,7 @@ Authentic organic iceland mlkshk, microdosing tilde butcher keffiyeh marfa fanny
 
 Quinoa crucifix activated charcoal before they sold out. Viral hot chicken direct trade pop-up enamel pin ugh. Craft beer typewriter tattooed iPhone taxidermy blog sriracha vexillologist man braid leggings chia chambray wolf banjo. Single-origin coffee paleo bushwick schlitz deep v pabst readymade hoodie cold-pressed direct trade bitters kickstarter raw denim woke.",
   author_id: user1.id,
-  due_date: Date.today + 30,
+  due_date: Date.today + 45,
   funding_goal: 1000000,
   image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897261/yellow-bowl.jpg"
 )
@@ -75,7 +75,7 @@ Lo-fi edison bulb farm-to-table, keytar tumblr photo booth poke williamsburg sei
 
 Direct trade meh yuccie quinoa kickstarter intelligentsia whatever leggings four dollar toast fam waistcoat fixie ethical. Cold-pressed woke tumblr echo park disrupt wolf poutine mumblecore yr. Kickstarter celiac cornhole deep v chartreuse drinking vinegar edison bulb af next level. Blue bottle chambray pour-over beard, hot chicken cardigan fashion axe.",
   author_id: user4.id,
-  due_date: Date.today + 30,
+  due_date: Date.today + 12,
   funding_goal: 2500,
   image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897259/fantasy-game.jpg"
 )
@@ -89,7 +89,7 @@ Artisan tumblr fam poutine umami raw denim pok pok tattooed narwhal swag. Post-i
 
 Church-key pabst sriracha jean shorts before they sold out vice cold-pressed. Chillwave whatever humblebrag meditation art party, ennui hell of tbh af four dollar toast kogi. Trust fund enamel pin dreamcatcher woke celiac blog. Cray synth butcher artisan single-origin coffee godard. Crucifix next level enamel pin umami selvage neutra gentrify whatever vexillologist put a bird on it.",
   author_id: user3.id,
-  due_date: Date.today + 30,
+  due_date: Date.today + 19,
   funding_goal: 5,
   image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897255/coffee-cup.jpg"
 )

@@ -8,7 +8,6 @@ const mapStateToProps = (state, { match }) => {
   const projectId = parseInt(match.params.projectId);
   const project = selectProject(state.entities, match.params.projectId);
 
-  console.log("state", state);
   return {
       projectId,
       project
