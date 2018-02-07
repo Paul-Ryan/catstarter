@@ -23,7 +23,8 @@ class ProjectEditForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.updateProject(this.state);
+    console.warn(this.state);
+    this.props.updateProject(this.state).then(() => this.props.history.push(`/projects/${this.state.id}`));
     this.setState({
       author_id: this.props.user.id,
       title: "",
@@ -42,6 +43,8 @@ class ProjectEditForm extends React.Component {
     if (!this.state) {
       return null;
     }
+
+    console.log("state", this.state);
 
     return (
       <div className="form">
@@ -62,7 +65,7 @@ class ProjectEditForm extends React.Component {
           <label>Image url
             <input
               type="text"
-              value={this.state.image_url}
+              value={this.state.imageUrl}
               onChange={this.update('image_url')} />
           </label>
 

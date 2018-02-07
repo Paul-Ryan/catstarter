@@ -13,7 +13,6 @@ class ProjectForm extends React.Component {
       description: "",
       due_date: new Date(),
       funding_goal: 0,
-      fireRedirect: false
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,7 +26,7 @@ class ProjectForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.createProject(this.state);
+    this.props.createProject(this.state).then((servProj) => this.props.history.push(`/projects/${servProj.project.id}`));
     this.setState({
       author_id: this.props.user.id,
       title: "",
@@ -37,12 +36,10 @@ class ProjectForm extends React.Component {
       due_date: "",
       funding_goal: 0
     });
-    this.setState({ fireRedirect: true });
   }
 
   render () {
     const { from } = this.props.location.state || '/';
-    const { fireRedirect } = this.state;
 
     return (
       <div className="form">
@@ -99,9 +96,6 @@ class ProjectForm extends React.Component {
 
           <input type="submit" className="btn btn-submit" value="Create project!" />
         </form>
-        {fireRedirect && (
-          <Redirect to={from || '/projects'}/>
-        )}
       </div>
     );
   }
