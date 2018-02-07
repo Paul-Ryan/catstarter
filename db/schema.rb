@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180202185957) do
+ActiveRecord::Schema.define(version: 20180207053800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pledges", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "project_id", null: false
+    t.integer "pledge_amount", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_pledges_on_project_id"
+    t.index ["user_id"], name: "index_pledges_on_user_id"
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "title", null: false
@@ -28,6 +38,16 @@ ActiveRecord::Schema.define(version: 20180202185957) do
     t.index ["title"], name: "index_projects_on_title", unique: true
   end
 
+  create_table "rewards", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.string "title", null: false
+    t.text "description", null: false
+    t.integer "reward_minimum_amount", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_rewards_on_project_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
     t.string "password_digest", null: false
@@ -40,5 +60,8 @@ ActiveRecord::Schema.define(version: 20180202185957) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "pledges", "projects", on_delete: :cascade
+  add_foreign_key "pledges", "users", on_delete: :cascade
   add_foreign_key "projects", "users", column: "author_id", on_delete: :cascade
+  add_foreign_key "rewards", "projects", on_delete: :cascade
 end
