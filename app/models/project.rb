@@ -23,6 +23,9 @@ class Project < ApplicationRecord
     foreign_key: :author_id,
     class_name: :User
 
+  has_many :rewards
+  has_many :pledges
+
   # def current_funding()
   #
   # end

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import React from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
