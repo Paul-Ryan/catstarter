@@ -61,6 +61,7 @@ class ProjectShow extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     if (this.props.project.author) {
       return (
         <section className="show-project">

@@ -12,9 +12,9 @@ const receiveProjects = projects => ({
   projects
 });
 
-const receiveProject = project => ({
+const receiveProject = payload => ({
   type: RECEIVE_PROJECT,
-  project
+  payload
 });
 
 const removeProject = (id) => ({

@@ -40,6 +40,7 @@ class ProjectForm extends React.Component {
     });
   }
 
+
   render () {
     const { from } = this.props.location.state || '/';
 
