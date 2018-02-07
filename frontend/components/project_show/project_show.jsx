@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import RewardsContainer from './rewards_container';
 
 class ProjectShow extends React.Component {
   constructor(props) {
@@ -51,17 +52,14 @@ class ProjectShow extends React.Component {
 
   projectAbout() {
     return (
-      <div className="show-project-content row">
-        <div className="col col-8">
-          <h3>About</h3>
-          <p>{this.props.project.description}</p>
-        </div>
+      <div className="col col-8">
+        <h3>About</h3>
+        <p>{this.props.project.description}</p>
       </div>
     );
   }
 
   render() {
-    console.log(this.props);
     if (this.props.project.author) {
       return (
         <section className="show-project">
@@ -70,7 +68,10 @@ class ProjectShow extends React.Component {
               {this.projectHeader()}
             </header>
             {this.projectStats()}
-            {this.projectAbout()}
+            <div className="show-project-content row">
+              {this.projectAbout()}
+              <RewardsContainer />
+            </div>
           </div>
         </section>
       );
