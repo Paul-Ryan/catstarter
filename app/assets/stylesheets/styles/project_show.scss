@@ -64,6 +64,7 @@
 }
 
 .show-project-content {
+  display: flex;
   margin-top: 40px;
   margin-left: -20px;
   margin: 50px -20px -40px;
@@ -72,6 +73,15 @@
   background: white;
   border-top: 1px solid #DCDEDD;
   line-height: 1.6;
+}
+
+.show-project-content .col-8 {
+  flex-grow: 2;
+}
+
+.show-project-content .col-4 {
+  flex-grow: 1;
+  min-width: 300px; 
 }
 
 .show-project-content h3 {
