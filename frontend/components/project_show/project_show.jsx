@@ -5,6 +5,10 @@ import RewardsContainer from './rewards_container';
 class ProjectShow extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      pledgeOpen: false,
+      pledgeAmount: 0
+    };
   }
 
   componentDidMount() {
@@ -23,8 +27,6 @@ class ProjectShow extends React.Component {
     );
   }
 
-  
-
   projectHeader() {
     return (
       <div className="show-project-header row">
@@ -37,6 +39,24 @@ class ProjectShow extends React.Component {
     );
   }
 
+  openPledgeClick() {
+    this.setState({pledgeOpen: true});
+  }
+
+  closePledgeClick() {
+    this.setState({pledgeOpen: false});
+  }
+
+  update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
+  }
+
+  handlePledge() {
+    this.props.createPledge({pledge_amount: this.state.pledgeAmount, project_id: this.props.projectId});
+  }
+
   projectStats() {
     return (
       <div className="show-project-stats row">
@@ -45,7 +65,16 @@ class ProjectShow extends React.Component {
           <li><span className="green-stat">$3,650</span><br />pledged of ${this.props.project.fundingGoal}</li>
           <li><span className="gray-stat">181</span><br />backers</li>
           <li><span className="gray-stat">{this.daysToGo()}</span><br />days to go</li>
-          <Link className="btn btn-submit back-this-project" to="/">Back this project</Link>
+
+          { this.state.pledgeOpen
+            ? <div>
+                <input type="text" onChange={this.update("pledgeAmount")}></input>
+                <button className="btn btn-submit back-this-project" onClick={() => this.handlePledge()}>Make your pledge</button>
+                <button className="btn btn-submit back-this-project" onClick={() => this.closePledgeClick()}>Close pledge field</button>
+              </div>
+            : <button className="btn btn-submit back-this-project" onClick={() => this.openPledgeClick()}>Back this project</button>
+          }
+
           <li>This project will only be funded if it reaches its goal by {this.props.project.dueDate}</li>
         </ul>
       </div>

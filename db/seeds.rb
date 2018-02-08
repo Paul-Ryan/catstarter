@@ -232,3 +232,9 @@ reward7 = Reward.create(
   description: "demo reward 7 description",
   reward_minimum_amount: 150
 )
+
+pledge1 = Pledge.create(
+  project_id: project1.id,
+  user_id: user1.id,
+  pledge_amount: 10
+)

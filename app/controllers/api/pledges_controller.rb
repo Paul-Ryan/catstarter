@@ -2,6 +2,7 @@ class Api::PledgesController < ApplicationController
   def create
     @pledge = Pledge.new(pledge_params)
     @pledge.project_id = params[:project_id]
+    @pledge.user_id = current_user.id
 
     if @pledge.save
       render 'api/pledges/show'
@@ -20,6 +21,6 @@ class Api::PledgesController < ApplicationController
   private
 
   def pledge_params
-    params.require(:pledge).permit(:user_id, :project_id, :pledge_amount)
+    params.require(:pledge).permit(:pledge_amount)
   end
 end

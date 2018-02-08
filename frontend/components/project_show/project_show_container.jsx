@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import ProjectShow from './project_show';
 import { fetchProject } from '../../actions/project_actions';
 import { selectProject } from '../../reducers/selectors';
+import { createPledge } from '../../actions/pledge_actions';
 
 const mapStateToProps = (state, { match }) => {
   const projectId = parseInt(match.params.projectId);
@@ -15,7 +16,8 @@ const mapStateToProps = (state, { match }) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return ({
-    fetchProject: id => dispatch(fetchProject(id))
+    fetchProject: id => dispatch(fetchProject(id)),
+    createPledge: pledge => dispatch(createPledge(pledge))
   });
 };
 
