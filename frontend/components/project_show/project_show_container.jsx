@@ -9,7 +9,7 @@ const mapStateToProps = (state, { match }) => {
   const project = selectProject(state.entities, match.params.projectId);
   return {
       projectId,
-      project,
+      project
   };
 };
 

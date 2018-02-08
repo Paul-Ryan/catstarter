@@ -10,7 +10,7 @@ class Rewards extends React.Component {
   render() {
     return(
       <div className="col col-4">
-        <h1>Rewards</h1>
+        <h3>Rewards</h3>
         <ul className="reward-list">
         {
           Object.values(this.props.rewards).map(reward => (
@@ -21,6 +21,7 @@ class Rewards extends React.Component {
           ))
         }
         </ul>
+
       </div>
     );
   }

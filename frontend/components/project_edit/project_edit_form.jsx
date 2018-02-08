@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import RewardFormContainer from './reward_form_container';
 
 class ProjectEditForm extends React.Component {
   constructor(props) {
@@ -43,8 +44,6 @@ class ProjectEditForm extends React.Component {
     if (!this.state) {
       return null;
     }
-
-    console.log("state", this.state);
 
     return (
       <div className="form">
@@ -101,6 +100,7 @@ class ProjectEditForm extends React.Component {
 
           <input type="submit" className="btn btn-submit" value="Update your project!" />
         </form>
+        <RewardFormContainer />
       </div>
     );
   }
