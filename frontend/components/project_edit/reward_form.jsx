@@ -10,7 +10,6 @@ class RewardForm extends React.Component {
       reward_minimum_amount: 0
       // need to set the current project as the project_id
     };
-
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -23,6 +22,7 @@ class RewardForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createReward(this.state);
+    console.log("you submitted", this.state);
     this.setState({
       title: "",
       description: "",
@@ -55,9 +55,9 @@ class RewardForm extends React.Component {
               value={this.state.reward_minimum_amount}
               onChange={this.update('reward_minimum_amount')} />
           </label>
+          <input type="submit" value="Add reward" />
         </form>
 
-        <input type="submit" value="Add reward" />
       </div>
     );
   }

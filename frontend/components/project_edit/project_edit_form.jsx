@@ -1,6 +1,8 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import RewardFormContainer from './reward_form_container';
+import { HashRouter } from 'react-router-dom';
+
 
 class ProjectEditForm extends React.Component {
   constructor(props) {
@@ -24,7 +26,6 @@ class ProjectEditForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.warn(this.state);
     this.props.updateProject(this.state).then(() => this.props.history.push(`/projects/${this.state.id}`));
     this.setState({
       author_id: this.props.user.id,
@@ -100,7 +101,7 @@ class ProjectEditForm extends React.Component {
 
           <input type="submit" className="btn btn-submit" value="Update your project!" />
         </form>
-        <RewardFormContainer />
+          <RewardFormContainer />
       </div>
     );
   }

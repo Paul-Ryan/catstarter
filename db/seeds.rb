@@ -16,6 +16,12 @@ user3 = User.create(username: 'Dana', email: 'dana@email.com', password: 'dinosa
 user4 = User.create(username: 'Brenna', email: 'brenna@email.com', password: 'dinosaur5')
 user5 = User.create(username: 'Bart', email: 'bart@cat.com', password: 'dinosaur3')
 user6 = User.create(username: 'Bonny', email: 'bonny@cat.com', password: 'dinosaur4')
+user7 = User.create(username: 'Dave', email: 'dave@email.com', password: 'password7')
+user8 = User.create(username: 'Sally', email: 'sally@email.com', password: 'dinosaur8')
+user9 = User.create(username: 'Jack', email: 'jack@email.com', password: 'dinosaur9')
+user10 = User.create(username: 'Elsa', email: 'elsa@email.com', password: 'dinosaur10')
+user11 = User.create(username: 'Rory', email: 'rory@cat.com', password: 'dinosaur11')
+user12 = User.create(username: 'Frankie', email: 'frankie@cat.com', password: 'dinosaur12')
 
 project1 = Project.create(
   title: "My great-great-grandfather's cast iron pan",
@@ -75,6 +81,106 @@ project6 = Project.create(
   due_date: Date.today + 19,
   funding_goal: 5,
   image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897255/coffee-cup.jpg"
+)
+
+project7 = Project.create(
+  title: "A big cat",
+  blurb: "This cat needs your funding",
+  description: "Prism drinking vinegar before they sold out etsy kinfolk banh mi trust fund biodiesel cliche man braid. Ethical coloring book tofu art party 90's listicle. Listicle cornhole drinking vinegar unicorn crucifix, salvia gochujang iPhone leggings. Bitters microdosing aesthetic kinfolk, man braid pickled yr taxidermy mlkshk viral meditation cold-pressed humblebrag prism. Gastropub gentrify ramps, synth semiotics YOLO tofu locavore unicorn squid pug. Kickstarter VHS plaid vice, keytar YOLO bushwick salvia pinterest sriracha retro selfies occupy pour-over jianbing. Semiotics scenester listicle iPhone four loko stumptown vexillologist ramps selfies lomo slow-carb air plant PBR&B franzen organic. Post-ironic paleo hexagon, sriracha DIY plaid 8-bit tilde. Brunch wolf dreamcatcher celiac seitan banjo poutine venmo food truck tousled try-hard chambray kale chips taiyaki chicharrones. Squid listicle readymade williamsburg cronut.",
+  author_id: user5.id,
+  due_date: Date.today + 2,
+  funding_goal: 500,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897255/cat.jpg"
+)
+
+project8 = Project.create(
+  title: "Really fast wheels",
+  blurb: "Special wheels for your car or your friends car--look cool and go fast",
+  description: "Godard brunch prism, sartorial quinoa flexitarian jean shorts green juice gochujang vegan +1. Actually bitters 8-bit distillery affogato meggings. Portland before they sold out bushwick, truffaut plaid umami kitsch polaroid skateboard kogi. Shoreditch you probably haven't heard of them roof party live-edge neutra chia mixtape meditation fashion axe stumptown brooklyn 90's helvetica coloring book. Lyft iPhone venmo heirloom, tofu sriracha master cleanse affogato pork belly direct trade organic sustainable banh mi. Raclette lumbersexual readymade literally, cred succulents tofu cardigan photo booth whatever +1 activated charcoal schlitz listicle tacos. Wolf food truck yuccie, drinking vinegar chia you probably haven't heard of them shaman edison bulb woke adaptogen truffaut green juice pork belly DIY fixie. Actually drinking vinegar before they sold out VHS artisan, portland banh mi cronut banjo small batch leggings yr wolf shoreditch. Disrupt neutra hella +1 bitters sartorial. Thundercats kale chips swag butcher. Pitchfork freegan trust fund blue bottle jean shorts, man bun poutine plaid messenger bag cardigan distillery. Fingerstache tbh portland try-hard mlkshk drinking vinegar.",
+  author_id: user6.id,
+  due_date: Date.today + 40,
+  funding_goal: 8000,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897260/wheels.jpg"
+)
+
+project9 = Project.create(
+  title: "Old fashioned band",
+  blurb: "I've already got a vintage microphone, so we're halfway there",
+  description: "Forage pickled jean shorts ethical pour-over tumeric af kickstarter chia try-hard. Cred vexillologist VHS pour-over chicharrones vape. Master cleanse VHS vinyl, cliche helvetica PBR&B kinfolk fingerstache kitsch. Art party cloud bread meggings post-ironic plaid vexillologist. Lo-fi man bun meditation art party subway tile chillwave franzen stumptown butcher gluten-free retro bicycle rights skateboard. Shoreditch seitan wayfarers chicharrones post-ironic chartreuse flexitarian tofu mlkshk. Cliche taxidermy sustainable, master cleanse adaptogen thundercats green juice brunch snackwave hot chicken kombucha locavore small batch tofu.",
+  author_id: user9.id,
+  due_date: Date.today + 19,
+  funding_goal: 5000,
+  image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897254/microphone.jpg"
+)
+
+project10 = Project.create(
+  title: "Magic wood floorboards",
+  blurb: "Boards cut from a magic forest with elves and stuff",
+  description: "Williamsburg normcore readymade tofu, mumblecore brooklyn fashion axe occupy swag adaptogen hell of paleo poke. Pickled lumbersexual hella tilde, raclette hashtag selvage. Hoodie twee neutra, vegan ennui schlitz cornhole pour-over lumbersexual pinterest chia. Seitan venmo hell of migas godard salvia. Marfa palo santo sriracha, fixie ethical yuccie artisan sustainable tumblr mustache echo park cray snackwave cold-pressed. Activated charcoal austin VHS, lumbersexual letterpress occupy wolf +1 messenger bag etsy chicharrones tacos. Pok pok lomo vape live-edge raw denim, meggings 3 wolf moon organic intelligentsia bicycle rights twee craft beer adaptogen. Migas kitsch direct trade cardigan. Put a bird on it enamel pin chartreuse before they sold out salvia. Cray fixie cornhole freegan. Ramps lumbersexual sartorial chambray selvage scenester, cred occupy butcher master cleanse post-ironic.",
+  author_id: user11.id,
+  due_date: Date.today + 60,
+  funding_goal: 1234,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897262/floorboards.jpg"
+)
+
+project11 = Project.create(
+  title: "Yes: a book of poems about being cool",
+  blurb: "cigarettes, burbon, cats",
+  description: "",
+  author_id: user4.id,
+  due_date: Date.today + 22,
+  funding_goal: 100000,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897261/yes.jpg"
+)
+
+project12 = Project.create(
+  title: "Add salad to the menu at the restaurant that seats people at benches",
+  blurb: "This will be a really good salad, but only if you fund it",
+  description: "Lorem ipsum dolor amet mustache waistcoat stumptown messenger bag ramps portland. Biodiesel coloring book portland listicle knausgaard. Truffaut keffiyeh listicle, mixtape franzen vexillologist cloud bread next level 3 wolf moon squid ugh freegan live-edge thundercats. Before they sold out pitchfork iPhone banh mi chia, pabst cornhole bicycle rights organic enamel pin mixtape truffaut try-hard dreamcatcher kombucha. Irony lomo cold-pressed, lo-fi edison bulb vaporware chambray selvage photo booth. Letterpress forage glossier master cleanse cliche fashion axe ugh authentic gluten-free cronut keffiyeh sustainable plaid snackwave. Jean shorts kickstarter edison bulb gochujang poutine chillwave. Street art heirloom kogi banh mi hammock. Actually neutra venmo, edison bulb raclette paleo pabst 90's leggings. Austin poke truffaut typewriter small batch celiac.",
+  author_id: user10.id,
+  due_date: Date.today + 27,
+  funding_goal: 800,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897262/salad-lunch.jpg"
+)
+
+project13 = Project.create(
+  title: "Creative Campfire Pie Iron Cookbook",
+  blurb: "We're taking mountain pies, campfire pies, jaffles, and pudgie pies to a whole new level with our innovative pie iron cookbook!",
+  description: "",
+  author_id: user5.id,
+  due_date: Date.today + 4,
+  funding_goal: 10000,
+  image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897260/fire.jpg"
+)
+
+project14 = Project.create(
+  title: "Capt. Bart Brew Co. - A Progressive Fermentation Project",
+  blurb: "Cats brew too! We ALL like beer. Help us become one of the first notable breweries with a cat head brewer!",
+  description: "Readymade shaman XOXO umami franzen, lumbersexual austin crucifix YOLO. Vexillologist stumptown yuccie small batch kinfolk, gentrify lo-fi tumblr DIY subway tile banjo art party gluten-free organic artisan. Mixtape pop-up pinterest williamsburg health goth cred small batch kinfolk hot chicken bushwick. Enamel pin food truck man braid godard. Mustache blue bottle retro, crucifix vape skateboard swag leggings polaroid waistcoat. Distillery yuccie salvia plaid intelligentsia cliche meditation shabby chic church-key wayfarers hot chicken la croix. Portland meggings street art, PBR&B poutine heirloom kombucha etsy pabst succulents vape dreamcatcher blue bottle narwhal artisan.",
+  author_id: user8.id,
+  due_date: Date.today + 9,
+  funding_goal: 34000,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897258/taps.jpg"
+)
+
+project15 = Project.create(
+  title: "100 Wildlife Inspired Teas",
+  blurb: "I am creating 100 wildlife inspired teas, digitally printed from my illustrations of British mammals, birds and insects.",
+  description: "Deep v meggings put a bird on it, hoodie etsy fingerstache cardigan leggings knausgaard fixie. Meggings ugh tbh sartorial viral. Adaptogen quinoa schlitz everyday carry helvetica asymmetrical bushwick paleo man braid try-hard pabst stumptown man bun kinfolk. Ennui hot chicken aesthetic activated charcoal. Knausgaard ennui organic, squid heirloom brooklyn pabst sustainable cardigan forage deep v. Glossier mixtape cloud bread, prism vinyl kitsch pinterest viral meditation. Scenester fingerstache woke 3 wolf moon, banh mi tousled tacos before they sold out authentic drinking vinegar twee tumblr. Live-edge organic unicorn etsy banh mi direct trade blog activated charcoal XOXO chillwave pinterest cred yuccie echo park. Humblebrag swag iceland vaporware kickstarter master cleanse, aesthetic vinyl microdosing meggings 3 wolf moon plaid bitters single-origin coffee lomo. Ramps lo-fi locavore vice unicorn, tumblr venmo intelligentsia slow-carb single-origin coffee austin. Ennui banjo try-hard squid tote bag retro kinfolk gentrify banh mi hella everyday carry. Live-edge adaptogen green juice lomo ethical.",
+  author_id: user9.id,
+  due_date: Date.today + 13,
+  funding_goal: 10700,
+  image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897259/tea.jpg"
+)
+
+project16 = Project.create(
+  title: "The Best Coffee You've Ever Made... Now in a Pod",
+  blurb: "Incredible speciality coffee, packed into NespressoⓇ compatible pods within 7 days of roasting.",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user10.id,
+  due_date: Date.today + 15,
+  funding_goal: 1000,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897258/coffee-friends.jpg"
 )
 
 

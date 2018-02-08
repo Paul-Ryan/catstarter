@@ -15,8 +15,7 @@ class Api::RewardsController < ApplicationController
   # end
 
   def create
-    @reward = Reward.find_by(reward_params)
-    @reward.project_id = params[:project_id]
+    @reward = Reward.new(reward_params)
 
     if @reward.save
       render json: 'api/reward/show'

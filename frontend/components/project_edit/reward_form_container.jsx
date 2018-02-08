@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import RewardForm from './reward_form';
 import { createReward } from '../../actions/reward_actions';
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
+  console.log(ownProps);
   return ({
     currentUserId: state.session.currentUser.id
   });
