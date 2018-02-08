@@ -11,7 +11,7 @@
 #
 
 class Pledge < ApplicationRecord
-  validates :user_id, :project_id, :pledge, presence: true
+  validates :user_id, :project_id, :pledge_amount, presence: true
 
   belongs_to :user
   belongs_to :project

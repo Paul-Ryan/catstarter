@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import RewardForm2 from './reward_form';
+import RewardForm from './reward_form';
 
 class ProjectEditForm extends React.Component {
   constructor(props) {

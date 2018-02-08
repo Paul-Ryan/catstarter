@@ -24,3 +24,21 @@ export const deleteReward = id => dispatch => {
     .then(() => dispatch(removeReward(id))
   );
 };
+
+window.createReward = createReward;
+
+
+// {project_id: 122,
+// title: "demo Demo",
+// description: "demo reward 1 description",
+// reward_minimum_amount: 100}
+
+
+// $.ajax({
+//   url: `/api/projects/122/rewards`,
+//   method: 'POST',
+//   data: { reward: {project_id: 122,
+//   title: "demo Demo",
+//   description: "demo reward 1 description",
+//   reward_minimum_amount: 100} }
+// });

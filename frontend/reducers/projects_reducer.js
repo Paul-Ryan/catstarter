@@ -6,6 +6,8 @@ import {
   REMOVE_PROJECT
 } from '../actions/project_actions';
 
+import { RECEIVE_REWARD } from '../actions/reward_actions';
+
 const projectsReducer = (state = {}, action) => {
   Object.freeze(state);
   let newState;
@@ -19,6 +21,10 @@ const projectsReducer = (state = {}, action) => {
       newState = merge({}, state);
       delete newState[action.id];
       return newState;
+    case RECEIVE_REWARD:
+      newState = Object.assign({}, state);
+      newState[action.reward.project_id].rewards.push(action.reward.id);
+      return merge({}, state, newState);
     default:
       return state;
   }

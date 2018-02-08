@@ -1,10 +1,10 @@
 class Api::PledgesController < ApplicationController
   def create
-    @pledge = Pledge.find_by(reward_params)
+    @pledge = Pledge.new(pledge_params)
     @pledge.project_id = params[:project_id]
 
     if @pledge.save
-      render json: 'api/reward/show'
+      render 'api/pledges/show'
     else
       render json: @pledge.errors.full_messages, status: 422
     end
@@ -17,10 +17,9 @@ class Api::PledgesController < ApplicationController
     render json: @pledge
   end
 
-
   private
 
-  def reward_params
+  def pledge_params
     params.require(:pledge).permit(:user_id, :project_id, :pledge_amount)
   end
 end

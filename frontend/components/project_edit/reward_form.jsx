@@ -23,11 +23,11 @@ class RewardForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createReward(this.state);
-    console.log("you submitted", this.state);
     this.setState({
       title: "",
       description: "",
-      reward_minimum_amount: 0
+      reward_minimum_amount: 0,
+      project_id: this.props.projectId
     });
   }
 

@@ -23,6 +23,8 @@ class ProjectShow extends React.Component {
     );
   }
 
+  
+
   projectHeader() {
     return (
       <div className="show-project-header row">
