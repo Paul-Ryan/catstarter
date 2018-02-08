@@ -1,8 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import RewardFormContainer from './reward_form_container';
-import { HashRouter } from 'react-router-dom';
-
+import RewardForm2 from './reward_form';
 
 class ProjectEditForm extends React.Component {
   constructor(props) {
@@ -36,16 +34,12 @@ class ProjectEditForm extends React.Component {
       due_date: "",
       funding_goal: 0
     });
-    this.setState({ fireRedirect: true });
   }
 
   render () {
-    const { from } = this.props.location.state || '/';
-
     if (!this.state) {
       return null;
     }
-
     return (
       <div className="form">
         <h1>Update your project</h1>
@@ -101,7 +95,7 @@ class ProjectEditForm extends React.Component {
 
           <input type="submit" className="btn btn-submit" value="Update your project!" />
         </form>
-          <RewardFormContainer />
+          <RewardForm projectId={this.props.project.id} createReward={this.props.createReward}/>
       </div>
     );
   }

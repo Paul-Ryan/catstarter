@@ -7,9 +7,10 @@ class RewardForm extends React.Component {
     this.state = {
       title: "",
       description: "",
-      reward_minimum_amount: 0
-      // need to set the current project as the project_id
+      reward_minimum_amount: 0,
+      project_id: props.projectId
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
