@@ -5,6 +5,7 @@ import { fetchProject } from '../../actions/project_actions';
 import { selectProject } from '../../reducers/selectors';
 import { createPledge } from '../../actions/pledge_actions';
 
+
 const mapStateToProps = (state, { match }) => {
   const projectId = parseInt(match.params.projectId);
   const project = selectProject(state.entities, match.params.projectId);
