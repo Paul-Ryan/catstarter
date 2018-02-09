@@ -34,7 +34,7 @@ const percentGoal = (pledgeTotal, goal) => {
 
 To increase the DRYness of the code some similar forms were reused. The login and user sign up pages very similar components. The addition of an email field on the signup form is the main difference.
 
-(forms)
+![login][login]
 
 I was able to pass in a formType value that the forms advantage of in determining if the email field should appear.
 
@@ -67,4 +67,4 @@ emailField() {
 
 
 [fundingBar]:https://github.com/Paul-Ryan/catstarter/blob/master/app/assets/images/readme/funding_bar.png?raw=true  
-[login]:  
+[login]:https://github.com/Paul-Ryan/catstarter/blob/master/app/assets/images/readme/logins.png?raw=true  

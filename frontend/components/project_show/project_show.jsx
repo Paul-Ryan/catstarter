@@ -10,6 +10,8 @@ class ProjectShow extends React.Component {
       pledgeOpen: false,
       pledgeAmount: 0
     };
+
+
   }
 
   componentDidMount() {
@@ -61,7 +63,11 @@ class ProjectShow extends React.Component {
   }
 
   openPledgeClick() {
+    if (this.props.currentUser) {
     this.setState({pledgeOpen: true});
+  } else {
+    this.props.history.push("/login");
+    }
   }
 
   closePledgeClick() {
@@ -128,6 +134,7 @@ class ProjectShow extends React.Component {
           <li><span className="gray-stat">{this.daysToGo()}</span><br />days to go</li>
 
           {this.pledgeButton()}
+
 
           <li>This project will only be funded if it reaches its goal by {this.props.project.dueDate}</li>
         </ul>
