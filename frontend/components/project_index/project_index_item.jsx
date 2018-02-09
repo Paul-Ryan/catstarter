@@ -1,11 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const barFill = {
-  width: '75%'
+const totalPledges = (pledgeArr) => {
+  let sum = 0;
+
+  for(let i = 0; i < pledgeArr.length; i++) {
+    sum += pledgeArr[i];
+  }
+  return sum;
 };
 
-const ProjectIndexItem = ({ project }) => (
+const percentGoal = (pledgeTotal, goal) => {
+  let percentWidth = (pledgeTotal / goal) * 100;
+  return {
+    width: `${percentWidth}%`,
+    maxWidth: "100%"
+  };
+};
+
+const daysToGo = (date) => {
+  let date1 = Date.parse(date);
+  let dueDate = new Date(date1);
+  let today = new Date;
+  let timeDiff = Math.abs(today.getTime() - dueDate.getTime());
+  let diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+  return (
+   diffDays
+  );
+};
+
+const ProjectIndexItem = ({ project }) => {
+  let totalFunds = totalPledges(project.pledges);
+  let percentFunded = Math.floor(totalFunds / project.fundingGoal * 100);
+  let percentFundedStyles = percentGoal(totalFunds, project.fundingGoal);
+
+
+  return (
   <li className="project-index-item col col-4">
     <div className="grayBorder">
       <Link to={`projects/${project.id}`}>
@@ -21,15 +52,16 @@ const ProjectIndexItem = ({ project }) => (
       </div>
       <div className="project-index-info">
         <div className="project-pledge-bar">
-          <div className="project-pledge-bar-fill" style={barFill}></div>
+          <div className="project-pledge-bar-fill" style={percentFundedStyles}></div>
         </div>
-        <p className="project-pledge-total">Total pledged</p>
-        <p>Percent of goal reached</p>
-        <p>number of days to go</p>
+        <p className="project-pledge-total"><span className="green-text">${totalFunds} pledged</span></p>
+        <p>{percentFunded}% Funded</p>
+        <p>{daysToGo(project.dueDate)} days to go</p>
         <p className="project-categories">categories</p>
       </div>
     </div>
   </li>
-);
+  );
+};
 
 export default ProjectIndexItem;

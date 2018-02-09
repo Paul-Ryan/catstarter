@@ -7,6 +7,7 @@ import {
 } from '../actions/project_actions';
 
 import { RECEIVE_REWARD } from '../actions/reward_actions';
+import { RECEIVE_PLEDGE } from '../actions/pledge_actions';
 
 const projectsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -24,6 +25,10 @@ const projectsReducer = (state = {}, action) => {
     case RECEIVE_REWARD:
       newState = Object.assign({}, state);
       newState[action.reward.project_id].rewards.push(action.reward.id);
+      return merge({}, state, newState);
+    case RECEIVE_PLEDGE:
+      newState = Object.assign({}, state);
+      newState[action.pledge.project_id].pledges.push(action.pledge.pledge_amount);
       return merge({}, state, newState);
     default:
       return state;
