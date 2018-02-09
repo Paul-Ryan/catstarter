@@ -95,13 +95,36 @@ class ProjectShow extends React.Component {
     );
   }
 
+  totalPledges() {
+    let pledgeArr = this.props.project.pledges;
+    let sum = 0;
+
+    for(let i = 0; i < pledgeArr.length; i++) {
+      sum += pledgeArr[i];
+    }
+    return sum;
+  }
+
+  percentFundedStyles() {
+    let goal = (this.props.project.fundingGoal);
+    let totalFunds = this.totalPledges();
+    let percentWidth = totalFunds / goal * 100;
+    return ({
+      width: `${percentWidth}%`,
+      maxWidth: "100%"
+    });
+  }
+
   projectStats() {
     return (
       <div className="show-project-stats row">
         <img className="show-image col col-8" src={this.props.project.imageUrl} />
         <ul className="project-stats col col-4">
+          <div className="project-pledge-bar">
+            <div className="project-pledge-bar-fill" style={this.percentFundedStyles()}></div>
+          </div>
           <li><span className="green-stat">${this.totalFunds()}</span><br />pledged of ${this.props.project.fundingGoal}</li>
-          <li><span className="gray-stat">{this.totalBackers()}</span><br />backers</li>
+          <li><span className="gray-stat">{this.totalBackers()}</span><br />pledges</li>
           <li><span className="gray-stat">{this.daysToGo()}</span><br />days to go</li>
 
           {this.pledgeButton()}
