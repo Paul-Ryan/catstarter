@@ -1,6 +1,5 @@
+![catstarter](https://github.com/Paul-Ryan/catstarter/blob/master/app/assets/images/readme/catlogo.png?raw=true)
 # Catstarter
-
-(logo)
 
 [Catstarter](https://catstarter.herokuapp.com/#/) is a [Kickstarter](https://www.kickstarter.com/) clone. It allows users to create projects seeking funding, or to fund other users' projects and receive rewards for doing so. It's built with a Rails/PostgreSQL backend and utilizes a React/Redux frontend.
 
@@ -14,7 +13,8 @@ It doesn't have anything to do with cats. I just called it that because cats are
 
 ## Dynamic progress bar
 Each project has a green progress bar that fills as the money pledged to the project approaches the funding goal.
-(funding_bar)
+
+![funding bar][fundingBar]
 
 Generating the bar can be accomplished with pure HTML and CSS, but changing the width of the bar presented a challenge because scss stylesheets aren't able to apply different width attributes dynamically.
 
@@ -64,3 +64,7 @@ emailField() {
 
   * Project categories
   * Search
+
+
+[fundingBar]:https://github.com/Paul-Ryan/catstarter/blob/master/app/assets/images/readme/funding_bar.png?raw=true  
+[login]:  
