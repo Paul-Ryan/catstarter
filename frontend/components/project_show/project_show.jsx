@@ -5,6 +5,7 @@ import RewardsContainer from './rewards_container';
 class ProjectShow extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       pledgeOpen: false,
       pledgeAmount: 0
@@ -53,10 +54,26 @@ class ProjectShow extends React.Component {
     });
   }
 
-  handlePledge() {
-    this.props.createPledge({pledge_amount: this.state.pledgeAmount, project_id: this.props.projectId});
+  logged_in() {
+    return !!this.props.currentUser;
   }
 
+  handlePledge() {
+    this.props.createPledge({pledge_amount: this.state.pledgeAmount, project_id: this.props.projectId});
+    this.closePledgeClick();
+  }
+
+  pledgeButton() {
+    return (
+      this.state.pledgeOpen
+        ? <div>
+            <input type="text" onChange={this.update("pledgeAmount")}></input>
+            <button className="btn btn-submit back-this-project" onClick={() => this.handlePledge()}>Make your pledge</button>
+            <button className="btn btn-submit back-this-project" onClick={() => this.closePledgeClick()}>Close pledge field</button>
+          </div>
+        : <button className="btn btn-submit back-this-project" onClick={() => this.openPledgeClick()}>Back this project</button>
+    );
+  }
   projectStats() {
     return (
       <div className="show-project-stats row">
@@ -66,14 +83,8 @@ class ProjectShow extends React.Component {
           <li><span className="gray-stat">181</span><br />backers</li>
           <li><span className="gray-stat">{this.daysToGo()}</span><br />days to go</li>
 
-          { this.state.pledgeOpen
-            ? <div>
-                <input type="text" onChange={this.update("pledgeAmount")}></input>
-                <button className="btn btn-submit back-this-project" onClick={() => this.handlePledge()}>Make your pledge</button>
-                <button className="btn btn-submit back-this-project" onClick={() => this.closePledgeClick()}>Close pledge field</button>
-              </div>
-            : <button className="btn btn-submit back-this-project" onClick={() => this.openPledgeClick()}>Back this project</button>
-          }
+          {this.pledgeButton()}
+
 
           <li>This project will only be funded if it reaches its goal by {this.props.project.dueDate}</li>
         </ul>

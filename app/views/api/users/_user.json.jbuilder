@@ -1,2 +1,2 @@
-json.extract! @user, :username, :id, :email
-json.pledges @user.pledges.pluck(:id)
+json.extract! user, :username, :id, :email
+json.pledges user.pledges.pluck(:id)

@@ -42,8 +42,6 @@ class ProjectForm extends React.Component {
 
 
   render () {
-    const { from } = this.props.location.state || '/';
-
     return (
       <div className="form">
         <h1>Create your project</h1>
