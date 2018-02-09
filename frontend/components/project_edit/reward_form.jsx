@@ -8,9 +8,10 @@ class RewardForm extends React.Component {
       title: "",
       description: "",
       reward_minimum_amount: 0,
-      project_id: props.projectId
+      project_id: props.projectId,
+      submitNote: false
     };
-
+    this.nextReward = this.nextReward.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -20,6 +21,10 @@ class RewardForm extends React.Component {
     });
   }
 
+  nextReward() {
+    this.setState({submitNote: false});
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.createReward(this.state);
@@ -27,7 +32,8 @@ class RewardForm extends React.Component {
       title: "",
       description: "",
       reward_minimum_amount: 0,
-      project_id: this.props.projectId
+      project_id: this.props.projectId,
+      submitNote: true
     });
   }
 
@@ -38,27 +44,35 @@ class RewardForm extends React.Component {
         <form
           className="project-form"
           onSubmit={this.handleSubmit}>
+
           <label>Title
             <input
               type="text"
               value={this.state.title}
-              onChange={this.update('title')} />
+              onChange={this.update('title')}
+              onFocus={this.nextReward} />
           </label>
 
           <label>Description
             <input
               type="text"
               value={this.state.description}
-              onChange={this.update('description')} />
+              onChange={this.update('description')}
+              onFocus={this.nextReward} />
           </label>
 
           <label>Reward amount
             <input
               type="integer"
               value={this.state.reward_minimum_amount}
-              onChange={this.update('reward_minimum_amount')} />
+              onChange={this.update('reward_minimum_amount')}
+              onFocus={this.nextReward} />
           </label>
-          <input type="submit" className="btn btn-submit" value="Add reward" />
+          {
+            this.state.submitNote
+            ? <div className="btn submit-message">Reward Submitted!</div>
+            : <input type="submit" className="btn btn-submit" value="Add reward" />
+          }
         </form>
 
       </div>
