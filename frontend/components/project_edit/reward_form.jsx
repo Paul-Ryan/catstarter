@@ -33,9 +33,11 @@ class RewardForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="form form-edit">
         <h1>Add reward</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form
+          className="project-form"
+          onSubmit={this.handleSubmit}>
           <label>Title
             <input
               type="text"
@@ -56,7 +58,7 @@ class RewardForm extends React.Component {
               value={this.state.reward_minimum_amount}
               onChange={this.update('reward_minimum_amount')} />
           </label>
-          <input type="submit" value="Add reward" />
+          <input type="submit" className="btn btn-submit" value="Add reward" />
         </form>
 
       </div>

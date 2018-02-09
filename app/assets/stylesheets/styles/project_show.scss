@@ -63,6 +63,19 @@
   margin-bottom: 15px;
 }
 
+.pledge-section input {
+  transition: all 1s;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 600;
+  height: 48px;
+  line-height: 48px;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
 .show-project-content {
   display: flex;
   margin-top: 40px;
@@ -81,10 +94,31 @@
 
 .show-project-content .col-4 {
   flex-grow: 1;
-  min-width: 300px; 
+  min-width: 300px;
 }
 
 .show-project-content h3 {
   font-size: 30px;
   margin: 8px 0 3px;
+}
+
+.rewards-col h3 {
+  padding-left: 30px;
+}
+
+.reward-item {
+  box-sizing: border-box;
+  color: #282828;
+  margin: 5px 20px;
+  padding: 10px 10px;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+}
+
+.pledge-form-tag {
+  font-weight: 600;
+}
+.reward-item h1 {
+  font-size: 22px;
+  font-weight: 400;
 }

@@ -89,6 +89,7 @@ class ProjectEditForm extends React.Component {
           <label>Funding goal
             <input
               type="number"
+              className="form-funding"
               value={this.state.fundingGoal}
               onChange={this.update('funding_goal')} />
           </label>

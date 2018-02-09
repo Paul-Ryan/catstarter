@@ -9,7 +9,7 @@ class Rewards extends React.Component {
 
   render() {
     return(
-      <div className="col col-4">
+      <div className="col col-4 rewards-col">
         <h3>Rewards</h3>
         <ul className="reward-list">
         {

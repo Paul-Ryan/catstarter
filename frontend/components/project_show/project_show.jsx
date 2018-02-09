@@ -28,6 +28,25 @@ class ProjectShow extends React.Component {
     );
   }
 
+  totalFunds() {
+    if (!this.props.project.pledges) {
+      return 0;
+    } else if (this.props.project.pledges.length < 1 ){
+      return 0;
+    } else {
+    let fundArr = this.props.project.pledges;
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    return fundArr.reduce(reducer);
+    }
+  }
+
+  totalBackers() {
+    if (!this.props.project.pledges) {
+      return 0;
+    }
+    return this.props.project.pledges.length;
+  }
+
   projectHeader() {
     return (
       <div className="show-project-header row">
@@ -66,7 +85,7 @@ class ProjectShow extends React.Component {
   pledgeButton() {
     return (
       this.state.pledgeOpen
-        ? <div>
+        ? <div className="pledge-section">
             <input type="text" onChange={this.update("pledgeAmount")}></input>
             <button className="btn btn-submit back-this-project" onClick={() => this.handlePledge()}>Make your pledge</button>
             <button className="btn btn-submit back-this-project" onClick={() => this.closePledgeClick()}>Close pledge field</button>
@@ -74,17 +93,17 @@ class ProjectShow extends React.Component {
         : <button className="btn btn-submit back-this-project" onClick={() => this.openPledgeClick()}>Back this project</button>
     );
   }
+
   projectStats() {
     return (
       <div className="show-project-stats row">
         <img className="show-image col col-8" src={this.props.project.imageUrl} />
         <ul className="project-stats col col-4">
-          <li><span className="green-stat">$3,650</span><br />pledged of ${this.props.project.fundingGoal}</li>
-          <li><span className="gray-stat">181</span><br />backers</li>
+          <li><span className="green-stat">${this.totalFunds()}</span><br />pledged of ${this.props.project.fundingGoal}</li>
+          <li><span className="gray-stat">{this.totalBackers()}</span><br />backers</li>
           <li><span className="gray-stat">{this.daysToGo()}</span><br />days to go</li>
 
           {this.pledgeButton()}
-
 
           <li>This project will only be funded if it reaches its goal by {this.props.project.dueDate}</li>
         </ul>

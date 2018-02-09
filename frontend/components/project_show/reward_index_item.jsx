@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const RewardIndexItem = ({ reward }) => (
-  <li>
+  <li className="reward-item">
     <h1>{reward.title}</h1>
-    <p>{reward.description}</p>
-    <p>{reward.reward_minimum_amount}</p>
+    <p><span className="pledge-form-tag">Description:</span> {reward.description}</p>
+    <p><span className="pledge-form-tag">Required pledge:</span> ${reward.reward_minimum_amount}</p>
   </li>
 );
 

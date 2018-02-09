@@ -126,7 +126,7 @@ project10 = Project.create(
 project11 = Project.create(
   title: "Yes: a book of poems about being cool",
   blurb: "cigarettes, burbon, cats",
-  description: "",
+  description: "Succulents butcher jean shorts DIY squid mumblecore. VHS etsy whatever next level copper mug literally. Palo santo pitchfork blue bottle, hammock meditation edison bulb authentic forage hoodie sartorial aesthetic affogato disrupt. Dreamcatcher master cleanse readymade shaman waistcoat locavore green juice. Squid marfa fixie mustache meggings edison bulb. Vinyl food truck vexillologist venmo la croix authentic, kitsch sartorial fashion axe sustainable twee. Selvage bushwick blog viral lo-fi flannel before they sold out scenester, fashion axe cloud bread sriracha slow-carb intelligentsia chartreuse. Tbh gochujang chambray meditation, vinyl trust fund bicycle rights raw denim tattooed. Vinyl banh mi leggings iceland echo park vape meggings beard. Twee beard butcher YOLO retro. Disrupt readymade YOLO chillwave. 90's artisan sriracha ennui iceland meh coloring book chicharrones tbh DIY photo booth woke.",
   author_id: user4.id,
   due_date: Date.today + 22,
   funding_goal: 100000,
@@ -183,58 +183,171 @@ project16 = Project.create(
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897258/coffee-friends.jpg"
 )
 
+project17 = Project.create(
+  title: "Dishes from around the world and two croissants",
+  blurb: "Explore the globe through a bunch of food delivered to you in this one-of-a-kind food-delivery startup",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user11.id,
+  due_date: Date.today + 19,
+  funding_goal: 700,
+  image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897257/cooking-plates.jpg"
+)
+
+project18 = Project.create(
+  title: "Start a new space program where I build rockets in my garage",
+  blurb: "For ten-thousand dollars I'll put you on my first rocket to the moon",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user12.id,
+  due_date: Date.today + 10,
+  funding_goal: 1000,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897257/stars.jpg"
+)
+
+project19 = Project.create(
+  title: "A year of photography inspried by this camera my mom bought me",
+  blurb: "This camera was really expensive, so I'd better show my parents that I'm using it",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user2.id,
+  due_date: Date.today + 105,
+  funding_goal: 1300,
+  image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897255/camera.jpg"
+)
+
+project20 = Project.create(
+  title: "Man fights the moon",
+  blurb: "With enough money I think we can punch the moon back to where it came from somehow",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user3.id,
+  due_date: Date.today + 16,
+  funding_goal: 10000,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897254/moon-fighter.jpg"
+)
+
+project21 = Project.create(
+  title: "Noodles from another culture",
+  blurb: "This project combines our love of noodles with the discovery of something new that is also relatively safe and actually not that different",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user4.id,
+  due_date: Date.today + 15,
+  funding_goal: 1000,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897256/noodles.jpg"
+)
+
+project21 = Project.create(
+  title: "Catbag: A bag to hold all your cats",
+  blurb: "Your friends will never know how many cats are in or out of the bag with this bag",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user5.id,
+  due_date: Date.today + 25,
+  funding_goal: 1300,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897253/great-bag.jpg"
+)
+
+project21 = Project.create(
+  title: "Haunted things",
+  blurb: "If you donate to this kickstarter you will be visited by three ghosts in the next four days and they will tell you boring stories from history",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user6.id,
+  due_date: Date.today + 8,
+  funding_goal: 220,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897254/invisible-camera.jpg"
+)
+
 
 reward1 = Reward.create(
   project_id: project1.id,
-  title: "demo reward 1",
-  description: "demo reward 1 description",
-  reward_minimum_amount: 100
+  title: "One castiron pan",
+  description: "I'll bring you a pan in my van.",
+  reward_minimum_amount: 50
 )
 
 reward2 = Reward.create(
-  project_id: project2.id,
-  title: "demo reward 2",
-  description: "demo reward 2 description",
+  project_id: project1.id,
+  title: "Two castiron pans",
+  description: "I'll mail you two pans, so you can cook two things at once.",
   reward_minimum_amount: 100
 )
 
 reward3 = Reward.create(
-  project_id: project3.id,
-  title: "demo reward 3",
-  description: "demo reward 3 description",
-  reward_minimum_amount: 100
-)
-
-reward4 = Reward.create(
-  project_id: project4.id,
-  title: "demo reward 4",
-  description: "demo reward 4 description",
-  reward_minimum_amount: 100
-)
-
-reward5 = Reward.create(
-  project_id: project5.id,
-  title: "demo reward 5",
-  description: "demo reward 5 description",
-  reward_minimum_amount: 100
-)
-
-reward6 = Reward.create(
-  project_id: project6.id,
-  title: "demo reward 6",
-  description: "demo reward 6 description",
-  reward_minimum_amount: 100
-)
-
-reward7 = Reward.create(
   project_id: project1.id,
-  title: "demo reward 7",
-  description: "demo reward 7 description",
+  title: "Two pans and two lids",
+  description: "Put the lids on the pans while you cook if you want.",
   reward_minimum_amount: 150
 )
 
-pledge1 = Pledge.create(
-  project_id: project1.id,
-  user_id: user1.id,
-  pledge_amount: 10
-)
+reward = Reward.create( project_id: project2.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
+reward = Reward.create( project_id: project2.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
+reward = Reward.create( project_id: project2.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
+reward = Reward.create( project_id: project2.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
+
+reward = Reward.create( project_id: project3.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
+reward = Reward.create( project_id: project3.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
+reward = Reward.create( project_id: project3.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
+reward = Reward.create( project_id: project3.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
+
+reward = Reward.create( project_id: project4.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
+reward = Reward.create( project_id: project4.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
+reward = Reward.create( project_id: project4.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
+reward = Reward.create( project_id: project4.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
+
+reward = Reward.create( project_id: project5.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
+reward = Reward.create( project_id: project5.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
+reward = Reward.create( project_id: project5.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
+reward = Reward.create( project_id: project5.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
+
+reward = Reward.create( project_id: project6.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
+reward = Reward.create( project_id: project6.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
+reward = Reward.create( project_id: project6.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
+reward = Reward.create( project_id: project6.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
+
+reward = Reward.create( project_id: project7.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
+reward = Reward.create( project_id: project7.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
+reward = Reward.create( project_id: project7.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
+reward = Reward.create( project_id: project7.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
+
+reward = Reward.create( project_id: project8.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
+reward = Reward.create( project_id: project8.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
+reward = Reward.create( project_id: project8.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
+reward = Reward.create( project_id: project8.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
+
+
+
+pledge1 = Pledge.create( project_id: project1.id, user_id: user1.id, pledge_amount: 10)
+pledge2 = Pledge.create( project_id: project2.id, user_id: user1.id, pledge_amount: 15)
+pledge3 = Pledge.create( project_id: project3.id, user_id: user1.id, pledge_amount: 15)
+pledge4 = Pledge.create( project_id: project4.id, user_id: user1.id, pledge_amount: 100)
+
+pledge1 = Pledge.create( project_id: project1.id, user_id: user2.id, pledge_amount: 20)
+pledge2 = Pledge.create( project_id: project2.id, user_id: user2.id, pledge_amount: 150)
+pledge3 = Pledge.create( project_id: project3.id, user_id: user2.id, pledge_amount: 15)
+pledge4 = Pledge.create( project_id: project4.id, user_id: user2.id, pledge_amount: 100)
+
+pledge1 = Pledge.create( project_id: project1.id, user_id: user3.id, pledge_amount: 15)
+pledge2 = Pledge.create( project_id: project2.id, user_id: user3.id, pledge_amount: 15)
+pledge3 = Pledge.create( project_id: project3.id, user_id: user3.id, pledge_amount: 20)
+pledge4 = Pledge.create( project_id: project4.id, user_id: user3.id, pledge_amount: 100)
+
+pledge1 = Pledge.create( project_id: project1.id, user_id: user4.id, pledge_amount: 100)
+pledge2 = Pledge.create( project_id: project2.id, user_id: user4.id, pledge_amount: 15)
+pledge3 = Pledge.create( project_id: project3.id, user_id: user4.id, pledge_amount: 15)
+pledge4 = Pledge.create( project_id: project4.id, user_id: user4.id, pledge_amount: 100)
+
+pledge1 = Pledge.create( project_id: project5.id, user_id: user5.id, pledge_amount: 10)
+pledge2 = Pledge.create( project_id: project6.id, user_id: user5.id, pledge_amount: 15)
+pledge3 = Pledge.create( project_id: project7.id, user_id: user5.id, pledge_amount: 15)
+pledge4 = Pledge.create( project_id: project8.id, user_id: user5.id, pledge_amount: 100)
+
+pledge1 = Pledge.create( project_id: project5.id, user_id: user6.id, pledge_amount: 10)
+pledge2 = Pledge.create( project_id: project6.id, user_id: user6.id, pledge_amount: 15)
+pledge3 = Pledge.create( project_id: project7.id, user_id: user6.id, pledge_amount: 15)
+pledge4 = Pledge.create( project_id: project8.id, user_id: user6.id, pledge_amount: 100)
+
+pledge1 = Pledge.create( project_id: project5.id, user_id: user7.id, pledge_amount: 10)
+pledge2 = Pledge.create( project_id: project6.id, user_id: user7.id, pledge_amount: 15)
+pledge3 = Pledge.create( project_id: project7.id, user_id: user7.id, pledge_amount: 15)
+pledge4 = Pledge.create( project_id: project8.id, user_id: user7.id, pledge_amount: 100)
+
+pledge1 = Pledge.create( project_id: project5.id, user_id: user8.id, pledge_amount: 10)
+pledge2 = Pledge.create( project_id: project6.id, user_id: user8.id, pledge_amount: 15)
+pledge3 = Pledge.create( project_id: project7.id, user_id: user8.id, pledge_amount: 15)
+pledge4 = Pledge.create( project_id: project8.id, user_id: user8.id, pledge_amount: 100)
