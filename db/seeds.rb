@@ -9,6 +9,7 @@
 User.delete_all
 Project.delete_all
 Reward.delete_all
+Pledge.delete_all
 
 user1 = User.create(username: 'demoLogin', email: 'demo@email.com', password: 'password')
 user2 = User.create(username: 'Paul', email: 'paul.ryan.iii@gmail.com', password: 'dinosaur1')
@@ -50,7 +51,7 @@ project3 = Project.create(
   author_id: user3.id,
   due_date: Date.today + 8,
   funding_goal: 300,
-  image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897259/thought-catalog.jpg"
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897259/thought-catalog.jpg"
 )
 
 project4 = Project.create(
@@ -60,7 +61,7 @@ project4 = Project.create(
   author_id: user1.id,
   due_date: Date.today + 45,
   funding_goal: 1000000,
-  image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897261/yellow-bowl.jpg"
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897261/yellow-bowl.jpg"
 )
 
 project5 = Project.create(
@@ -70,7 +71,7 @@ project5 = Project.create(
   author_id: user4.id,
   due_date: Date.today + 12,
   funding_goal: 2500,
-  image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897259/fantasy-game.jpg"
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897259/fantasy-game.jpg"
 )
 
 project6 = Project.create(
@@ -80,7 +81,7 @@ project6 = Project.create(
   author_id: user3.id,
   due_date: Date.today + 19,
   funding_goal: 5,
-  image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897255/coffee-cup.jpg"
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897255/coffee-cup.jpg"
 )
 
 project7 = Project.create(
@@ -110,7 +111,7 @@ project9 = Project.create(
   author_id: user9.id,
   due_date: Date.today + 19,
   funding_goal: 5000,
-  image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897254/microphone.jpg"
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897254/microphone.jpg"
 )
 
 project10 = Project.create(
@@ -146,11 +147,11 @@ project12 = Project.create(
 project13 = Project.create(
   title: "Creative Campfire Pie Iron Cookbook",
   blurb: "We're taking mountain pies, campfire pies, jaffles, and pudgie pies to a whole new level with our innovative pie iron cookbook!",
-  description: "",
+  description: "mustache waistcoat stumptown messenger bag ramps portland. Biodiesel coloring book portland listicle knausgaard. Truffaut keffiyeh listicle, mixtape franzen vexillologist cloud bread next level 3 wolf moon squid ugh freegan live-edge thundercats. Before they sold out pitchfork iPhone banh mi chia, pabst cornhole bicycle rights organic enamel pin mixtape truffaut try-hard dreamcatcher kombucha. Irony lomo cold-pressed, lo-fi edison bulb vaporware chambray selvage photo booth. Letterpress forage glossier",
   author_id: user5.id,
   due_date: Date.today + 4,
   funding_goal: 10000,
-  image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897260/fire.jpg"
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897260/fire.jpg"
 )
 
 project14 = Project.create(
@@ -170,7 +171,7 @@ project15 = Project.create(
   author_id: user9.id,
   due_date: Date.today + 13,
   funding_goal: 10700,
-  image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897259/tea.jpg"
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897259/tea.jpg"
 )
 
 project16 = Project.create(
@@ -190,7 +191,7 @@ project17 = Project.create(
   author_id: user11.id,
   due_date: Date.today + 19,
   funding_goal: 700,
-  image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897257/cooking-plates.jpg"
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897257/cooking-plates.jpg"
 )
 
 project18 = Project.create(
@@ -205,12 +206,12 @@ project18 = Project.create(
 
 project19 = Project.create(
   title: "A year of photography inspried by this camera my mom bought me",
-  blurb: "This camera was really expensive, so I'd better show my parents that I'm using it",
+  blurb: "Look at this beast! it's got live five lenses and a hundred buttons. A bunch of parts rotate and make sounds for some reason.",
   description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
   author_id: user2.id,
   due_date: Date.today + 105,
   funding_goal: 1300,
-  image_url: "http://res.cloudinary.com/paul-ryan/image/upload/v1517897255/camera.jpg"
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897255/camera.jpg"
 )
 
 project20 = Project.create(
@@ -275,79 +276,79 @@ reward3 = Reward.create(
   reward_minimum_amount: 150
 )
 
-reward = Reward.create( project_id: project2.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
-reward = Reward.create( project_id: project2.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
-reward = Reward.create( project_id: project2.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
-reward = Reward.create( project_id: project2.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
+Reward.create(project_id: project2.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
+Reward.create(project_id: project2.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
+Reward.create(project_id: project2.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
+Reward.create(project_id: project2.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
 
-reward = Reward.create( project_id: project3.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
-reward = Reward.create( project_id: project3.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
-reward = Reward.create( project_id: project3.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
-reward = Reward.create( project_id: project3.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
+Reward.create(project_id: project3.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
+Reward.create(project_id: project3.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
+Reward.create(project_id: project3.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
+Reward.create(project_id: project3.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
 
-reward = Reward.create( project_id: project4.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
-reward = Reward.create( project_id: project4.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
-reward = Reward.create( project_id: project4.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
-reward = Reward.create( project_id: project4.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
+Reward.create(project_id: project4.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
+Reward.create(project_id: project4.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
+Reward.create(project_id: project4.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
+Reward.create(project_id: project4.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
 
-reward = Reward.create( project_id: project5.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
-reward = Reward.create( project_id: project5.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
-reward = Reward.create( project_id: project5.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
-reward = Reward.create( project_id: project5.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
+Reward.create(project_id: project5.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
+Reward.create(project_id: project5.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
+Reward.create(project_id: project5.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
+Reward.create(project_id: project5.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
 
-reward = Reward.create( project_id: project6.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
-reward = Reward.create( project_id: project6.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
-reward = Reward.create( project_id: project6.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
-reward = Reward.create( project_id: project6.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
+Reward.create(project_id: project6.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
+Reward.create(project_id: project6.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
+Reward.create(project_id: project6.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
+Reward.create(project_id: project6.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
 
-reward = Reward.create( project_id: project7.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
-reward = Reward.create( project_id: project7.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
-reward = Reward.create( project_id: project7.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
-reward = Reward.create( project_id: project7.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
+Reward.create(project_id: project7.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
+Reward.create(project_id: project7.id, title: "Demo reward 1", description: "description of demo reward", reward_minimum_amount: 20)
+Reward.create(project_id: project7.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
+Reward.create(project_id: project7.id, title: "Demo reward 2", description: "description of demo reward", reward_minimum_amount: 50)
 
-reward = Reward.create( project_id: project8.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
-reward = Reward.create( project_id: project8.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
-reward = Reward.create( project_id: project8.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
-reward = Reward.create( project_id: project8.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
+Reward.create(project_id: project8.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
+Reward.create(project_id: project8.id, title: "Demo reward 3", description: "description of demo reward", reward_minimum_amount: 80)
+Reward.create(project_id: project8.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
+Reward.create(project_id: project8.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
 
 
 
-pledge1 = Pledge.create( project_id: project1.id, user_id: user1.id, pledge_amount: 10)
-pledge2 = Pledge.create( project_id: project2.id, user_id: user1.id, pledge_amount: 15)
-pledge3 = Pledge.create( project_id: project3.id, user_id: user1.id, pledge_amount: 15)
-pledge4 = Pledge.create( project_id: project4.id, user_id: user1.id, pledge_amount: 100)
+Pledge.create( project_id: project1.id, user_id: user1.id, pledge_amount: 10)
+Pledge.create( project_id: project2.id, user_id: user1.id, pledge_amount: 15)
+Pledge.create( project_id: project3.id, user_id: user1.id, pledge_amount: 15)
+Pledge.create( project_id: project4.id, user_id: user1.id, pledge_amount: 100)
 
-pledge1 = Pledge.create( project_id: project1.id, user_id: user2.id, pledge_amount: 20)
-pledge2 = Pledge.create( project_id: project2.id, user_id: user2.id, pledge_amount: 150)
-pledge3 = Pledge.create( project_id: project3.id, user_id: user2.id, pledge_amount: 15)
-pledge4 = Pledge.create( project_id: project4.id, user_id: user2.id, pledge_amount: 100)
+Pledge.create( project_id: project1.id, user_id: user2.id, pledge_amount: 20)
+Pledge.create( project_id: project2.id, user_id: user2.id, pledge_amount: 150)
+Pledge.create( project_id: project3.id, user_id: user2.id, pledge_amount: 15)
+Pledge.create( project_id: project4.id, user_id: user2.id, pledge_amount: 100)
 
-pledge1 = Pledge.create( project_id: project1.id, user_id: user3.id, pledge_amount: 15)
-pledge2 = Pledge.create( project_id: project2.id, user_id: user3.id, pledge_amount: 15)
-pledge3 = Pledge.create( project_id: project3.id, user_id: user3.id, pledge_amount: 20)
-pledge4 = Pledge.create( project_id: project4.id, user_id: user3.id, pledge_amount: 100)
+Pledge.create( project_id: project1.id, user_id: user3.id, pledge_amount: 15)
+Pledge.create( project_id: project2.id, user_id: user3.id, pledge_amount: 15)
+Pledge.create( project_id: project3.id, user_id: user3.id, pledge_amount: 20)
+Pledge.create( project_id: project4.id, user_id: user3.id, pledge_amount: 100)
 
-pledge1 = Pledge.create( project_id: project1.id, user_id: user4.id, pledge_amount: 100)
-pledge2 = Pledge.create( project_id: project2.id, user_id: user4.id, pledge_amount: 15)
-pledge3 = Pledge.create( project_id: project3.id, user_id: user4.id, pledge_amount: 15)
-pledge4 = Pledge.create( project_id: project4.id, user_id: user4.id, pledge_amount: 100)
+Pledge.create( project_id: project1.id, user_id: user4.id, pledge_amount: 100)
+Pledge.create( project_id: project2.id, user_id: user4.id, pledge_amount: 15)
+Pledge.create( project_id: project3.id, user_id: user4.id, pledge_amount: 15)
+Pledge.create( project_id: project4.id, user_id: user4.id, pledge_amount: 100)
 
-pledge1 = Pledge.create( project_id: project5.id, user_id: user5.id, pledge_amount: 10)
-pledge2 = Pledge.create( project_id: project6.id, user_id: user5.id, pledge_amount: 15)
-pledge3 = Pledge.create( project_id: project7.id, user_id: user5.id, pledge_amount: 15)
-pledge4 = Pledge.create( project_id: project8.id, user_id: user5.id, pledge_amount: 100)
+Pledge.create( project_id: project5.id, user_id: user5.id, pledge_amount: 10)
+Pledge.create( project_id: project6.id, user_id: user5.id, pledge_amount: 15)
+Pledge.create( project_id: project7.id, user_id: user5.id, pledge_amount: 15)
+Pledge.create( project_id: project8.id, user_id: user5.id, pledge_amount: 100)
 
-pledge1 = Pledge.create( project_id: project5.id, user_id: user6.id, pledge_amount: 10)
-pledge2 = Pledge.create( project_id: project6.id, user_id: user6.id, pledge_amount: 15)
-pledge3 = Pledge.create( project_id: project7.id, user_id: user6.id, pledge_amount: 15)
-pledge4 = Pledge.create( project_id: project8.id, user_id: user6.id, pledge_amount: 100)
+Pledge.create( project_id: project5.id, user_id: user6.id, pledge_amount: 10)
+Pledge.create( project_id: project6.id, user_id: user6.id, pledge_amount: 15)
+Pledge.create( project_id: project7.id, user_id: user6.id, pledge_amount: 15)
+Pledge.create( project_id: project8.id, user_id: user6.id, pledge_amount: 100)
 
-pledge1 = Pledge.create( project_id: project5.id, user_id: user7.id, pledge_amount: 10)
-pledge2 = Pledge.create( project_id: project6.id, user_id: user7.id, pledge_amount: 15)
-pledge3 = Pledge.create( project_id: project7.id, user_id: user7.id, pledge_amount: 15)
-pledge4 = Pledge.create( project_id: project8.id, user_id: user7.id, pledge_amount: 100)
+Pledge.create( project_id: project5.id, user_id: user7.id, pledge_amount: 10)
+Pledge.create( project_id: project6.id, user_id: user7.id, pledge_amount: 15)
+Pledge.create( project_id: project7.id, user_id: user7.id, pledge_amount: 15)
+Pledge.create( project_id: project8.id, user_id: user7.id, pledge_amount: 100)
 
-pledge1 = Pledge.create( project_id: project5.id, user_id: user8.id, pledge_amount: 10)
-pledge2 = Pledge.create( project_id: project6.id, user_id: user8.id, pledge_amount: 15)
-pledge3 = Pledge.create( project_id: project7.id, user_id: user8.id, pledge_amount: 15)
-pledge4 = Pledge.create( project_id: project8.id, user_id: user8.id, pledge_amount: 100)
+Pledge.create( project_id: project5.id, user_id: user8.id, pledge_amount: 10)
+Pledge.create( project_id: project6.id, user_id: user8.id, pledge_amount: 15)
+Pledge.create( project_id: project7.id, user_id: user8.id, pledge_amount: 15)
+Pledge.create( project_id: project8.id, user_id: user8.id, pledge_amount: 100)
