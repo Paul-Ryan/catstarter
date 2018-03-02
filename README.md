@@ -56,7 +56,7 @@ emailField() {
 ```
 
 <!-- ## Image cropping in project index -->
-
+<!-- ternary statement for backing project button -->
 
 ## Features to add
 
