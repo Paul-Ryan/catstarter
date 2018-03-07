@@ -13,6 +13,11 @@ Add error handling for edit project form
 Improve ReadMe.txt
 
 
+long term:
+allow users to upload photos
+use a custom route for search - eg. put search route in projects controller /search
+
+
 
 Refactor pledges:
  * should refactor projects pledges array to use id instead, so I'm not tracking amounts in two places

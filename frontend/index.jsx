@@ -5,9 +5,8 @@ import Root from './components/root';
 
 import { fetchProjects, fetchProject, createProject, deleteProject } from './actions/project_actions';
 import { createReward, deleteReward } from './actions/reward_actions';
-// import { login, signup, logout } from './util/session_api_util';
-// import { login, signup, logout, clear } from './actions/session_actions';
-// import * as ProjectAPIUtil from './util/project_api_util';
+import { login, signup, logout, clear } from './actions/session_actions';
+import * as ProjectAPIUtil from './util/project_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;

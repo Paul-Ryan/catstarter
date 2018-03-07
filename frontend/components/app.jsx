@@ -18,6 +18,7 @@ import ProjectShowContainer from './project_show/project_show_container';
 import ProjectFormContainer from './project_create/project_form_container';
 import UserInfoContainer from './user_info/user_info_container';
 import ProjectEditContainer from './project_edit/project_edit_container';
+import SearchPage from './search_page/search_page_container';
 
 const App = () => (
   <div>
@@ -25,12 +26,16 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={SessionFormContainer} />
       <AuthRoute exact path="/signup" component={SessionFormContainer} />
-      <Route exact path="/projects" component={ProjectIndexContainer} />
       <Route exact path="/" component={ProjectIndexContainer} />
-      <ProtectedRoute exact path="/create" component={ProjectFormContainer} />
-      <Route exact path="/projects/:projectId" component={ProjectShowContainer} />
       <ProtectedRoute exact path="/users/:userId" component={UserInfoContainer} />
+
+      <Route exact path="/projects" component={ProjectIndexContainer} />
+      <Route exact path="/projects/:projectId" component={ProjectShowContainer} />
       <ProtectedRoute exact path="/projects/:projectId/edit" component={ProjectEditContainer} />
+
+      <ProtectedRoute exact path="/create" component={ProjectFormContainer} />
+      <Route path="/search" component={SearchPage} />
+
     </Switch>
   </div>
 );

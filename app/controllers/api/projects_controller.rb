@@ -1,8 +1,10 @@
 class Api::ProjectsController < ApplicationController
   def index
-    # trying to figure out how to get authors into state
-    # @projects = Project.all
-    @projects = Project.all.includes(:author)
+    if params[:search]
+      @projects = Projects.where("lower(title) LIKE ?", "%" + params[:search].downcase.split("").join("%") + "%")
+    else
+      @projects = Project.all.includes(:author)
+    end
     render '/api/projects/index'
   end
 
