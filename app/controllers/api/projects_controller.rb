@@ -1,10 +1,6 @@
 class Api::ProjectsController < ApplicationController
   def index
-    if params[:search]
-      @projects = Projects.where("lower(title) LIKE ?", "%" + params[:search].downcase.split("").join("%") + "%")
-    else
-      @projects = Project.all.includes(:author)
-    end
+    @projects = Project.all.includes(:author)
     render '/api/projects/index'
   end
 
@@ -45,6 +41,11 @@ class Api::ProjectsController < ApplicationController
     else
       render json: ['couldn\'t find project'], status: 404
     end
+  end
+
+  def search
+    puts "it worked" 
+    # @projects = Project.where("lower(title) LIKE ?", params[:search])
   end
 
   private

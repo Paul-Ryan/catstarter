@@ -27,7 +27,7 @@ const receiveErrors = (errors) => ({
   errors
 });
 
-export const fetchProjects = () => dispatch => {
+export const fetchProjects = search => dispatch => {
   return ProjectAPIUtil.fetchProjects()
     .then(dbProjects => (dispatch(receiveProjects(dbProjects))
   ), err => (

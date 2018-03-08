@@ -1,16 +1,16 @@
 To do:
-
-Refactor project pledges slice of store to use ID *
 Implement search
 Implement Categories/Discover
+Add error handling for project form
+Add error handling for rewards form
+Improve ReadMe.txt
+
+Refactor project pledges slice of store to use ID *
 Improve Backing Projects and Rewards to reward users
 Add a splash page
 Style splash page
 Refactor update and create form to use a single react form
-Add error handling for project form
-Add error handling for rewards form
 Add error handling for edit project form
-Improve ReadMe.txt
 
 
 long term:
