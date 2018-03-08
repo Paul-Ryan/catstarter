@@ -1,7 +1,5 @@
 class Api::ProjectsController < ApplicationController
   def index
-    # trying to figure out how to get authors into state
-    # @projects = Project.all
     @projects = Project.all.includes(:author)
     render '/api/projects/index'
   end
@@ -43,6 +41,12 @@ class Api::ProjectsController < ApplicationController
     else
       render json: ['couldn\'t find project'], status: 404
     end
+  end
+
+  def search
+    puts "it worked"
+    @projects = Project.all
+    render :search
   end
 
   private

@@ -1,18 +1,24 @@
 To do:
+Add a splash page, Style splash page (3/9)
+Implement Categories/Discover (Tuesday/weekend)(3/11)
+Improve backings - pick a reward and (maybe associate that with ur profile) (3/13)
 
-Refactor project pledges slice of store to use ID *
-Implement search
-Implement Categories/Discover
-Improve Backing Projects and Rewards to reward users
-Add a splash page
-Style splash page
-Refactor update and create form to use a single react form
+Implement search (Friday) (3/16)
 Add error handling for project form
 Add error handling for rewards form
-Add error handling for edit project form
 Improve ReadMe.txt
 
+Refactor project pledges slice of store to use ID *
+Improve Backing Projects and Rewards to reward users
+Refactor update and create form to use a single react form
+Add error handling for edit project form
 
+
+long term:
+allow users to upload photos
+use a custom route for search - eg. put search route in projects controller /search
+
+keep app awake: http://kaffeine.herokuapp.com/
 
 Refactor pledges:
  * should refactor projects pledges array to use id instead, so I'm not tracking amounts in two places

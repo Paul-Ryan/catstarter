@@ -33,4 +33,21 @@ class Project < ApplicationRecord
   # def days_left()
   #
   # end
+
+  def self.search(search)
+    if search == ""
+      results = Project.all
+    else
+      search = '%' + search.downcase + '%'
+      results = Project.where("
+        lower(title) LIKE ? or
+        lower(blurb) LIKE ? or
+        lower(description) LIKE ?",
+        "%#{search}%",
+        "%#{search}%",
+        "%#{search}%")
+    end
+
+  results
+  end
 end

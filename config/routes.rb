@@ -5,9 +5,11 @@ Rails.application.routes.draw do
     resources :projects, only: [:index, :create, :show, :update, :destroy] do
       resources :rewards, only: [:create]
       resources :pledges, only: [:create]
+      get "search", on: :collection
     end
     resources :pledges, only: [:destroy]
     resources :rewards, only: [:destroy]
+
   end
 
   root "static_pages#root"
