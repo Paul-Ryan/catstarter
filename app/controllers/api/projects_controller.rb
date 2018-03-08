@@ -44,8 +44,9 @@ class Api::ProjectsController < ApplicationController
   end
 
   def search
-    puts "it worked" 
-    # @projects = Project.where("lower(title) LIKE ?", params[:search])
+    puts "it worked"
+    @projects = Project.all
+    render :search
   end
 
   private
