@@ -1,3 +1,9 @@
+import { values } from 'lodash';
+
+export const selectAllProjects = ({projects}) => {
+  return values(projects);
+};
+
 export const selectProject = ({ projects }, id) => {
    const project = projects[id] || {};
    return project;

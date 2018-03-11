@@ -1,0 +1,86 @@
+html {
+  background: white;
+}
+
+.container {
+  width: 100%;
+}
+
+.splash-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  border-bottom: 1px solid #656969;
+}
+
+.splash-section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 40px;
+  border-left: 1px solid #DCDEDD;
+}
+
+.splash-section:first-child {
+  border-left: none;
+}
+
+.splash-section p {
+  display: block;
+  font-size: 15px;
+  line-height: 21px;
+}
+.splash-top {
+  color: rgb(101, 105, 105);
+
+}
+.splash-sub {
+  font-weight: 600;
+  color: rgb(40, 40, 40);
+}
+
+// Featured PROJECT
+
+.featured {
+  margin: 60px 0 0;
+  padding: 0 60px 0;
+}
+
+.featured > h2 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.featured-projects {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 5px 0 20px;
+  background: url("https://res.cloudinary.com/paul-ryan/image/upload/v1517897262/food.jpg");
+  background-size: cover;
+  border: 1px solid rgb(101, 105, 105);
+}
+
+.featured-projects p {
+  position: absolute;
+  display: inline-block;
+  line-height: 15px;
+  background: white;
+  padding: 10px 15px;
+}
+
+.featured-title {
+  top: 350px;
+  left: 20px;
+  font-size: 24px;
+}
+
+.featured-author {
+  top: 385px;
+  left: 20px;
+}
+
+.featured-percent {
+  top: 430px;
+  left: 20px;
+}

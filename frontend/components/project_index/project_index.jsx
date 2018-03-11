@@ -15,7 +15,7 @@ class ProjectIndex extends React.Component {
     this.props.fetchProjects();
   }
 
-  render () {
+  render() {
     const { projects } = this.props;
 
     return (

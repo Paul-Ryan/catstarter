@@ -20,6 +20,10 @@ use a custom route for search - eg. put search route in projects controller /sea
 
 keep app awake: http://kaffeine.herokuapp.com/
 
+search notes:
+$.ajax({url: "/api/projects/search" }).then(console.log)
+
+
 Refactor pledges:
  * should refactor projects pledges array to use id instead, so I'm not tracking amounts in two places
  * then I can change number of "pledges" on show page to "backers"

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root "static_pages#root"
+
   namespace :api, defaults: {format: :json} do
     resource :users, only: [:create, :show]
     resource :session, only: [:create, :destroy, :show]
@@ -9,8 +12,6 @@ Rails.application.routes.draw do
     end
     resources :pledges, only: [:destroy]
     resources :rewards, only: [:destroy]
-
   end
 
-  root "static_pages#root"
 end

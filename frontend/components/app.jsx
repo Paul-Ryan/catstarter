@@ -11,6 +11,7 @@ import {
 import { AuthRoute } from '../util/route_util';
 import { ProtectedRoute } from '../util/route_util';
 
+import SplashPageContainer from './splashpage/splashpage_container';
 import GlobalHeaderContainer from './global_header/global_header_container';
 import SessionFormContainer from './session_form/session_form_container';
 import ProjectIndexContainer from './project_index/project_index_container';
@@ -18,15 +19,16 @@ import ProjectShowContainer from './project_show/project_show_container';
 import ProjectFormContainer from './project_create/project_form_container';
 import UserInfoContainer from './user_info/user_info_container';
 import ProjectEditContainer from './project_edit/project_edit_container';
-import SearchPage from './search_page/search_page_container';
+import SearchPage from './search/search_page_container';
 
 const App = () => (
   <div>
     <GlobalHeaderContainer />
-    <Switch>
+    <Route exact path="/" component={SplashPageContainer} />
+
+  <Switch>
       <AuthRoute exact path="/login" component={SessionFormContainer} />
       <AuthRoute exact path="/signup" component={SessionFormContainer} />
-      <Route exact path="/" component={ProjectIndexContainer} />
       <ProtectedRoute exact path="/users/:userId" component={UserInfoContainer} />
 
       <Route exact path="/projects" component={ProjectIndexContainer} />
@@ -35,7 +37,6 @@ const App = () => (
 
       <ProtectedRoute exact path="/create" component={ProjectFormContainer} />
       <Route path="/search" component={SearchPage} />
-
     </Switch>
   </div>
 );
