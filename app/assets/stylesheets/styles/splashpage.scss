@@ -163,10 +163,21 @@ html {
   border-bottom: 1px solid gray;
 }
 
-.project-item > h4 {
+.new-link {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #282828;
+  text-decoration: none;
+}
 
+.new-link:hover {
+  color: #037362;
+  fill: #037362;
+  text-decoration: underline;
 }
 
 .project-item > p {
+  font-size: 14px;
   color: lightgray;
+  margin-top: 15px; 
 }

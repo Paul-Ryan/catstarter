@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class NewNoteworthy extends React.Component {
   constructor(props) {
@@ -15,22 +16,22 @@ class NewNoteworthy extends React.Component {
         <ul className="project-index">
           <li className="project-item">
             <img className="new-img" src="http://lorempixel.com/100/60/" />
-            <h4>title</h4>
+            <Link to="" className="new-link"> href="#">title</Link>
             <p>Percent funded</p>
           </li>
           <li className="project-item">
             <img className="new-img" src="http://lorempixel.com/100/60/" />
-            <h4>title</h4>
+            <Link to="" className="new-link"> href="#">title</Link>
             <p>Percent funded</p>
           </li>
           <li className="project-item">
             <img className="new-img" src="http://lorempixel.com/100/60/" />
-            <h4>title</h4>
+            <Link to="" className="new-link"> href="#">title</Link>
             <p>Percent funded</p>
           </li>
           <li className="project-item">
             <img className="new-img" src="http://lorempixel.com/100/60/" />
-            <h4>title</h4>
+            <Link to="" className="new-link"> href="#">title</Link>
             <p>Percent funded</p>
           </li>
         </ul>
