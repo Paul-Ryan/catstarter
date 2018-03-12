@@ -2,6 +2,7 @@ import React from 'react';
 import FormattedDate from './formatted_date';
 import FeaturedProjects from './featured_projects';
 import NewNoteworthy from './new_noteworthy/new_noteworthy_index';
+import CategoryBar from './category_bar';
 
 class SplashPage extends React.Component {
   constructor(props) {
@@ -35,6 +36,9 @@ class SplashPage extends React.Component {
             <p className="splash-top">LIVE PROJECTS</p>
             <p className="splash-sub">782</p>
           </div>
+        </section>
+        <section>
+          <CategoryBar />
         </section>
         <section className="splash-widgets">
           <FeaturedProjects projects={"project"} />
