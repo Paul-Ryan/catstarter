@@ -82,6 +82,11 @@ html {
   cursor: pointer;
 }
 
+.cat-button:focus,
+.cat-button:active {
+    outline: none;
+}
+
 .splash-widgets {
   display: flex;
   justify-content: space-between;
@@ -95,9 +100,12 @@ html {
   padding: 0 60px 0;
 }
 
-.featured > h2 {
+.featured h2 {
   font-size: 14px;
   font-weight: 400;
+  margin-bottom: 10px; 
+  text-decoration: none;
+  color: rgb(40, 40, 40);
 }
 
 .featured-projects {
@@ -112,9 +120,14 @@ html {
 .featured-projects p {
   position: absolute;
   display: inline-block;
+  color: rgb(40, 40, 40);
   line-height: 15px;
   background: white;
   padding: 10px 15px;
+}
+
+.featured a {
+  text-decoration: none;
 }
 
 .featured-title {
@@ -139,10 +152,10 @@ html {
   margin-left: 20px;
 }
 
-.new-noteworthy > h2 {
+.new-noteworthy h2 {
   font-size: 14px;
   font-weight: 400;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
   border-bottom: 1px solid gray;
 }
 
@@ -161,8 +174,8 @@ html {
 
 .project-item {
   box-sizing: border-box;
-  min-height: 110px;
-  padding: 20px 0 15px;
+  min-height: 92px;
+  padding: 15px 0 15px;
   border-bottom: 1px solid gray;
 }
 

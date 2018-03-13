@@ -15,7 +15,7 @@ function Featured(props) {
         <h2>FEATURED PROJECT</h2>
         <div className="featured-projects" style={backgroundImg}>
           <p className="featured-title">{props.projects[0].title}</p>
-          <p className="featured-author">{props.projects[0].author.username}</p>
+          <p className="featured-author">By {props.projects[0].author.username}</p>
         </div>
       </Link>
     </div>
