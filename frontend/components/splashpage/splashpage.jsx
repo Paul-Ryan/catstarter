@@ -3,19 +3,29 @@ import FormattedDate from './formatted_date';
 import FeaturedProjects from './featured_projects';
 import NewNoteworthy from './new_noteworthy/new_noteworthy_index';
 import CategoryBar from './category_bar';
+import Featured from './featured';
 
 class SplashPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      date: new Date()
+      date: new Date(),
+      currentCategory: "games",
+      featuredProjects: this.props.projects
       };
   }
   componentDidMount() {
       this.props.fetchProjects();
+
   }
 
   render() {
+    if (this.props.projects.length === 0) {
+      return null;
+    }
+
+    let keys = Object.values(this.props.projects);
+    // console.log(keys);
 
     return (
       <div className="container">
@@ -41,8 +51,8 @@ class SplashPage extends React.Component {
           <CategoryBar />
         </section>
         <section className="splash-widgets">
-          <FeaturedProjects projects={"project"} />
-          <NewNoteworthy />
+          <Featured projects={Object.values(this.props.projects)} />
+          <NewNoteworthy projects={this.props.projects} />
         </section>
       </div>
     );

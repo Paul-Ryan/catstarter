@@ -4,8 +4,9 @@ import { fetchProjects } from '../../actions/project_actions';
 import { selectAllProjects } from '../../reducers/selectors';
 
 const mapStateToProps = state => {
-  console.log(state);
-  return { projects: selectAllProjects(state.entities) };
+  return {
+    projects: state.entities.projects,
+  };
 };
 
 const mapDispatchToProps = dispatch => {
