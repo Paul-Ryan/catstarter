@@ -1,9 +1,9 @@
 import React from 'react';
 import FormattedDate from './formatted_date';
-import FeaturedProjects from './featured_projects';
-import NewNoteworthy from './new_noteworthy/new_noteworthy_index';
+import New from './new';
 import CategoryBar from './category_bar';
 import Featured from './featured';
+// import * as Select from '../reducers.selectors';
 
 class SplashPage extends React.Component {
   constructor(props) {
@@ -52,7 +52,7 @@ class SplashPage extends React.Component {
         </section>
         <section className="splash-widgets">
           <Featured projects={Object.values(this.props.projects)} />
-          <NewNoteworthy projects={this.props.projects} />
+          <New projects={Object.values(this.props.projects)} />
         </section>
       </div>
     );

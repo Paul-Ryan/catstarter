@@ -14,7 +14,6 @@ function Featured(props) {
       <div className="featured-projects" style={backgroundImg}>
         <p className="featured-title">{props.projects[0].title}</p>
         <p className="featured-author">{props.projects[0].author.username}</p>
-        <p className="featured-percent">{props.projects[0].funding_goal}</p>
       </div>
     </div>
   );

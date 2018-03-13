@@ -1,7 +1,12 @@
 import { values } from 'lodash';
 
 export const selectAllProjects = ({projects}) => {
-  return values(projects);
+  return Object.values(projects);
+};
+
+export const featuredProjects = ({projects}) => {
+  let featured = Object.values(projects);
+  return featured.slice(0, 5);
 };
 
 export const selectProject = ({ projects }, id) => {
