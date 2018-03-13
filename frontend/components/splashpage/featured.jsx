@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Featured(props) {
   if (props.projects.length === 0) {
@@ -10,11 +11,13 @@ function Featured(props) {
 
   return (
     <div className="featured">
-      <h2>FEATURED PROJECT</h2>
-      <div className="featured-projects" style={backgroundImg}>
-        <p className="featured-title">{props.projects[0].title}</p>
-        <p className="featured-author">{props.projects[0].author.username}</p>
-      </div>
+      <Link to={`projects/${props.projects[0].id}`}>
+        <h2>FEATURED PROJECT</h2>
+        <div className="featured-projects" style={backgroundImg}>
+          <p className="featured-title">{props.projects[0].title}</p>
+          <p className="featured-author">{props.projects[0].author.username}</p>
+        </div>
+      </Link>
     </div>
   );
 }
