@@ -52,7 +52,7 @@ html {
   height: 60px;
   margin-top: 30px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -64,6 +64,10 @@ html {
 .category-bar > li:hover {
   color: rgb(40, 40, 40);
   border-bottom: 2px solid gray;
+}
+
+.category-bar > li:first-child button {
+  padding-left: 0;
 }
 
 .cat-button {

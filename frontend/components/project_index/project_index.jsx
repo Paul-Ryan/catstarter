@@ -20,7 +20,7 @@ class ProjectIndex extends React.Component {
 
     return (
       <section className="project-index">
-        <nav className="categories">Projects</nav>
+        <nav className="index-categories">Projects</nav>
         <ul className="row">
           {
             projects.map(project => (
