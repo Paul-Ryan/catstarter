@@ -40,11 +40,26 @@ class ProjectForm extends React.Component {
     });
   }
 
+  renderErrors() {
+    return(
+      <ul className="error-list">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
 
   render () {
     return (
       <div className="form">
         <h1>Create your project</h1>
+
+      {this.renderErrors()}
+
         <ul className="form-select">
           <li><button>Basics</button></li>
           <li><button>Rewards</button></li>

@@ -1,8 +1,7 @@
 import {
   RECEIVE_PROJECT_ERRORS,
-  RECEIVE_PROJECTS,
   RECEIVE_PROJECT,
-  REMOVE_PROJECT
+  CLEAR_ERRORS,
 } from '../actions/project_actions';
 
 const _nullErrors = [];
@@ -12,11 +11,9 @@ export default (state = _nullErrors, action) => {
   switch (action.type) {
     case RECEIVE_PROJECT_ERRORS:
       return action.errors;
-    case RECEIVE_PROJECTS:
-      return _nullErrors;
     case RECEIVE_PROJECT:
       return _nullErrors;
-    case REMOVE_PROJECT:
+    case CLEAR_ERRORS:
       return _nullErrors;
     default:
       return state;

@@ -3,7 +3,7 @@ Add a splash page, Style splash page (3/9)
 Implement Categories/Discover (Tuesday/weekend)(3/11)
 Improve backings - pick a reward and (maybe associate that with ur profile) (3/13)
 
-Implement search (Friday) (3/16)
+Implement search
 Add error handling for project form
 Add error handling for rewards form
 Improve ReadMe.txt
@@ -17,6 +17,8 @@ Add error handling for edit project form
 long term:
 allow users to upload photos
 use a custom route for search - eg. put search route in projects controller /search
+grid css to make the site responsive
+full testing on one slice => whole app
 
 keep app awake: http://kaffeine.herokuapp.com/
 
