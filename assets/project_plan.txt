@@ -1,9 +1,8 @@
 To do:
-Add a splash page, Style splash page (3/9)
 Implement Categories/Discover (Tuesday/weekend)(3/11)
 Improve backings - pick a reward and (maybe associate that with ur profile) (3/13)
 
-Implement search (Friday) (3/16)
+Implement search
 Add error handling for project form
 Add error handling for rewards form
 Improve ReadMe.txt
@@ -17,6 +16,13 @@ Add error handling for edit project form
 long term:
 allow users to upload photos
 use a custom route for search - eg. put search route in projects controller /search
+grid css to make the site responsive
+full testing on one slice => whole app
+-format date in project submit so that there is no warning
+- days to go is static (but accurate upon creation)
+questions:
+Project creation triggers errors
+
 
 keep app awake: http://kaffeine.herokuapp.com/
 
@@ -36,3 +42,6 @@ Questions:
 Where to put functions I use in multi places to track percent pledges (currently live in multiple places)
 
 users should be given rewards
+
+Done:
+Add a splash page, Style splash page (3/9)
