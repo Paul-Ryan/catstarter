@@ -35,7 +35,7 @@ class ProjectForm extends React.Component {
       image_url: "",
       blurb: "",
       description: "",
-      due_date: "",
+      due_date: new Date(),
       funding_goal: 0
     });
   }
