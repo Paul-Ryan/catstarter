@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :pledges, only: [:create]
       get "search", on: :collection
     end
+    resources :categories, only: [:index, :show]
     resources :pledges, only: [:destroy]
     resources :rewards, only: [:destroy]
   end

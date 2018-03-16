@@ -18,4 +18,8 @@ class CategoryName < ApplicationRecord
     primary_key: :id,
     foreign_key: :category_id,
     class_name: :Category
+
+  has_many :projects,
+    through: :category_joins,
+    source: :project
 end
