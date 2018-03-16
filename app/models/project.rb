@@ -30,9 +30,13 @@ class Project < ApplicationRecord
   #   primary_key: :id,
   #   foreign_key: :project_id,
   #   class_name: :Category
-  has_many :categories
-  has_many :category_names, 
-    through: :categories,
+  has_many :category_joins,
+    primary_key: :id,
+    foreign_key: :project_id,
+    class_name: :Category
+
+  has_many :categories,
+    through: :category_joins,
     source: :category_name
 
   # def current_funding()

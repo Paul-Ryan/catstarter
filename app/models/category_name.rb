@@ -14,7 +14,7 @@ class CategoryName < ApplicationRecord
     message: "is not a valid category"
   }, presence: true
 
-  has_many :categories,
+  has_many :category_joins,
     primary_key: :id,
     foreign_key: :category_id,
     class_name: :Category
