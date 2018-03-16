@@ -10,7 +10,7 @@
 
 class CategoryName < ApplicationRecord
   validates :name, inclusion: {
-    in: %w(music games food arts publishing illustration film),
+    in: %w(Music Games Food Arts Publishing Crafts Film Technology Design),
     message: "is not a valid category"
   }, presence: true
 

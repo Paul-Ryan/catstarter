@@ -10,6 +10,19 @@ User.delete_all
 Project.delete_all
 Reward.delete_all
 Pledge.delete_all
+Category.delete_all
+CategoryName.delete_all
+
+# Categories available
+m = CategoryName.create!(name: "Music")
+g = CategoryName.create!(name: "Games")
+f = CategoryName.create!(name: "Food")
+a = CategoryName.create!(name: "Arts")
+w = CategoryName.create!(name: "Publishing")
+c = CategoryName.create!(name: "Crafts")
+f = CategoryName.create!(name: "Film")
+t = CategoryName.create!(name: "Technology")
+d = CategoryName.create!(name: "Design")
 
 user1 = User.create(username: 'demoLogin', email: 'demo@email.com', password: 'password')
 user2 = User.create(username: 'Paul', email: 'paul.ryan.iii@gmail.com', password: 'dinosaur1')
@@ -311,44 +324,70 @@ Reward.create(project_id: project8.id, title: "Demo reward 3", description: "des
 Reward.create(project_id: project8.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
 Reward.create(project_id: project8.id, title: "Demo reward 4", description: "description of demo reward", reward_minimum_amount: 200)
 
+# Pledge creation
+Pledge.create(project_id: project1.id, user_id: user1.id, pledge_amount: 10)
+Pledge.create(project_id: project2.id, user_id: user1.id, pledge_amount: 15)
+Pledge.create(project_id: project3.id, user_id: user1.id, pledge_amount: 15)
+Pledge.create(project_id: project4.id, user_id: user1.id, pledge_amount: 100)
+
+Pledge.create(project_id: project1.id, user_id: user2.id, pledge_amount: 20)
+Pledge.create(project_id: project2.id, user_id: user2.id, pledge_amount: 150)
+Pledge.create(project_id: project3.id, user_id: user2.id, pledge_amount: 15)
+Pledge.create(project_id: project4.id, user_id: user2.id, pledge_amount: 100)
+
+Pledge.create(project_id: project1.id, user_id: user3.id, pledge_amount: 15)
+Pledge.create(project_id: project2.id, user_id: user3.id, pledge_amount: 15)
+Pledge.create(project_id: project3.id, user_id: user3.id, pledge_amount: 20)
+Pledge.create(project_id: project4.id, user_id: user3.id, pledge_amount: 100)
+
+Pledge.create(project_id: project1.id, user_id: user4.id, pledge_amount: 100)
+Pledge.create(project_id: project2.id, user_id: user4.id, pledge_amount: 15)
+Pledge.create(project_id: project3.id, user_id: user4.id, pledge_amount: 15)
+Pledge.create(project_id: project4.id, user_id: user4.id, pledge_amount: 100)
+
+Pledge.create(project_id: project5.id, user_id: user5.id, pledge_amount: 10)
+Pledge.create(project_id: project6.id, user_id: user5.id, pledge_amount: 15)
+Pledge.create(project_id: project7.id, user_id: user5.id, pledge_amount: 15)
+Pledge.create(project_id: project8.id, user_id: user5.id, pledge_amount: 100)
+
+Pledge.create(project_id: project5.id, user_id: user6.id, pledge_amount: 10)
+Pledge.create(project_id: project6.id, user_id: user6.id, pledge_amount: 15)
+Pledge.create(project_id: project7.id, user_id: user6.id, pledge_amount: 15)
+Pledge.create(project_id: project8.id, user_id: user6.id, pledge_amount: 100)
+
+Pledge.create(project_id: project5.id, user_id: user7.id, pledge_amount: 10)
+Pledge.create(project_id: project6.id, user_id: user7.id, pledge_amount: 15)
+Pledge.create(project_id: project7.id, user_id: user7.id, pledge_amount: 15)
+Pledge.create(project_id: project8.id, user_id: user7.id, pledge_amount: 100)
+
+Pledge.create(project_id: project5.id, user_id: user8.id, pledge_amount: 10)
+Pledge.create(project_id: project6.id, user_id: user8.id, pledge_amount: 15)
+Pledge.create(project_id: project7.id, user_id: user8.id, pledge_amount: 15)
+Pledge.create(project_id: project8.id, user_id: user8.id, pledge_amount: 100)
+
+# Category creation
+Category.create(project_id: project1.id, category_id: f.id )
+Category.create(project_id: project1.id, category_id: c.id )
+
+Category.create(project_id: project2.id, category_id: c.id)
+
+Category.create(project_id: project3.id, category_id: c.id)
+Category.create(project_id: project3.id, category_id: w.id)
+
+Category.create(project_id: project4.id, category_id: c.id)
+
+Category.create(project_id: project5.id, category_id: g.id)
+Category.create(project_id: project5.id, category_id: t.id)
+
+Category.create(project_id: project6.id, category_id: f.id)
 
 
-Pledge.create( project_id: project1.id, user_id: user1.id, pledge_amount: 10)
-Pledge.create( project_id: project2.id, user_id: user1.id, pledge_amount: 15)
-Pledge.create( project_id: project3.id, user_id: user1.id, pledge_amount: 15)
-Pledge.create( project_id: project4.id, user_id: user1.id, pledge_amount: 100)
-
-Pledge.create( project_id: project1.id, user_id: user2.id, pledge_amount: 20)
-Pledge.create( project_id: project2.id, user_id: user2.id, pledge_amount: 150)
-Pledge.create( project_id: project3.id, user_id: user2.id, pledge_amount: 15)
-Pledge.create( project_id: project4.id, user_id: user2.id, pledge_amount: 100)
-
-Pledge.create( project_id: project1.id, user_id: user3.id, pledge_amount: 15)
-Pledge.create( project_id: project2.id, user_id: user3.id, pledge_amount: 15)
-Pledge.create( project_id: project3.id, user_id: user3.id, pledge_amount: 20)
-Pledge.create( project_id: project4.id, user_id: user3.id, pledge_amount: 100)
-
-Pledge.create( project_id: project1.id, user_id: user4.id, pledge_amount: 100)
-Pledge.create( project_id: project2.id, user_id: user4.id, pledge_amount: 15)
-Pledge.create( project_id: project3.id, user_id: user4.id, pledge_amount: 15)
-Pledge.create( project_id: project4.id, user_id: user4.id, pledge_amount: 100)
-
-Pledge.create( project_id: project5.id, user_id: user5.id, pledge_amount: 10)
-Pledge.create( project_id: project6.id, user_id: user5.id, pledge_amount: 15)
-Pledge.create( project_id: project7.id, user_id: user5.id, pledge_amount: 15)
-Pledge.create( project_id: project8.id, user_id: user5.id, pledge_amount: 100)
-
-Pledge.create( project_id: project5.id, user_id: user6.id, pledge_amount: 10)
-Pledge.create( project_id: project6.id, user_id: user6.id, pledge_amount: 15)
-Pledge.create( project_id: project7.id, user_id: user6.id, pledge_amount: 15)
-Pledge.create( project_id: project8.id, user_id: user6.id, pledge_amount: 100)
-
-Pledge.create( project_id: project5.id, user_id: user7.id, pledge_amount: 10)
-Pledge.create( project_id: project6.id, user_id: user7.id, pledge_amount: 15)
-Pledge.create( project_id: project7.id, user_id: user7.id, pledge_amount: 15)
-Pledge.create( project_id: project8.id, user_id: user7.id, pledge_amount: 100)
-
-Pledge.create( project_id: project5.id, user_id: user8.id, pledge_amount: 10)
-Pledge.create( project_id: project6.id, user_id: user8.id, pledge_amount: 15)
-Pledge.create( project_id: project7.id, user_id: user8.id, pledge_amount: 15)
-Pledge.create( project_id: project8.id, user_id: user8.id, pledge_amount: 100)
+# m = CategoryName.create!(name: "Music")
+# g = CategoryName.create!(name: "Games")
+# f = CategoryName.create!(name: "Food")
+# a = CategoryName.create!(name: "Arts")
+# w = CategoryName.create!(name: "Publishing")
+# c = CategoryName.create!(name: "Crafts")
+# f = CategoryName.create!(name: "Film")
+# t = CategoryName.create!(name: "Technology")
+# d = CategoryName.create!(name: "Design")
