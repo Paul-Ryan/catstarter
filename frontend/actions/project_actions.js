@@ -6,7 +6,8 @@ export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 export const REMOVE_PROJECT = "DELETE_PROJECT";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
-// We need two actions: one to go fetch all the benches from our Rails API, and one that tells our store to change our application state to represent the bench data in our action.
+// We need two actions: one to go fetch all the benches from our Rails API,
+// and one that tells our store to change our application state to represent the bench data in our action.
 
 const receiveProjects = projects => ({
   type: RECEIVE_PROJECTS,
