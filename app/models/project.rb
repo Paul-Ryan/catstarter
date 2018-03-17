@@ -26,6 +26,19 @@ class Project < ApplicationRecord
   has_many :rewards
   has_many :pledges
 
+  # has_many :category_keys,
+  #   primary_key: :id,
+  #   foreign_key: :project_id,
+  #   class_name: :Category
+  has_many :category_joins,
+    primary_key: :id,
+    foreign_key: :project_id,
+    class_name: :Category
+
+  has_many :categories,
+    through: :category_joins,
+    source: :category_name
+
   # def current_funding()
   #
   # end

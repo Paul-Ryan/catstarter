@@ -1,6 +1,7 @@
 class Api::ProjectsController < ApplicationController
   def index
-    @projects = Project.all.includes(:author)
+    # @projects = Project.all.includes(:author)
+    @projects = Project.all
     render '/api/projects/index'
   end
 
@@ -17,11 +18,7 @@ class Api::ProjectsController < ApplicationController
 
   def show
     @project = Project.find_by(id: params[:id])
-    if @project
-      render 'api/projects/show'
-    else
-      render json: @project.errors.full_messages, status: 404
-    end
+    render 'api/projects/show'
   end
 
   def update
