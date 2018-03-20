@@ -10,12 +10,13 @@ class SplashPage extends React.Component {
     super(props);
     this.state = {
       date: new Date(),
-      currentCategory: "games",
+      currentCategory: "Games",
       featuredProjects: this.props.projects
       };
   }
   componentDidMount() {
       this.props.fetchProjects();
+      this.props.fetchCategories();
   }
 
   render() {

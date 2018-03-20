@@ -5,7 +5,6 @@ import {
   RECEIVE_PROJECT,
   REMOVE_PROJECT
 } from '../actions/project_actions';
-import { RECEIVE_CATEGORY } from '../actions/category_actions';
 import { RECEIVE_REWARD } from '../actions/reward_actions';
 import { RECEIVE_PLEDGE } from '../actions/pledge_actions';
 
@@ -18,12 +17,6 @@ const projectsReducer = (state = {}, action) => {
     case RECEIVE_PROJECT:
       newState = {[action.payload.project.id]: action.payload.project};
       return merge({}, state, newState);
-    case RECEIVE_CATEGORY:
-      newState = {
-        projects: action.payload.projects,
-        category: action.payload.category
-      };
-      return merge({}, state, newState); // if we don't merge with old state, we don't need to filter
     case REMOVE_PROJECT:
       newState = merge({}, state);
       delete newState[action.id];
