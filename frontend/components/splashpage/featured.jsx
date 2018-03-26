@@ -8,18 +8,26 @@ function Featured(props) {
 
   let imgUrl = props.projects[0].imageUrl;
   let backgroundImg = { backgroundImage: `url(${imgUrl})` };
+  let featured = pickFeatured(props.projects);
 
   return (
     <div className="featured">
-      <Link to={`projects/${props.projects[0].id}`}>
+      <Link to={`projects/${featured.id}`}>
         <h2>FEATURED PROJECT</h2>
         <div className="featured-projects" style={backgroundImg}>
-          <p className="featured-title">{props.projects[0].title}</p>
-          <p className="featured-author">By {props.projects[0].author.username}</p>
+          <p className="featured-title">{featured.title}</p>
+          <p className="featured-author">By {featured.author.username}</p>
         </div>
       </Link>
     </div>
   );
+}
+
+function pickFeatured(projects) {
+  // console.log(Object.values(projects));
+  const allProjects = Object.values(projects)
+
+  return projects[0];
 }
 
 export default Featured;

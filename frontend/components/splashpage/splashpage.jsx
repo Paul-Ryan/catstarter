@@ -1,6 +1,5 @@
 import React from 'react';
 import SplashBar from './splash_bar';
-import CategoryBar from './category_bar';
 import New from './new';
 import Featured from './featured';
 import Category from './category';
@@ -27,7 +26,7 @@ class SplashPage extends React.Component {
       <Category
         value={category}
         onClick={() => this.handleClick(category)}
-        />
+      />
     );
   }
 
@@ -48,18 +47,26 @@ class SplashPage extends React.Component {
     return (
       <div className="container">
         <SplashBar />
-        <section>
-          <CategoryBar />
-        </section>
 
-        <section className="category-bar">
-          {this.renderCategory("Music")}
-          {this.renderCategory("Games")}
-          {this.renderCategory("Food")}
-        </section>
+        <div className="categories">
+          <section className="category-bar">
+            {this.renderCategory("Music")}
+            {this.renderCategory("Games")}
+            {this.renderCategory("Food")}
+            {this.renderCategory("Arts")}
+            {this.renderCategory("Publishing")}
+            {this.renderCategory("Crafts")}
+            {this.renderCategory("Film")}
+            {this.renderCategory("Technology")}
+            {this.renderCategory("Design")}
+          </section>
+        </div>
 
         <section className="splash-widgets">
-          <Featured projects={Object.values(this.props.projects)} />
+          <Featured
+            projects={Object.values(this.props.projects)} 
+            currentCategory = {this.state.currentCategory}
+          />
           <New projects={Object.values(this.props.projects)} />
         </section>
       </div>

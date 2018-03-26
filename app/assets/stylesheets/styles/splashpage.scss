@@ -56,12 +56,13 @@ html {
   align-items: center;
 }
 
-.category-bar > li {
+.category-bar > li,
+.category-bar > button {
   height: 60px;
   line-height: 60px;
 }
 
-.category-bar > li:hover {
+.category-bar > .category:hover {
   color: rgb(40, 40, 40);
   border-bottom: 2px solid gray;
 }
@@ -70,20 +71,20 @@ html {
   padding-left: 0;
 }
 
-.cat-button {
+.category {
   border: none;
   background: none;
   font-size: 18px;
   color: rgb(216, 216, 216);
 }
 
-.cat-button:hover {
+.category:hover {
   color: rgb(40, 40, 40);
   cursor: pointer;
 }
 
-.cat-button:focus,
-.cat-button:active {
+.category:focus,
+.category:active {
     outline: none;
 }
 
@@ -103,7 +104,7 @@ html {
 .featured h2 {
   font-size: 14px;
   font-weight: 400;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
   text-decoration: none;
   color: rgb(40, 40, 40);
 }
