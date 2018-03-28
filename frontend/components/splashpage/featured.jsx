@@ -8,7 +8,8 @@ function Featured(props) {
 
   let imgUrl = props.projects[0].imageUrl;
   let backgroundImg = { backgroundImage: `url(${imgUrl})` };
-  let featured = pickFeatured(props.projects);
+  // let featured = pickFeatured(props.projects, props.currentCategory);
+  let featured = props.featuredProject;
 
   return (
     <div className="featured">
@@ -23,11 +24,30 @@ function Featured(props) {
   );
 }
 
-function pickFeatured(projects) {
-  // console.log(Object.values(projects));
-  const allProjects = Object.values(projects)
+// function pickFeatured(projects, currentCategory) {
+//   // console.log(Object.values(projects));
+//   // console.log("Projects", projects[0]);
+//   // console.log("current", currentCategory);
+//   let featured;
+//   featured = projects.forEach( (project) => {
+//     let categories = project['categories'];
+//     console.log("categories", categories);
+//     if (categories && categories.indexOf(currentCategory) !== -1) {
+//       return project;
+//     }
+//   });
+//   return projects[0];
+// }
 
-  return projects[0];
+function pickFeatured(projects, currentCategory) {
+  let featured;
+  featured = projects.filter(project => project['categories'].includes(currentCategory))
+  console.log(featured[0]);
+  if (featured[0]) {
+    return featured[0];
+  } else {
+   return projects[0];
+  }
 }
 
 export default Featured;

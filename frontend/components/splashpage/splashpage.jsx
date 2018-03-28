@@ -12,7 +12,8 @@ class SplashPage extends React.Component {
     this.state = {
       date: new Date(),
       currentCategory: "Music",
-      featuredProjects: this.props.projects
+      featuredProjects: this.props.projects,
+      featuredProject: {id: 1, title: "featured", author: "cat"}
       };
   }
 
@@ -30,12 +31,26 @@ class SplashPage extends React.Component {
     );
   }
 
+  pickFeatured(projects, currentCategory) {
+    let featured;
+    featured = projects.filter(project => project['categories'].includes(currentCategory))
+    if (featured[0]) {
+      return featured[0];
+    } else {
+     return projects[0];
+    }
+  }
+
   handleClick(category) {
     if (this.state.currentCategory === category) {
       return;
     }
+
+    let featured = this.pickFeatured(Object.values(this.props.projects), category);
+
     this.setState({
       currentCategory: category,
+      featuredProject: featured
     });
   }
 
@@ -64,7 +79,8 @@ class SplashPage extends React.Component {
 
         <section className="splash-widgets">
           <Featured
-            projects={Object.values(this.props.projects)} 
+            featuredProject={this.state.featuredProject}
+            projects={Object.values(this.props.projects)}
             currentCategory = {this.state.currentCategory}
           />
           <New projects={Object.values(this.props.projects)} />
