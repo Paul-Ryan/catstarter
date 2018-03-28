@@ -8,6 +8,7 @@
     json.author do
       json.extract! project.author, :username
     end
+    json.categories project.categories.pluck(:id)
     json.rewards project.rewards.pluck(:id)
     json.pledges project.pledges.pluck(:pledge_amount)
   end

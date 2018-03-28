@@ -1,5 +1,7 @@
 import merge from 'lodash/merge';
 
+import { RECEIVE_CATEGORY } from '../actions/category_actions';
+
 import {
   RECEIVE_PROJECTS,
   RECEIVE_PROJECT,

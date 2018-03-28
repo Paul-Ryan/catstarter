@@ -11,3 +11,10 @@ export const fetchCategory = id => {
     method: 'GET',
   });
 };
+
+export const fetchProjectCategory = id => {
+  return $.ajax({
+    url: `api/projects/category/${id}`,
+    method: 'GET',
+  });
+};
