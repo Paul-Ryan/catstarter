@@ -6,10 +6,11 @@ function Featured(props) {
     return null;
   }
 
-  let imgUrl = props.projects[0].imageUrl;
-  let backgroundImg = { backgroundImage: `url(${imgUrl})` };
-  // let featured = pickFeatured(props.projects, props.currentCategory);
   let featured = props.featuredProject;
+  let imgUrl = props.projects[0].imageUrl;
+  // let backgroundImg = { backgroundImage: `url(${imgUrl})` };
+  let backgroundImg = { backgroundImage: `url(${props.featuredProject.imageUrl})` };
+  // let featured = pickFeatured(props.projects, props.currentCategory);
 
   return (
     <div className="featured">

@@ -11,10 +11,10 @@ class SplashPage extends React.Component {
     super(props);
     this.state = {
       date: new Date(),
-      currentCategory: "Music",
+      currentCategory: "Games",
       featuredProjects: this.props.projects,
-      featuredProject: {id: 1, title: "featured", author: "cat"}
-      };
+      featuredProject: {id: 1, title: "featured", author: "cat", imageURL: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897262/cool-glasses.jpg" }
+    };
   }
 
   componentDidMount() {
