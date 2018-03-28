@@ -13,7 +13,12 @@ class SplashPage extends React.Component {
       date: new Date(),
       currentCategory: "Games",
       featuredProjects: this.props.projects,
-      featuredProject: {id: 1, title: "featured", author: "cat", imageURL: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897262/cool-glasses.jpg" }
+      featuredProject: {
+        id: 1,
+        title: "Special Glasses: see what you've been missing!",
+        author: {username: "Cat"},
+        imageUrl: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897262/cool-glasses.jpg"
+      }
     };
   }
 
