@@ -7,7 +7,7 @@ Add error handling for project form - X
 Combine project and revise form
 Add error handling for revise form
 Improve ReadMe.txt
-Combine rewards form wit project/revision form 
+Combine rewards form wit project/revision form
 
 Refactor project pledges slice of store to use ID *
 Improve Backing Projects and Rewards to reward users
@@ -16,6 +16,7 @@ Add error handling for edit project form
 
 
 long term:
+replace ajax requests with fetch requests 
 allow users to upload photos
 use a custom route for search - eg. put search route in projects controller /search
 grid css to make the site responsive
