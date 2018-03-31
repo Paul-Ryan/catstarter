@@ -7,7 +7,7 @@ function ProjectIndexItem(props) {
   return (
     <li className="project-item">
       <Link to={`projects/${project.id}`} className="new-link">
-        <img className="new-img" src={project.imageUrl} />
+        <img src={project.imageUrl} className="new-img" />
         <h3>{project.title}</h3>
       </Link>
     </li>

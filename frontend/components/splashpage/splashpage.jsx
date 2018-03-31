@@ -11,8 +11,8 @@ class SplashPage extends React.Component {
     super(props);
     this.state = {
       date: new Date(),
-      currentCategory: "Games",
-      featuredProjects: this.props.projects,
+      currentCategory: "Crafts",
+      listProjects: [],
       featuredProject: {
         id: 1,
         title: "Special Glasses: see what you've been missing!",
@@ -28,6 +28,7 @@ class SplashPage extends React.Component {
   }
 
   renderCategory(category) {
+    console.log("render running");
     return (
       <Category
         value={category}
@@ -36,6 +37,8 @@ class SplashPage extends React.Component {
     );
   }
 
+// this handles project selection for both widgets
+// later factor this out into multi methods to select in cooler ways
   pickFeatured(projects, currentCategory) {
     let featured = projects.filter(project =>
       project['categories'].includes(currentCategory));
@@ -43,7 +46,7 @@ class SplashPage extends React.Component {
     if (featured[0]) {
       return featured;
     } else {
-     return projects[0];
+     return projects;
     }
   }
 
@@ -92,8 +95,6 @@ class SplashPage extends React.Component {
             currentCategory = {this.state.currentCategory}
           />
           <New
-            projects={Object.values(this.props.projects)}
-            currentCategory = {this.state.currentCategory}
             listProjects = {this.state.listProjects}
           />
         </section>

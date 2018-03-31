@@ -8,28 +8,22 @@ class New extends React.Component {
     super(props);
     this.state = {
       tab: "new",
-      category: props.currentCategory,
-      projects: props.projects,
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({ category: nextProps.currentCategory });
-  }
-
   renderProjectIndexItem(n) {
+    if (typeof this.props.listProjects[n] === 'undefined') {
+      return null;
+    }
+
     return (
       <ProjectIndexItem
-        project={this.props.projects[n]}
+        project={this.props.listProjects[n]}
       />
     );
   }
 
   render() {
-    if (this.props.projects.length === 0) {
-      return null;
-    }
-
     return (
       <div className="new-noteworthy">
         <ul className="splash-list">
@@ -38,24 +32,9 @@ class New extends React.Component {
         </ul>
         <ul className="new-index">
           {this.renderProjectIndexItem(1)}
-          <li className="project-item">
-            <Link to={`projects/${this.props.projects[2].id}`} className="new-link">
-              <img className="new-img" src={this.props.projects[2].imageUrl} />
-              {this.props.projects[2].title}
-            </Link>
-          </li>
-          <li className="project-item">
-            <Link to={`projects/${this.props.projects[3].id}`} className="new-link">
-              <img className="new-img" src={this.props.projects[3].imageUrl} />
-              <h3>{this.props.projects[3].title}</h3>
-            </Link>
-          </li>
-          <li className="project-item">
-            <Link to={`projects/${this.props.projects[4].id}`} className="new-link">
-              <img className="new-img" src={this.props.projects[4].imageUrl} />
-              <h3>{this.props.projects[4].title}</h3>
-            </Link>
-          </li>
+          {this.renderProjectIndexItem(2)}
+          {this.renderProjectIndexItem(3)}
+          {this.renderProjectIndexItem(4)}
         </ul>
         <Link to="projects">View All</Link>
       </div>
