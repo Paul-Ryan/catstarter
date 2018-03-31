@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import ProjectIndexItem from './project_index';
 
 
 class New extends React.Component {
@@ -9,11 +9,20 @@ class New extends React.Component {
     this.state = {
       tab: "new",
       category: props.currentCategory,
+      projects: props.projects,
     };
   }
-  
+
   componentWillReceiveProps(nextProps) {
     this.setState({ category: nextProps.currentCategory });
+  }
+
+  renderProjectIndexItem(n) {
+    return (
+      <ProjectIndexItem
+        project={this.props.projects[n]}
+      />
+    );
   }
 
   render() {
@@ -28,12 +37,7 @@ class New extends React.Component {
           <li className="list-header">POPULAR</li>
         </ul>
         <ul className="new-index">
-          <li className="project-item">
-            <Link to={`projects/${this.props.projects[1].id}`} className="new-link">
-              <img className="new-img" src={this.props.projects[1].imageUrl} />
-              <h3>{this.props.projects[1].title}</h3>
-            </Link>
-          </li>
+          {this.renderProjectIndexItem(1)}
           <li className="project-item">
             <Link to={`projects/${this.props.projects[2].id}`} className="new-link">
               <img className="new-img" src={this.props.projects[2].imageUrl} />
