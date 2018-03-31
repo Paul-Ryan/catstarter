@@ -173,6 +173,18 @@ html {
   margin-bottom: 15px;
 }
 
+.splash-list {
+  display: flex;
+}
+
+.list-header {
+  padding: 0 8px;
+}
+
+.list-header:first-child {
+  padding-left: 0;
+}
+
 .project-item {
   box-sizing: border-box;
   min-height: 92px;
