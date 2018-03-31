@@ -88,7 +88,10 @@ class SplashPage extends React.Component {
             projects={Object.values(this.props.projects)}
             currentCategory = {this.state.currentCategory}
           />
-          <New projects={Object.values(this.props.projects)} />
+          <New
+            projects={Object.values(this.props.projects)}
+            currentCategory = {this.state.currentCategory}
+          />
         </section>
       </div>
     );

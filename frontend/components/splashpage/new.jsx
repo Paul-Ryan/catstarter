@@ -8,7 +8,12 @@ class New extends React.Component {
     super(props);
     this.state = {
       tab: "new",
+      category: props.currentCategory,
     };
+  }
+  
+  componentWillReceiveProps(nextProps) {
+    this.setState({ category: nextProps.currentCategory });
   }
 
   render() {
@@ -52,7 +57,6 @@ class New extends React.Component {
       </div>
     );
   }
-
 }
 
 export default New;
