@@ -6,9 +6,6 @@ import ProjectIndexItem from './project_index';
 class New extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      tab: "new",
-    };
   }
 
   renderProjectIndexItem(n) {
@@ -24,6 +21,9 @@ class New extends React.Component {
   }
 
   render() {
+    console.log("list projects", this.props.listProjects);
+
+
     return (
       <div className="new-noteworthy">
         <ul className="splash-list">

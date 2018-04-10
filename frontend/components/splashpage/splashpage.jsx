@@ -1,6 +1,7 @@
 import React from 'react';
 import SplashBar from './splash_bar';
 import New from './new';
+import FeaturedRight from './featured_right';
 import Featured from './featured';
 import Category from './category';
 
@@ -29,32 +30,24 @@ class SplashPage extends React.Component {
     );
   }
 
-// this handles project selection for both widgets
-// later factor this out into multi methods to select in cooler ways
-  pickFeatured(projects, currentCategory) {
-    let featured = projects.filter(project => {
-      return project['categories'].includes(currentCategory); });
+  pickFeatured() {
+    let projects = Object.values(this.props.projects);
+    let count = 0;
+    let i = 0;
+    let displayProjects = [];
 
-    if (featured[0]) {
-      return featured;
-    } else {
-      return projects;
+    while (count < 5 && i < projects.length) {
+      if (projects[i].categories.includes(this.state.currentCategory)) {
+        displayProjects.push(projects[i]);
+        count++;
+      }
+      i++;
     }
+
   }
 
-  handleClick(category) {
-    if (this.state.currentCategory === category) {
-      return;
-    }
-
-    let featured = this.pickFeatured(
-      Object.values(this.props.projects), category);
-
-    this.setState({
-      currentCategory: category,
-      featuredProject: featured[0],
-      listProjects: featured.slice(1)
-    });
+  handleClick(currentCategory) {
+    this.setState({ currentCategory });
   }
 
   render() {
@@ -76,10 +69,12 @@ class SplashPage extends React.Component {
     if (displayProjects.length === 0) {
       return null;
     }
-
+    console.log("display projects", displayProjects);
+    console.log("slice 1", displayProjects.slice(1));
     return (
       <div className="container">
         <SplashBar />
+          <span className="current-category">{this.state.currentCategory}</span>
 
         <div className="categories">
           <section className="category-bar">
@@ -103,6 +98,7 @@ class SplashPage extends React.Component {
           />
           <New
             listProjects = {displayProjects.slice(1)}
+            currentCategory = {this.state.currentCategory}
           />
         </section>
       </div>
