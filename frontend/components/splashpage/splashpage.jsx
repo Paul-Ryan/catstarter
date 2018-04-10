@@ -4,21 +4,14 @@ import New from './new';
 import Featured from './featured';
 import Category from './category';
 
-// import * as Select from '../reducers.selectors';
 
 class SplashPage extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       date: new Date(),
       currentCategory: "Crafts",
-      listProjects: [],
-      featuredProject: {
-        id: 1,
-        title: "Special Glasses: see what you've been missing!",
-        author: {username: "Cat"},
-        imageUrl: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897262/cool-glasses.jpg"
-      }
     };
   }
 
@@ -28,7 +21,6 @@ class SplashPage extends React.Component {
   }
 
   renderCategory(category) {
-    console.log("render running");
     return (
       <Category
         value={category}
@@ -40,13 +32,13 @@ class SplashPage extends React.Component {
 // this handles project selection for both widgets
 // later factor this out into multi methods to select in cooler ways
   pickFeatured(projects, currentCategory) {
-    let featured = projects.filter(project =>
-      project['categories'].includes(currentCategory));
+    let featured = projects.filter(project => {
+      return project['categories'].includes(currentCategory); });
 
     if (featured[0]) {
       return featured;
     } else {
-     return projects;
+      return projects;
     }
   }
 
@@ -66,7 +58,22 @@ class SplashPage extends React.Component {
   }
 
   render() {
-    if (this.props.projects.length === 0) {
+
+    // pick the featured and new projects to display based on the currentCategory
+    let projects = Object.values(this.props.projects);
+    let count = 0;
+    let i = 0;
+    let displayProjects = [];
+
+    while (count < 5 && i < projects.length) {
+      if (projects[i].categories.includes(this.state.currentCategory)) {
+        displayProjects.push(projects[i]);
+        count++;
+      }
+      i++;
+    }
+
+    if (displayProjects.length === 0) {
       return null;
     }
 
@@ -90,12 +97,12 @@ class SplashPage extends React.Component {
 
         <section className="splash-widgets">
           <Featured
-            featuredProject={this.state.featuredProject}
+            featuredProject={displayProjects[0]}
             projects={Object.values(this.props.projects)}
             currentCategory = {this.state.currentCategory}
           />
           <New
-            listProjects = {this.state.listProjects}
+            listProjects = {displayProjects.slice(1)}
           />
         </section>
       </div>

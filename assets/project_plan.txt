@@ -16,7 +16,7 @@ Add error handling for edit project form
 
 
 long term:
-replace ajax requests with fetch requests 
+replace ajax requests with fetch requests
 allow users to upload photos
 use a custom route for search - eg. put search route in projects controller /search
 grid css to make the site responsive
@@ -25,6 +25,7 @@ full testing on one slice => whole app
 - days to go is static (but accurate upon creation)
 questions:
 Project creation triggers errors
+refactor views to user partials
 
 
 keep app awake: http://kaffeine.herokuapp.com/
