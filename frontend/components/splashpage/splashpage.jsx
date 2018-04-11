@@ -1,7 +1,6 @@
 import React from 'react';
 import SplashBar from './splash_bar';
 import New from './new';
-import FeaturedRight from './featured_right';
 import Featured from './featured';
 import Category from './category';
 
@@ -93,7 +92,6 @@ class SplashPage extends React.Component {
         <section className="splash-widgets">
           <Featured
             featuredProject={displayProjects[0]}
-            projects={Object.values(this.props.projects)}
             currentCategory = {this.state.currentCategory}
           />
           <New

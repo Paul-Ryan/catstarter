@@ -20,7 +20,7 @@ f = CategoryName.create!(name: "Food")
 a = CategoryName.create!(name: "Arts")
 w = CategoryName.create!(name: "Publishing")
 c = CategoryName.create!(name: "Crafts")
-f = CategoryName.create!(name: "Film")
+i = CategoryName.create!(name: "Film")
 t = CategoryName.create!(name: "Technology")
 d = CategoryName.create!(name: "Design")
 
@@ -47,6 +47,9 @@ project1 = Project.create(
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897262/food.jpg"
 )
 
+Category.create(project_id: project1.id, category_id: f.id )
+Category.create(project_id: project1.id, category_id: c.id )
+
 project2 = Project.create(
   title: "Bespoke x-ray glasses",
   blurb: "Keep away from mirrors",
@@ -56,6 +59,9 @@ project2 = Project.create(
   funding_goal: 4000,
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897262/cool-glasses.jpg"
 )
+
+Category.create(project_id: project2.id, category_id: c.id)
+Category.create(project_id: project2.id, category_id: t.id)
 
 project3 = Project.create(
   title: "Notebooks made of recycled worse notebooks",
@@ -67,6 +73,9 @@ project3 = Project.create(
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897259/thought-catalog.jpg"
 )
 
+Category.create(project_id: project3.id, category_id: c.id)
+Category.create(project_id: project3.id, category_id: w.id)
+
 project4 = Project.create(
   title: "Bowl with a duck on it",
   blurb: "First of a series of bowls to hold fruit!",
@@ -76,6 +85,9 @@ project4 = Project.create(
   funding_goal: 1000000,
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897261/yellow-bowl.jpg"
 )
+
+Category.create(project_id: project4.id, category_id: c.id)
+Category.create(project_id: project4.id, category_id: d.id)
 
 project5 = Project.create(
   title: "Boat Zone: a strategy game where you play the boat",
@@ -87,6 +99,9 @@ project5 = Project.create(
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897259/fantasy-game.jpg"
 )
 
+Category.create(project_id: project5.id, category_id: g.id)
+Category.create(project_id: project5.id, category_id: t.id)
+
 project6 = Project.create(
   title: "A cup of coffee",
   blurb: "I will send each of you one cup of coffee!",
@@ -96,6 +111,8 @@ project6 = Project.create(
   funding_goal: 5,
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897255/coffee-cup.jpg"
 )
+
+Category.create(project_id: project6.id, category_id: f.id)
 
 project7 = Project.create(
   title: "A big cat",
@@ -107,6 +124,8 @@ project7 = Project.create(
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897255/cat.jpg"
 )
 
+Category.create(project_id: project7.id, category_id: a.id)
+
 project8 = Project.create(
   title: "Really fast wheels",
   blurb: "Special wheels for your car or your friends car--look cool and go fast",
@@ -116,6 +135,9 @@ project8 = Project.create(
   funding_goal: 8000,
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897260/wheels.jpg"
 )
+
+Category.create(project_id: project8.id, category_id: t.id)
+Category.create(project_id: project8.id, category_id: g.id)
 
 project9 = Project.create(
   title: "Old fashioned band",
@@ -127,6 +149,8 @@ project9 = Project.create(
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897254/microphone.jpg"
 )
 
+Category.create(project_id: project9.id, category_id: m.id)
+
 project10 = Project.create(
   title: "Magic wood floorboards",
   blurb: "Boards cut from a magic forest with elves and stuff",
@@ -136,6 +160,8 @@ project10 = Project.create(
   funding_goal: 1234,
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897262/floorboards.jpg"
 )
+
+Category.create(project_id: project10.id, category_id: c.id)
 
 project11 = Project.create(
   title: "Yes: a book of poems about being cool",
@@ -147,6 +173,9 @@ project11 = Project.create(
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897261/yes.jpg"
 )
 
+Category.create(project_id: project11.id, category_id: w.id)
+Category.create(project_id: project11.id, category_id: a.id)
+
 project12 = Project.create(
   title: "Add salad to the menu at the restaurant that seats people at benches",
   blurb: "This will be a really good salad, but only if you fund it",
@@ -156,6 +185,8 @@ project12 = Project.create(
   funding_goal: 800,
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897262/salad-lunch.jpg"
 )
+
+Category.create(project_id: project12.id, category_id: f.id)
 
 project13 = Project.create(
   title: "Creative Campfire Pie Iron Cookbook",
@@ -167,6 +198,9 @@ project13 = Project.create(
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897260/fire.jpg"
 )
 
+Category.create(project_id: project13.id, category_id: f.id)
+Category.create(project_id: project13.id, category_id: w.id)
+
 project14 = Project.create(
   title: "Capt. Bart Brew Co. - A Progressive Fermentation Project",
   blurb: "Cats brew too! We ALL like beer. Help us become one of the first notable breweries with a cat head brewer!",
@@ -176,6 +210,8 @@ project14 = Project.create(
   funding_goal: 34000,
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897258/taps.jpg"
 )
+
+Category.create(project_id: project14.id, category_id: f.id)
 
 project15 = Project.create(
   title: "100 Wildlife Inspired Teas",
@@ -187,6 +223,9 @@ project15 = Project.create(
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897259/tea.jpg"
 )
 
+Category.create(project_id: project15.id, category_id: f.id)
+Category.create(project_id: project15.id, category_id: a.id)
+
 project16 = Project.create(
   title: "The Best Coffee You've Ever Made... Now in a Pod",
   blurb: "Incredible speciality coffee, packed into NespressoⓇ compatible pods within 7 days of roasting.",
@@ -196,6 +235,9 @@ project16 = Project.create(
   funding_goal: 1000,
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897258/coffee-friends.jpg"
 )
+
+Category.create(project_id: project16.id, category_id: f.id)
+Category.create(project_id: project16.id, category_id: t.id)
 
 project17 = Project.create(
   title: "Dishes from around the world and two croissants",
@@ -207,6 +249,9 @@ project17 = Project.create(
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897257/cooking-plates.jpg"
 )
 
+Category.create(project_id: project17.id, category_id: f.id)
+Category.create(project_id: project17.id, category_id: i.id)
+
 project18 = Project.create(
   title: "Start a new space program where I build rockets in my garage",
   blurb: "For ten-thousand dollars I'll put you on my first rocket to the moon",
@@ -216,6 +261,8 @@ project18 = Project.create(
   funding_goal: 1000,
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897257/stars.jpg"
 )
+
+Category.create(project_id: project18.id, category_id: t.id)
 
 project19 = Project.create(
   title: "A year of photography inspried by this camera my mom bought me",
@@ -227,6 +274,10 @@ project19 = Project.create(
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897255/camera.jpg"
 )
 
+Category.create(project_id: project19.id, category_id: a.id)
+Category.create(project_id: project19.id, category_id: w.id)
+Category.create(project_id: project19.id, category_id: i.id)
+
 project20 = Project.create(
   title: "Man fights the moon",
   blurb: "With enough money I think we can punch the moon back to where it came from somehow",
@@ -236,6 +287,9 @@ project20 = Project.create(
   funding_goal: 10000,
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897254/moon-fighter.jpg"
 )
+
+Category.create(project_id: project20.id, category_id: a.id)
+Category.create(project_id: project20.id, category_id: t.id)
 
 project21 = Project.create(
   title: "Noodles from another culture",
@@ -247,7 +301,9 @@ project21 = Project.create(
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897256/noodles.jpg"
 )
 
-project21 = Project.create(
+Category.create(project_id: project21.id, category_id: f.id)
+
+project22 = Project.create(
   title: "Catbag: A bag to hold all your cats",
   blurb: "Your friends will never know how many cats are in or out of the bag with this bag",
   description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
@@ -257,7 +313,10 @@ project21 = Project.create(
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897253/great-bag.jpg"
 )
 
-project21 = Project.create(
+Category.create(project_id: project22.id, category_id: c.id)
+Category.create(project_id: project22.id, category_id: d.id)
+
+project23 = Project.create(
   title: "Haunted things",
   blurb: "If you donate to this kickstarter you will be visited by three ghosts in the next four days and they will tell you boring stories from history",
   description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
@@ -267,6 +326,126 @@ project21 = Project.create(
   image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897254/invisible-camera.jpg"
 )
 
+Category.create(project_id: project23.id, category_id: a.id)
+
+project24 = Project.create(
+  title: "The album art of bands who like fruit on the beach",
+  blurb: "There are several bands in this rad collection of album art that you can support and support the arts good job",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user6.id,
+  due_date: Date.today + 25,
+  funding_goal: 1500,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897253/gold-pineapple.jpg"
+)
+
+Category.create(project_id: project24.id, category_id: m.id)
+Category.create(project_id: project24.id, category_id: d.id)
+Category.create(project_id: project24.id, category_id: w.id)
+
+project25 = Project.create(
+  title: "A film about a band of farmers named Alice",
+  blurb: "Three women who all have the same name and play music!",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user12.id,
+  due_date: Date.today + 20,
+  funding_goal: 15000,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897258/strawberries.jpg"
+)
+
+Category.create(project_id: project25.id, category_id: m.id)
+Category.create(project_id: project25.id, category_id: i.id)
+
+project26 = Project.create(
+  title: "Puizza: Punk and Pizza: a story of a generation",
+  blurb: "Some things go together like pizza and beer",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user11.id,
+  due_date: Date.today + 21,
+  funding_goal: 4800,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897256/pizza.jpg"
+)
+
+Category.create(project_id: project26.id, category_id: m.id)
+Category.create(project_id: project26.id, category_id: f.id)
+Category.create(project_id: project26.id, category_id: i.id)
+
+project27 = Project.create(
+  title: "Bando: a turn-based band simulation where you also date",
+  blurb: "doo ba doo ba doo da",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user10.id,
+  due_date: Date.today + 40,
+  funding_goal: 4800,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897253/band.jpg"
+)
+
+Category.create(project_id: project27.id, category_id: m.id)
+Category.create(project_id: project27.id, category_id: g.id)
+
+project28 = Project.create(
+  title: "Ranger Simulator",
+  blurb: "Ride the trail like a real ranger",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user9.id,
+  due_date: Date.today + 40,
+  funding_goal: 200000,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897254/horse-water-bottle.jpg"
+)
+
+Category.create(project_id: project28.id, category_id: g.id)
+Category.create(project_id: project28.id, category_id: t.id)
+
+project29 = Project.create(
+  title: "Burrito Saga 2",
+  blurb: "Train to become the ultimate burrito designer with rice, beans, cheese, and other ingredients",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user8.id,
+  due_date: Date.today + 20,
+  funding_goal: 800000,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897255/burrito.jpg"
+)
+
+Category.create(project_id: project29.id, category_id: g.id)
+Category.create(project_id: project29.id, category_id: d.id)
+
+project30 = Project.create(
+  title: "Shapes in nature: the work of a nature designer",
+  blurb: "This is trick: nature designer is not a real job",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user8.id,
+  due_date: Date.today + 20,
+  funding_goal: 12000,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897256/plant.jpg"
+)
+
+Category.create(project_id: project30.id, category_id: d.id)
+Category.create(project_id: project30.id, category_id: w.id)
+
+project31 = Project.create(
+  title: "Robusta: a modern design firm that only designs coffee cups",
+  blurb: "Design, design, design",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user7.id,
+  due_date: Date.today + 55,
+  funding_goal: 7450,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897258/coffee-friends.jpg"
+)
+
+Category.create(project_id: project31.id, category_id: d.id)
+Category.create(project_id: project31.id, category_id: a.id)
+
+project32 = Project.create(
+  title: "I told my mom if she got my brother a camera, she'd have to get me one too",
+  blurb: "I'm gonna do a Catstarter that's even better than his and I don't even like photography",
+  description: "Fingerstache live-edge dreamcatcher, next level gluten-free palo santo subway tile. Gluten-free tote bag you probably haven't heard of them hammock, messenger bag fingerstache pok pok seitan jianbing. Fixie viral tumblr iceland disrupt, art party vice knausgaard bespoke before they sold out vegan slow-carb lyft. Selfies meditation skateboard unicorn salvia cornhole. Plaid disrupt knausgaard lo-fi ethical. Locavore jianbing authentic try-hard chambray. Four dollar toast bitters chartreuse aesthetic typewriter pop-up. Letterpress raw denim green juice raclette helvetica. Mixtape af woke, kale chips taxidermy gentrify hell of flannel. Truffaut fashion axe messenger bag wolf vexillologist kickstarter deep v fingerstache.",
+  author_id: user6.id,
+  due_date: Date.today + 35,
+  funding_goal: 1580,
+  image_url: "https://res.cloudinary.com/paul-ryan/image/upload/v1517897255/camera.jpg"
+)
+
+Category.create(project_id: project32.id, category_id: a.id)
+Category.create(project_id: project32.id, category_id: i.id)
 
 reward1 = Reward.create(
   project_id: project1.id,
@@ -365,21 +544,7 @@ Pledge.create(project_id: project6.id, user_id: user8.id, pledge_amount: 15)
 Pledge.create(project_id: project7.id, user_id: user8.id, pledge_amount: 15)
 Pledge.create(project_id: project8.id, user_id: user8.id, pledge_amount: 100)
 
-# Category creation
-Category.create(project_id: project1.id, category_id: f.id )
-Category.create(project_id: project1.id, category_id: c.id )
 
-Category.create(project_id: project2.id, category_id: c.id)
-
-Category.create(project_id: project3.id, category_id: c.id)
-Category.create(project_id: project3.id, category_id: w.id)
-
-Category.create(project_id: project4.id, category_id: c.id)
-
-Category.create(project_id: project5.id, category_id: g.id)
-Category.create(project_id: project5.id, category_id: t.id)
-
-Category.create(project_id: project6.id, category_id: f.id)
 
 
 # m = CategoryName.create!(name: "Music")

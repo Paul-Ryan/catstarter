@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Featured(props) {
+  if (props.length === 0) {
+    return null;
+  }
+
   let featured = props.featuredProject;
   let backgroundImg = { backgroundImage: `url(${props.featuredProject.imageUrl})` };
 
