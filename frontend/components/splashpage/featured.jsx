@@ -11,6 +11,7 @@ function Featured(props) {
 
   return (
     <div className="featured">
+      <h1 className="current-category">{props.currentCategory}</h1>
       <Link to={`projects/${featured.id}`}>
         <h2>FEATURED PROJECT</h2>
         <div className="featured-projects" style={backgroundImg}>

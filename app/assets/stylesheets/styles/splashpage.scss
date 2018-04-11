@@ -42,15 +42,16 @@ html {
 // below splash bar
 
 .categories {
+  width: 1100px;
   border-bottom: 1px solid lightgray;
   padding: 0;
-  margin: 0 10% 0 60px;
+  margin: 0 auto;
 }
 
 .category-bar {
   max-width: 700px;
   height: 60px;
-  margin-top: 30px;
+  margin: 20px 10% 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,20 +92,25 @@ html {
 .splash-widgets {
   display: flex;
   justify-content: space-between;
-  margin: 70px 10% 0 0;
+  margin: 20px auto;
+  max-width: 1100px;
 }
 
 // Featured PROJECT
 
 .featured {
   margin: 0 0;
-  padding: 0 60px 0;
+}
+
+h1.current-category {
+  line-height: 30px;
 }
 
 .featured h2 {
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 10px;
+  margin-top: 18px;
   text-decoration: none;
   color: rgb(40, 40, 40);
 }
@@ -151,6 +157,7 @@ html {
 
 .new-noteworthy {
   margin-left: 20px;
+  margin-top: 40px;
 }
 
 .new-noteworthy h2 {
@@ -179,6 +186,7 @@ html {
 
 .list-header {
   padding: 0 8px;
+  font-size: 14px;
 }
 
 .list-header:first-child {

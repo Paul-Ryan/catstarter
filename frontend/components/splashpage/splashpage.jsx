@@ -68,12 +68,10 @@ class SplashPage extends React.Component {
     if (displayProjects.length === 0) {
       return null;
     }
-    console.log("display projects", displayProjects);
-    console.log("slice 1", displayProjects.slice(1));
+
     return (
       <div className="container">
         <SplashBar />
-          <span className="current-category">{this.state.currentCategory}</span>
 
         <div className="categories">
           <section className="category-bar">
@@ -90,6 +88,7 @@ class SplashPage extends React.Component {
         </div>
 
         <section className="splash-widgets">
+
           <Featured
             featuredProject={displayProjects[0]}
             currentCategory = {this.state.currentCategory}
