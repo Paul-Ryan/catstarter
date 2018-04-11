@@ -123,29 +123,33 @@ h1.current-category {
   background-size: cover;
   border: 1px solid rgb(101, 105, 105);
 }
-
-.featured-projects p {
+.featured-text {
   position: absolute;
-  display: inline-block;
+}
+
+.featured-text p {
   color: rgb(40, 40, 40);
-  line-height: 15px;
+  line-height: 25px;
   background: white;
   padding: 10px 15px;
+  margin-right: 18px; 
 }
 
 .featured a {
   text-decoration: none;
 }
 
-.featured-title {
+.featured-text {
   top: 350px;
   left: 20px;
+}
+
+.featured-title {
   font-size: 24px;
 }
 
 .featured-author {
-  top: 385px;
-  left: 20px;
+  display: inline-block;
 }
 
 .featured-percent {
