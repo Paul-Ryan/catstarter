@@ -26,7 +26,6 @@ class New extends React.Component {
       <div className="new-noteworthy">
         <ul className="splash-list">
           <li className="list-header">NEW & NOTEWORTHY</li>
-          <li className="list-header">POPULAR</li>
         </ul>
         <ul className="new-index">
           {this.renderProjectIndexItem(0)}
