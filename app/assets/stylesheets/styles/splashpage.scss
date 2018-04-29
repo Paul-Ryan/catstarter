@@ -90,10 +90,10 @@ html {
 }
 
 .splash-widgets {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 20px auto;
-  max-width: 1100px;
 }
 
 // Featured PROJECT
@@ -160,8 +160,8 @@ h1.current-category {
 // new and noteworthy
 
 .new-noteworthy {
-  margin-left: 20px;
-  margin-top: 40px;
+  margin-left: 5%;
+  margin-top: 30px;
 }
 
 .new-noteworthy h2 {
@@ -182,6 +182,7 @@ h1.current-category {
 .new-index {
   width: 510px;
   margin-bottom: 15px;
+  border-top: 1px solid gray;
 }
 
 .splash-list {
@@ -189,6 +190,7 @@ h1.current-category {
 }
 
 .list-header {
+  margin: 18px 0 10px;
   padding: 0 8px;
   font-size: 14px;
 }
