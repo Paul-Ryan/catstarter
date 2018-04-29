@@ -1,3 +1,8 @@
+.show-project {
+  width: 85%;
+  margin: 0 auto;
+}
+
 .show-project-header {
   box-sizing: border-box;
   padding: 20px;
@@ -23,6 +28,7 @@
 
 .show-project-stats {
   display: flex;
+  width: 100%;
   color: #656969;
 }
 
@@ -50,9 +56,9 @@
 
 .show-image {
   flex-grow: 2;
-  max-width: 620px;
-  max-height: 350px;
   height: auto;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 .back-this-project {
